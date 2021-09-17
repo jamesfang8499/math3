@@ -1,0 +1,1038 @@
+\chapter{任意角的三角函数}
+
+\section{弧和角的概念及其度量}
+
+\subsection{任意大小的角}
+在平面几何里，每一个角可以看作是由一条射线绕着它
+的端点旋转而形成的。射线的端点叫做角的顶点，射线旋转的
+开始位置叫做角的始边，终止位置叫做角的终边。如图6.1所
+示的角$\alpha$是射线$OA$绕着端点$O$,按着箭头所示的方向旋转
+到$OB$所形成。$O$点是角$\alpha$的顶点，射线$OA$和$OB$分别是
+角$\alpha$的始边和终边。
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex]
+    \draw (0,0)node[left]{$O$}--(3,0)node[right]{$A$};
+    \draw (0,0)--(50:3) node [right]{$B$};
+\draw[->, thick] (1,0) arc (0:50:1);
+\node at (25:1.25){$\alpha$};
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{figure}[htp]
+    \centering
+    
+        \begin{tikzpicture}[>=latex, scale=.8]
+            \begin{scope}
+            \draw (0,0)node[left]{$O$}--(3,0)node[right]{$A$};
+            \draw (0,0)--(-30:3) node [right]{$B$};
+        \draw[->, thick] (1,0) arc (0:360-30:1);
+        \node at (1.5,-2){(a)};
+    \end{scope}
+    \begin{scope}[xshift=5cm]
+            \draw (0,0)node[left]{$O$}--(3,0)node[above]{$A$};
+          \node at   (3,0)[below]{$B$};
+        \draw[thick] (.3,0) arc (0:180:.3);
+        \draw[thick] (-.3,0) arc (180:360:.5);
+        \draw[thick] (.7,0) arc (0:180:.7);
+        \draw[thick,->] (-.7,0) arc (180:360:.9);
+
+        \node at (1.5,-2){(b)};
+    \end{scope}
+    \begin{scope}[xshift=10cm]
+        \draw (0,0)node[left]{$O$}--(3,0)node[right]{$A$};
+        \draw (0,0)--(50:3) node [right]{$B$};
+        \draw[thick] (50:.3) arc (50:180:.3);
+        \draw[thick] (-.3,0) arc (180:360:.5);
+        \draw[thick] (.7,0) arc (0:180:.7);
+        \draw[thick,->] (-.7,0) arc (180:360+60:.9);
+    \node at (1.5,-2){(c)};
+\end{scope}
+        \end{tikzpicture}
+    \caption{}
+\end{figure}
+
+射线旋转所形成的角可以是任意大小的角，这也就是
+说，一条射线旋转所成的角可以是锐角，钝角，平角，也可
+以大于一个平角(图6.2a),也可以绕端点若干周后和开始
+的位置重合(图6.2b),也可以旋转若干周又一周的部分
+(图6.2c)。
+
+我们还看到射线有两种相反的旋转方向：逆时针方向和
+顺时针方向。为了加以区别，我们把按逆时针方向旋转所形
+成的角叫做正角，按顺时针方向旋转所形成的角叫做负角。
+例如图6.3中以$OA$为始边的角$\alpha=210^{\circ}$, $\beta=-150^{\circ}$, $\gamma=-660^{\circ}$.
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex, scale=.8]
+\draw (0,0)node[below]{$O$}--(4,0)node[right]{$A$};
+\draw (0,0)--(-150:4)node[left]{$B_1$};    
+\draw (0,0)--(60:4)node[right]{$B_2$};    
+\draw[->, very thick] (.5,0) arc (0:-150:.5);
+\node at (-75:.8){$\beta=-150^{\circ}$};
+
+\draw[->, very thick] (.85,0) arc (0:210:.85);
+\node at (105:1.2){$\alpha=210^{\circ}$};
+
+\draw[thick] (2,0) arc (0:-150:2) ;
+\draw[thick] (-150:2) arc (-150:-150-150:2.1) ;
+\draw[thick] (60:2.2) arc (60:-150:2.2);
+\draw[->, thick] (-150:2.2) arc (-150:-150-149:2.3);
+\node at (0,2.6){$\gamma=-660^{\circ}$};
+
+
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+如果射线$OA$没有
+作任何旋转，仍留在开
+始的位置，那么我们也
+把它看成一个角，叫做\textbf{零角}。
+
+这样，我们把角的概念推广到了任意的
+角，包括正角、负角和零角。
+
+我们这样引进来的广义角的概念，是由下列三个因素组
+成：“始边”、“旋转方向”、“旋转量”。旋转量的大小
+通常是以度数或弧度数来表示。
+
+和角的概念对应的是弧的概念。
+
+我们已经讨论了任意大小的角，现在再来讨论任意大小
+的弧。
+
+圆弧可以看做是射线上的一点（不与端点重合），随着
+射线旋转所形成的轨迹。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\draw (4,0)node[right]{$A$}--(0,0)node[left]{$O$}--(40:4)node[above]{$B$};
+\draw (1.5,0)node[below]{$M$} arc (0:40:1.5) node[above]{$M'$};
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+
+
+
+如图6.4所示，弧$\wideparen{MM'}$是射线$OA$上的$M$点，随着射
+线$OA$旋转，由起始位置到$OB$时所形成的轨迹。显然，对
+于任意角$\alpha$的终边的每个位置，都有$M$点划出的弧$\wideparen{MM'}$
+和它对应。和规定角的正负一样，我们规定：当射线上的一
+点按逆时针方向旋转时，该点所划出的弧为正的；按顺时针
+方向旋转时，该点所划出的弧为负的，这样规定就使正、负
+角和正、负弧对应起来。
+
+再来规定角和它所对应弧的量数。在平面几何里，我们曾规定把圆
+周分成360等分，每一份叫做一度的弧，一度弧所对的圆心角叫做一度的
+角。因此，一个圆弧含有多少度、分、
+秒，它所对圆心角也含有多少度、
+分、秒，即弧与其所对应的圆心角有完全相同的量数。例如
+圆心角是$500^{\circ}$的角时，它所对的弧就是$500^{\circ}$的弧；圆心角是$-300^{\circ}$时，它所对的弧也是$-300^{\circ}$.
+
+\subsection{角的度量}
+角的度量是取一个确定的角作为度量单位，利用它来量
+所有的角。用周角的$\frac{1}{360}$
+作为度量单位的叫做“度”。在高
+等数学和其它基础科学理论系统中也常用弧度作为度量圆弧
+和角的单位。
+
+在弧度制中，取等于半径长的圆弧作为单位弧长。这样
+的弧叫做一弧度弧。用一弧度弧度量同一个圆上的圆弧所得
+到的量数叫做这个圆弧的弧度数，这也就是说给定圆弧的弧
+度数等于圆弧的弧长和半径的比值：
+\begin{equation}
+    \alpha=\frac{\ell}{R}
+\end{equation}
+这里$\alpha$是圆弧的弧度数，$\ell$是弧长，$R$是圆的半径。
+
+我们指出圆心角所张的圆弧的弧度数由这个角的大小决
+定，而和圆的半径长短无关。
+
+事实上，从几何里知道，在
+圆心角相同时，两个圆上的弧长
+的比等于它们的半径长的比(图6.5), 即
+\[\frac{\wideparen{A_1B_1}}{\wideparen{A_2B_2}}=\frac{R_1}{R_2}\]
+或\[\frac{\wideparen{A_1B_1}}{R_1}=\frac{\wideparen{A_2B_2}}{R_2}\]
+这就是说，两个圆弧$\wideparen{A_1B_1}$, $\wideparen{A_2B_2}$的弧度数是相同的。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[scale=.8]
+\draw (0,0) circle (2);
+\draw (0,0) circle (3);
+\draw (0,0)--(40:3);
+\draw (0,0)--(140:3);
+
+\node at (40:2)[right]{$A_2$};
+\node at (40:3)[right]{$A_1$};
+\node at (140:2)[left]{$B_2$};
+\node at (140:3)[left]{$B_1$};
+\node at (0,0)[below]{$O$};
+
+\draw[decorate,decoration={brace,raise=1pt}] (0,0)--node[above=3pt]{$R_1$}(40:3);
+\draw[decorate,decoration={brace,raise=1pt}] (140:2)--node[above=3pt]{$R_2$}(0,0);
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+因此，一个圆心角所对的弧的弧度数可以表示这个角的
+大小，我们也把圆心角所对的圆弧的弧度数称为这个角的弧
+度数。
+
+\begin{blk}{定义}
+    以一个角为圆心角，这个角所对的弧的长和这个
+弧的半径长之比，叫做这个角的弧度数。
+\end{blk}
+
+当弧长等于半径时，这个比值等于1, 因此，在弧度制
+里，度量一个角时，我们规定：
+
+长度等于半径的圆弧所对的圆心角叫做1弧度角。换言
+之，一弧度圆弧所对的圆心角叫做1弧度角。
+
+这样，由(6.1)推得
+\begin{equation}
+    \ell=aR
+\end{equation}
+即圆弧长等于这圆弧的弧度数（或这弧所对圆心角的弧度数）
+和半径长的乘积。特别地，单位圆上的弧长等于它的弧度数。
+
+利用(6.1)还可以接计算一些特殊角的弧度数。
+
+当弧长等于圆周长$C=2\pi R$时，这个比值等于$2\pi$, 因
+此，
+\[\begin{split}
+    \text{周角}&=  \frac{2\pi R}{R}=2\pi \text{弧度}\\
+    \text{平角}&=\frac{1}{2} \text{周角}=\pi \text{弧度}\\
+    \text{直角}&=\frac{1}{4}\text{周角}=\frac{\pi}{2}\text{弧度}\\
+    45^{\circ}&=\frac{1}{2}\text{直角}=\frac{\pi}{4}\text{弧度}\\
+    30^{\circ}&=\frac{1}{3}\text{直角}=\frac{\pi}{6}\text{弧度}\\
+    60^{\circ}&=\frac{1}{3}\text{平角}=\frac{\pi}{8}\text{弧度}\\
+\end{split}\]
+
+\begin{rmk}
+角的量数是以弧度数表示的，通常只写出数值不
+写出单位，以后我们都将单位“弧度”二字省略不写。例如
+平角$=\pi$弧度就写成平角$=\pi$。但是千万不要误解平角就是
+圆周率$3.1415926\cdots$。
+\end{rmk}
+
+度与弧度的互化。
+
+因为平角$=180^{\circ}=\pi$, 所以$1^{\circ}=\frac{\pi}{180}
+\approx 0.017453$。$A^{\circ}$的角相应的弧度数：
+\[\begin{split}
+    \alpha&=\frac{A\pi}{180}\\
+    1'&=\left(\frac{1}{60}\right)^{\circ}=\frac{1}{60}\left(\frac{\pi}{180}\right)\approx 0.00029088\\
+    1\text{(弧度)}&=\frac{180^{\circ}}{\pi}=57.295^{\circ}\approx 3438'\approx 206265''
+    = 57^{\circ}17'45''
+\end{split}\]
+$\alpha$弧度的角相应的度数：
+\[A^{\circ}=\frac{a\cdot 180^{\circ}}{\pi}\]
+
+下表给出一些常见角的弧度和它们的近似值：
+\begin{center}
+\begin{tabular}{cccccccc}
+\hline
+度 & $30^{\circ}$ & $45^{\circ}$ & $60^{\circ}$ & $90^{\circ}$ & $180^{\circ}$ & $270^{\circ}$ & $360^{\circ}$\\
+\hline
+弧度 & $\frac{\pi}{6}$   & $\frac{\pi}{4}$   & $\frac{\pi}{3}$   & $\frac{\pi}{2}$   & $\pi$   & $\frac{3}{2}\pi$  & $2\pi$\\
+近似值 & 0.5236   & 0.7854   & 1.0472   & 1.5708   & 3.1416   & 4.7124   & 6.2832\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{example}
+    化$67^{\circ}30'$为弧度。
+\end{example}
+
+\begin{solution}
+\[67^{\circ}30'=67.5^{\circ}=\frac{\pi}{180}\x 67.5=\frac{3}{8}\pi \; \text{(弧度)}\]
+\end{solution}
+
+\begin{example}
+    化$\frac{3}{5}\pi$弧度为度。
+\end{example}
+
+\begin{solution}
+  \[\frac{3}{5}\pi= \frac{180^{\circ}}{\pi}\x\frac{3}{5}\pi=108^{\circ}  \]  
+\end{solution}
+
+\begin{example}
+    两皮带轮的半径$R_1=20$, $R_2=30$, 求它们的转速
+    之比(图6.6)。
+\begin{figure}[htp]
+    \centering
+    \begin{tikzpicture}[>=latex]
+\draw (0,0) circle (1);
+\draw (4,0) circle (1.5);
+\node at  (0,0) [below]{$O_1$};
+\node at  (4,0) [below]{$O_2$};
+\draw (140:1)node[left]{$S_1$}--(0,0)--(97.2:1)--+(7.2:3.97)--(4,0)--+(130:1.5)node[left]{$S_2$};
+\draw (-97.2:1)--+(-7.2:3.97);
+\draw[->] (97.2:.5) arc (97.2:140:.5);
+\draw[->] (4,0)--+(97.2:.8) arc (97.2:130:.8);
+\node at (-.25,.5)[above]{$\alpha_1$};
+\node at (4-.3,.8)[above]{$\alpha_2$};
+
+\draw[<-]  (1,1.35)--(2,1.5);
+\draw [->] (1,-1.35)--(2,-1.5);
+
+    \end{tikzpicture}
+    \caption{}
+\end{figure}
+\end{example}
+
+\begin{solution}
+    因为在相同的时间内，两轮周上转过的弧长相等，
+    即$S_1=S_2$, 在弧度制下：
+\[S_1=\alpha_1 R_1,\qquad S_2=\alpha_2 R_2\]
+$\therefore\quad \alpha_1R_1=\alpha_2R_2 \quad \Rightarrow\quad \frac{\alpha_1}{\alpha_2}=\frac{R_2}{R_1}=\frac{30}{20}$
+
+$\therefore\quad \alpha_1:\alpha_2=3:2 $
+\end{solution}
+
+\begin{example}
+    地球的半径为6400公里，在同一经线上，甲、乙两
+地的距离为150公里，试求甲、乙两地纬度差。
+\end{example}
+
+
+\begin{solution}
+设$\theta$为甲、乙两地纬度差，则
+\[\begin{split}
+    \theta &= \frac{150}{6400}\approx 0.0234\\
+    &=0.0234\x\frac{180^{\circ}}{\pi}\\
+    &\approx 0.0234\x 3438'\\
+    &\approx 13^{\circ}14'
+\end{split}\]
+
+答: 两地纬度差为$13^{\circ}14'$。
+\end{solution}
+
+\begin{ex}
+\begin{enumerate}
+    \item 把下列各角的度数化为弧度数：
+\begin{multicols}{3}
+    \begin{enumerate}
+    \item $2^{\circ}$
+    \item $5^{\circ}$
+    \item $7^{\circ}30'$
+    \item $12^{\circ}30'$
+    \item $22.5^{\circ}$
+    \item $200^{\circ}$
+    \item $320^{\circ}$
+    \item $14^{\circ}24'$
+    \item $86^{\circ}45'$
+    \item  $157^{\circ}30'$
+\end{enumerate}
+\end{multicols}
+
+\item 把下列各角的弧度数化为度数：
+ \begin{multicols}{3}
+    \begin{enumerate}
+        \item $0.4800$
+        \item $0.0099$ 
+        \item $2.6400$
+        \item $\frac{3}{5}\pi$
+        \item $\frac{4}{5}\pi$
+        \item $\frac{\pi}{15}$
+        \item $\frac{\pi}{10}$
+        \item $3\pi$
+\end{enumerate}
+\end{multicols}
+
+\item 已知$200^{\circ}$的圆心角所对的弧长等于50cm, 求圆的
+半径。
+\item 轮子每秒旋转$\frac{5}{18}$
+弧度，20秒钟内转了多大角度？
+\item 一个大钟的长针长2尺8寸．20秒间针端走了几寸？
+\item 扇形弧长为20cm, 半径为15cm, 求扇形面积。
+\item 地球半径为6400公里，地面上一弧所对球心角为$1'$,
+问弧长若干公里？
+\end{enumerate}
+\end{ex}
+
+\subsection{始边和终边相同的角}
+今后我们常在直角坐标系里讨论角，并把角放在下面的
+标准位置：使角的顶点与坐标原点重合，角的始边与$x$轴的
+正半轴重合，角的终边在第几象限，就把这个角叫做第几象
+限角（或说这个角属于第几象限）。如图6.7(1)中，
+$\frac{\pi}{6}$, $\frac{13\pi}{6}$
+和$-\frac{11\pi}{6}$
+都是第一象限的角。在图6.7(2)中，
+$-\frac{\pi}{3}$, $\frac{5\pi}{3}$
+都是第四象限的角。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex]
+\begin{scope}
+    \draw[->](-2,0)--(2,0)node[right]{$x$};
+    \draw[->](0,-2)--(0,2)node[right]{$y$};
+\draw (0,0)--(30:2.5)node[right]{$B$};
+\draw[->] (.75,0) arc (0:30:.75);
+\draw[->] (1,0) arc (0:-330:1);
+\node at (.2,-.2){$O$};
+\node at (15:1){$\tfrac{\pi}{6}$};
+\node at (2,.5){$\tfrac{13\pi}{6}$};
+\node at (.5,1.2){$-\tfrac{11\pi}{6}$};
+\draw(1.5,0) arc (0:270:1.5);
+\draw [->] (0,-1.5) arc (270:384:1.7);
+\node at (0,-2.5){(1)};
+\end{scope}
+\begin{scope}[xshift=6cm]
+    \draw[->](-2,0)--(2,0)node[right]{$x$};
+    \draw[->](0,-2)--(0,2)node[right]{$y$};
+    \draw (0,0)--(-60:2.5)node[right]{$B$};
+    \draw[->] (.75,0) arc (0:-60:.75);
+    \draw[->] (1,0) arc (0:300:1);
+    \node at (.2,.2){$O$};
+    \node at (-30:1){$-\tfrac{\pi}{3}$};
+    
+\node at (1,1){$\tfrac{5\pi}{3}$};
+\node at (0,-2.5){(2)};
+
+\end{scope}
+\end{tikzpicture}   
+    \caption{}
+\end{figure}
+
+
+在图6.7(1)中可以看到$\frac{13\pi}{6}$与$-\frac{11\pi}{6}$都和$\frac{\pi}{6}$的角终边相同。
+$\frac{13\pi}{6}$和$-\frac{11\pi}{6}$
+可以写成下列形式：
+\[2\pi+\frac{\pi}{6},\qquad -2\pi+\frac{\pi}{6}\]
+显然，除了这两个角以外，与
+的角终边相同的角还有：
+\[\begin{split}
+    2\x 2\pi+\frac{\pi}{6},&\qquad -2\x 2\pi+\frac{\pi}{6}\\
+    3\x 2\pi+\frac{\pi}{6},&\qquad -3\x 2\pi+\frac{\pi}{6}\\
+\cdots\cdots\qquad &\qquad\qquad \cdots\cdots
+\end{split}\]
+所有和$\frac{\pi}{6}$
+的角终边相同的角，连同$\frac{\pi}{6}$
+在内，可以用下式表示：
+\[2k\pi+\frac{\pi}{6},\quad (k\in\mathbb{Z})\]
+当$k=1$时，它表示$\frac{\pi}{6}$的角；$k=1$时，它表示$\frac{13\pi}{6}$的角；$k=-1$时，它表示$-\frac{11\pi}{6}$的角。
+
+一般地，所有和$\alpha$角终边相同的角，连同$\alpha$在内，可
+以用式子$2k\pi+\alpha\; (k\in\mathbb{Z})$来表示。
+
+由此可见，具有相同始边和终边的角不止一个，而是无
+穷多个，它们之间彼此相差整数周（正的或负的）即$2\pi$的整数
+倍。实际上，相同始边和终边的角是由无穷多个角组成的集
+合。与$\alpha$终边相同的角（$\alpha$角处在标准位置）的集合可记作：
+\[\{\beta|\beta=2k\pi+\alpha,\; k\in\mathbb{Z}\}\quad  \text{(若$\alpha$以弧度制给出）}\]
+或
+\[\{\beta|\beta=k\cdot 360^{\circ}+\alpha,\; k\in\mathbb{Z}\}\quad  \text{(若$\alpha$以度数制给出）}\]
+
+
+\begin{example}
+    在$0^{\circ}$到$360^{\circ}$的范围内，找出与下列各角终边相同
+的角，并判定下列各角是哪个象限的角。
+\[-120^{\circ},\qquad 640^{\circ},\qquad -950^{\circ}12'\]
+
+\end{example}
+
+
+\begin{solution}
+\begin{enumerate}
+    \item $\because\quad -120^{\circ}=-360^{\circ}+240^{\circ}$
+    
+$\therefore\quad -120^{\circ}$的角与$240^{\circ}$的角的终边相同，它是第
+三象限的角。
+\item $\because\quad 640^{\circ}=360^{\circ}+280^{\circ}$
+
+$\therefore\quad 640^{\circ}$的角与$280^{\circ}$的角的终边相同，它是第四象限
+的角。
+
+\item $\because\quad -950^{\circ}12'=-3x360^{\circ}+129^{\circ}48'$
+
+$\therefore\quad -950^{\circ}12'$的角与$129^{\circ}48'$的角的终边相同，它是
+第二象限的角。
+\end{enumerate}
+\end{solution}
+
+\begin{example}
+写出与下列各角终边相同的角的集合$S$, 并把$S$
+中$-2\pi$到$4\pi$间的角写出来：
+\[\frac{\pi}{3},\qquad -\frac{\pi}{4},\qquad \frac{15\pi}{7}\]
+\end{example}
+
+\begin{solution}
+\begin{enumerate}
+    \item 
+$S=\left\{\beta \Big|\beta =2k\pi+\frac{\pi}{3},\; k\in\mathbb{Z}\right\}$
+
+$S$中在$-2\pi$到$4\pi$间的角：
+\begin{itemize}
+    \item 当$k=-1$时，$\beta =-2\pi+\frac{\pi}{3}=\frac{-5\pi}{8}$
+    \item 当$k=0$时，$\beta=\frac{\pi}{3}$ 
+    \item 当$k=1$时，$\beta =2\pi+\frac{\pi}{3}=\frac{7\pi}{3}$
+\end{itemize}
+
+\item $S=\left\{\beta \Big|\beta =2k\pi-\frac{\pi}{4},\;k\in\mathbb{Z}\right\}$
+
+$S$中在$-2\pi$到$4\pi$间的角：
+\begin{itemize}
+    \item 当$k=0$时，$\beta =-\frac{\pi}{4}$
+    \item 当$k=1$时，$\beta =2\pi-\frac{\pi}{4}=\frac{7\pi}{4}$
+    \item 当$k=2$时，$\beta =4\pi-\frac{\pi}{4}=\frac{15\pi}{4}$
+\end{itemize}
+
+\item $S=\left\{\beta \Big|\beta =2k\pi+\frac{15\pi}{7},\; k\in\mathbb{Z}\right\}$
+
+$S$中在$-2\pi$到$4\pi$间的角：
+\begin{itemize}
+    \item 当$k=-2$时，$\beta =-4\pi+\frac{15\pi}{7}=-\frac{13\pi}{7}$
+    \item 当$k=-1$时，$\beta =-2\pi+\frac{15\pi}{7}=\frac{\pi}{7}$
+    \item 当$k=0$时，$\beta=\frac{15\pi}{7}$
+\end{itemize}
+\end{enumerate}    
+\end{solution}
+
+如果处在标准位置的角的终边落在坐标轴上，那么如何
+写出终边相同的角呢？下面我们来研究这个问题。
+
+\begin{enumerate}
+    \item 终边落在$x$轴的正向上，这些角的量数为
+\[2n\pi\quad  (n\in\mathbb{Z})\]
+\item 终边落在x轴的负向上，这些角的量数
+\[2n\pi +\pi =(2n+1)\pi\quad  (n\in\mathbb{Z})\]
+把1、2结合起来，量数为$k\pi\;  (k\in\mathbb{Z})$的角的终边
+落在$x$轴上，在$k$为偶数时，终边落在$x$轴的正向上；在$k$
+为奇数时，终边落在$x$轴的负向上。
+\item 终边落在$y$轴的正向上，这些角的量数为
+\[2n\pi +\frac{\pi}{2}\quad (n\in\mathbb{Z})\]
+\item 终边落在$y$轴的负向上，这些角的量数为
+\[-\frac{\pi}{2}+2nx=(2n-1)\pi +\frac{\pi}{2}\quad (n\in\mathbb{Z})\]
+把3、4结合起来，量数为$k\pi +\frac{\pi}{2}\; (k\in\mathbb{Z})$的
+角的终边落在$y$轴上，在$k$为偶数时，终边落在$y$轴的正向
+上，在$k$为奇数时，终边落在$y$轴的负向上。
+\end{enumerate}
+
+量数为$k\cdot \frac{\pi}{2}\; (k\in\mathbb{Z})$的角的终边，或落在$x$轴上，或落在$y$轴上。在$k=0,1,2,3,4,5,\ldots$时，终边依次落
+在$z$轴正向、$y$轴正向、$x$轴负向、$y$轴负向、$x$轴正向、$y$
+轴正向……在$k=-1,-2,-3,-4,-5,\ldots$
+时，终边依次落在$y$轴负向、$x$轴负向、$y$轴正向、$x$轴正
+向、$y$轴负向……
+
+此外，若$\alpha$的终边落在右半平面（一、四象限），则满足
+\[-\frac{\pi}{2}+2k\pi<\alpha<\frac{\pi}{2}+2k\pi\quad (k\in\mathbb{Z})\]
+若$\alpha$的终边落在上半平面（一、二象限），则满足
+\[2k\pi <\alpha<(2k+1)\pi \]
+
+以上这些表示法希望大家熟悉，因为以后经常要用到。
+
+\begin{ex}
+\begin{enumerate}
+    \item 在度数制下，写出下面处在标准位置的终边相同的
+    角。
+        \begin{enumerate}    \begin{multicols}{2}
+    \item $30^{\circ}$
+    \item 终边落在$x$轴正向上；
+    \item 终边落在$x$轴负向上；
+    \item 终边落在$x$轴上；
+    \item 终边落在$y$轴正向上；
+    \item 终边落在$y$轴负向上；
+    \item 终边落在$y$轴上；    \end{multicols}
+    \item 角$\alpha$的终边落在左半平面上；
+    \item 角$\alpha$的终边落在下半平面上。     
+    \end{enumerate}
+
+    
+    \item 把下列角放在标准位置上，用量角器作出下列各角，
+    并指出它们是哪个象限的角。
+    \[-55^{\circ},\qquad -265^{\circ},\qquad 400^{\circ} ,\qquad 1000^{\circ},\qquad -512^{\circ} \]
+
+    \item 当时钟上指出3点，6点和8点的时候，写出分针
+    与时针所成角的一般形式。
+    \item 试求出下列处在标准位置的各角的最小正同边角及
+    最大负同边角，并说明各角为何象限角：
+    \[1140^{\circ},\qquad 1680^{\circ},\qquad -1290^{\circ},\qquad -1510^{\circ}\]
+\item 写出与下列各角终边相同的角的集合，并把集合中
+在$-4\pi$ 到$2\pi$ 间的角写出来：
+\[\frac{\pi}{4},\qquad -\frac{\pi}{6},\qquad \frac{36\pi}{5},\qquad -\frac{8\pi}{7}\]
+\end{enumerate} 
+\end{ex}
+
+\subsection{单位圆}
+\begin{blk}{定义}
+    以坐标原点为圆心，半径长为1的圆叫做单位圆。
+它上面任一弧的长度恰好等于弧度数。
+\end{blk}
+ 
+如图6.8, 单位圆交坐标轴于四个点$A(1,0)$、$B(0,1)$、
+$A_1(-1,0)$、$B_1(0,-1)$。过$A$作单位圆的切线$\ell$, 在$\ell$上这
+样来建立坐标系：取$A$为原点，取向上的方向为正向，单
+位等于半径长，这样$\ell$就是一条实数轴。我们已经知道实数
+轴上的点和全体实数是一一对应的。
+
+\begin{figure}[htp]
+    \centering
+\includegraphics[scale=.6]{fig/6-8.PNG}
+    \caption{}
+\end{figure}
+
+
+
+现在把数轴$\ell$设想为一
+条无限长而没有伸缩性的丝
+线，把数轴$\ell$正的那一半按
+反时针方向来包卷单位圆，
+而用这条数轴负的那一半按
+顺时针方向包卷于单位圆上。设$S_1$是数轴$\ell$正的那一半上的一点（图6.8），当
+$\ell$包卷到圆上后，此点就落到
+单位圆上的$P_1$点，此时$S_1$
+点的坐标是单位圆上弧$\wideparen{AP_1}$
+的长或$\wideparen{AP_1}$的弧度数，也是
+$\wideparen{AP_1}$所对圆心角$\theta$的弧度数。如
+果数轴$\ell$上的一点坐标是负的，那么它就是$\ell$的负半轴按顺
+时针方向包卷在单位圆上的负弧或它所对负圆心角的弧度
+数，通过数轴在单位圆上的包卷，我们建立了数轴上一切点的
+坐标和处在标准位置的圆心角$\theta$的弧度数之间的一一对应，
+并且由于它们的基本单位相等，于是$\theta$角的弧度数就可以从
+包卷在单位圆上的数轴$\ell$上的点的坐标直接读出来。
+
+我们必须注意，在数轴$\ell$上，坐标相差$2\pi$ 的或相差$2\pi$ 
+整数倍的那些点，当把$\ell$包卷在单位圆上时，都位于同一
+点，例如$P_1$点是弧长$S_1$达到的一点，那么弧长等于$S_1\pm 2\pi,
+S_1\pm 4\pi ,\ldots$的弧，当$\ell$包卷在单位圆上时也达到同一个
+点$P_1$, 这就说明了数轴上的点和单位圆上的点是多一对应。
+于是数轴$\ell$上的任意两个实数$S_1,S_2$和单位圆上同一个点
+对应的充要条件是：
+\[S_1-S_2=2n\pi \qquad  (n\in\mathbb{Z})\]
+我们把上述两种对应复合在一起得到：
+\begin{align*}
+    \text{实数}\mathbb{R}& \longleftrightarrow  \{\theta|\text{标准位置有向角的弧度数}\}  \tag{一一对应}\\
+& \longrightarrow \{(x,y)|x^2+y^2=1\} \tag{多一对应}
+\end{align*}
+
+这里$(x,y)$是单位圆上点的坐标。
+我们在下面将应用这种对应关系来研究三角函数的许多
+性质。并且把角的三角函数与实变数的三角函数统一起来。
+
+
+\begin{example}
+    在单位圆上作出对应于下列各数的点：
+\[0,\quad \frac{\pi}{6},\quad \frac{\pi}{3},\quad \frac{\pi}{2},\quad \frac{2\pi}{3},\quad \frac{5\pi}{6},\quad \pi,\quad \frac{7\pi}{6},\quad \frac{4\pi}{3},\quad \frac{3\pi}{2},\quad \frac{5\pi}{3},\quad \frac{11\pi}{6},\quad 2\pi\]
+\end{example}
+
+\begin{solution}
+    这些数中每相邻两数的差是$\frac{\pi}{6}$，
+即在单位圆上以
+相邻两数为端点的弧都相等，因此我们将单位圆12等分后，就
+得到对应于上列各数的点（图6.9）。
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex]
+    \draw[->] (-3,0)--(3,0)node[right]{$x$};
+    \draw[->] (0,-3)--(0,3)node[right]{$y$};
+\draw[thick] (0,0) circle(2);
+
+    \draw (1*30:2) [fill=black] circle (1.5pt) node[above=5pt]{$P_1$};
+    \draw (2*30:2) [fill=black] circle (1.5pt) node[above=5pt]{$P_2$};
+    \draw (3*30:2) [fill=black] circle (1.5pt);
+    \draw (4*30:2) [fill=black] circle (1.5pt) node[above=5pt]{$P_3$};
+    \draw (5*30:2) [fill=black] circle (1.5pt) node[above=5pt]{$P_4$};
+    \draw (6*30:2) [fill=black] circle (1.5pt);
+    \draw (7*30:2) [fill=black] circle (1.5pt) node[below=5pt]{$P_5$};
+    \draw (8*30:2) [fill=black] circle (1.5pt) node[below=5pt]{$P_6$};
+    \draw (9*30:2) [fill=black] circle (1.5pt);
+    \draw (10*30:2) [fill=black] circle (1.5pt) node[below=5pt]{$P_7$};
+    \draw (11*30:2) [fill=black] circle (1.5pt) node[below=5pt]{$P_8$};
+   
+\node at (2.2,0)[above]{$A$};   
+\node at (-2.2,0)[above]{$A_1$};
+\node at (0,2.2)[left]{$B$};   
+\node at (0,-2.2)[left]{$B_1$};
+\node at (0.25,-.25){$O$};  
+
+\node at (6,3){$\frac{\pi}{6}\to P_1,\qquad \frac{\pi}{3}\to P_2$};
+\node at (6,2){$ \frac{\pi}{2}\to B,\qquad \frac{2\pi}{3}\to P_3$};
+\node at (6,1){$\frac{5\pi}{6}\to P_4,\qquad \pi\to A_1$};
+\node at (6,0){$\frac{7\pi}{6}\to P_5,\qquad \frac{4\pi}{3}\to P_6$};
+\node at (6,-1){$\frac{3\pi}{2}\to B_1,\qquad \frac{5\pi}{3}\to P_7$};
+\node at (6,-2){$\frac{11\pi}{6}\to P_8,\qquad 2\pi\to A$};
+
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+\end{solution}
+
+\begin{example}
+在数轴$\ell$上找到和单位圆上$(0,1)$点对应的一切实
+数。
+\end{example}
+
+\begin{solution}
+在单位圆上$B$点的坐标是$(0,1)$, $\wideparen{AB}$的弧长是$\frac{\pi}{2}$，
+因此在数轴$\ell$上和$(0,1)$点对应的一切实数是：$\frac{\pi}{2}+2k\pi\; (k\in\mathbb{Z})$。
+
+\end{solution}
+
+\begin{ex}
+\begin{enumerate}
+   \item 在单位圆上找出与实数0, $\frac{\pi}{2}$, $-\frac{\pi}{2}$，$\pi$对应的点$P_1$、$P_2$、$P_3$、$P_4$. 并写出与$\angle AOP_1$、$\angle AOP_2$、$\angle AOP_3$、
+$\angle AOP_4$对应的一切实数的一般形式。
+
+
+\item \begin{enumerate}
+\item 在单位圆上找出分别与下面各实数0、$\frac{\pi}{6}$、$\frac{\pi}{4}$、$\frac{\pi}{3}$、$\frac{\pi}{2}$对应的点$P_0$、$P_1$、$P_2$、$P_3$、$P_4$。
+\item 分别写出$P_0$、$P_1$、$P_2$、$P_3$、$P_4$各点的直角坐标。
+\item 与下面各实数对应的点，哪些和$P_0$、$P_1$、$P_2$、$P_3$、$P_4$关于坐标轴对称？哪些关于原点对称？并写出它们的直
+角坐标。
+\end{enumerate} 
+\end{enumerate}
+\[\frac{2\pi}{3},\quad \frac{3\pi}{4},\quad \frac{5\pi}{6},\quad \pi,\quad \frac{7\pi}{6},\quad \frac{5\pi}{4},\quad \frac{4\pi}{3},\quad \frac{3\pi}{2},\quad \frac{5\pi}{3},\quad -\frac{\pi}{4},\quad \frac{11\pi}{6}\]
+\end{ex}
+
+\section{任意角的三角函数}
+在描述和研究有关转动和振动的实际问题的时候，我们
+就要研究任意角的三角函数，下面我们来研究任意角的三角
+函数。
+
+\subsection{任意角三角函数的定义}
+如图6.10, 在角$\alpha$的终边上任意取一点$P$（不是坐标
+系的原点）。
+
+以坐标系的原点为起点，$P$为终点的有向线段$\Vec{OP}$叫做
+$P$点的向量半径或旋转半径。
+
+设$P$点的坐标是$(x,y)$, 它和原点的距离为$r>0$（即
+旋转半径$\Vec{OP}$的长），横坐标$x$与纵坐标$y$的正负是由
+$P$点所在的象限来确定的。距离$r$总是正的，并且
+\[r=\sqrt{x^2+y^2}\]
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex]
+    \draw[->] (-3,0)--(3,0)node[right]{$x$};
+    \draw[->] (0,-3)--(0,3)node[right]{$y$};
+\draw[thick] (0,0) circle(2);
+\draw (0,0)--(120:3);
+\draw (0,0)--(120:2)node[left]{$P(x,y)$}--(-1,0)node[below]{$M(x,y)$};
+   
+\node at (2.2,0)[above]{$A$};   
+\node at (.25,-.25){$O$};
+\draw[->] (.5,0) arc (0:120:.5);
+\node at (60:.8){$\alpha$};
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{blk}{定义}
+    \begin{enumerate}
+\item $\frac{y}{r}$叫做角$\alpha$的正弦，记作$\sin\alpha$, 即
+$\sin\alpha=\frac{y}{r}$；
+\item $\frac{x}{r}$叫做角$\alpha$的余弦，记作$\cos\alpha$, 即$\cos\alpha=\frac{x}{r}$；
+\item $\frac{y}{x}$
+叫做角$\alpha$的正切，记作$\tan\alpha$, 即$\tan\alpha=\frac{y}{x}$；
+\item $\frac{x}{y}$叫做角$\alpha$的余切，记作$\cot\alpha$, 即$\cot\alpha=\frac{x}{y}$；
+\item $\frac{r}{x}$
+叫做角$\alpha$的正割，记作$\sec\alpha$, 即$\sec\alpha=\frac{r}{x}$；
+\item $\frac{r}{y}$
+叫做角$\alpha$的余割，记作$\csc\alpha$, 即$\csc\alpha=\frac{r}{y}$。        
+    \end{enumerate}
+\end{blk}
+
+对于确定的角$\alpha$，$\frac{y}{r},\; \frac{x}{r},\; \frac{y}{x},\; \frac{x}{y},\; \frac{r}{x},\; \frac{r}{y}$
+这六个比值的大小，和我们在$\alpha$角的终边上所取$P$点的位置没有关系，如图6.11中，$P_1(x_1,y_1)$点为角$\alpha$终边上
+另一点，$P_1$到原点$O$的距离为$r_1$，$x$和$x_1$、$y$和$y_1$的符号
+相同，因为$\triangle POM\sim \triangle P_1OM_1$，所以
+\[\begin{split}
+   & \frac{y_1}{r_1}=\frac{y}{r},\qquad \frac{x_1}{r_1}=\frac{x}{r},\qquad \frac{y_1}{x_1}=\frac{y}{x}\\
+   &\frac{x_1}{y_1}=\frac{x}{y},\qquad  \frac{r_1}{x_1}= \frac{r}{x},\qquad \frac{r_1}{y_1}=\frac{r}{y}
+\end{split}\]
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex]
+    \draw[->] (-2.5,0)--(2.5,0)node[right]{$x$};
+    \draw[->] (0,-1)--(0,3)node[right]{$y$};
+\draw (0,0)--(120:3)node[left]{$P_1(x_1,y_1)$}--(-1.5,0)node [below]{$M_1$};
+\draw (0,0)--(120:2)node[right]{$P(x,y)$}--(-1,0)node [below]{$M$};
+\node at (.25,-.25){$O$};
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+这就是说，对于确定的角 $\alpha$, $\sin\alpha$、$\cos \alpha$、$\tan \alpha$、$\cot \alpha$、
+$\sec\alpha$、$\csc\alpha$
+都有确定的值，因为它们的值是随着 $\alpha$变化而
+变化的，当 $\alpha$角取确定值的时候，它们的值也相应地唯一确
+定，所以，角 $\alpha$的正弦、余弦、正切、余切、正割和余割都
+是角 $\alpha$的函数，这些函数都叫做三角函数。
+
+很明显，当角 $\alpha$是锐角或钝角时，上面三角函数的定义
+和锐角、钝角三角函数的定义完全一样，所以锐角、钝角三
+角函数定义是任意角三角函数定义的特例。
+
+根据任意角三角函数定义，可以看出
+\[\sec\alpha=\frac{1}{\cos\alpha},\qquad \csc \alpha=\frac{1}{\sin\alpha},\qquad \cot \alpha=\frac{1}{\tan\alpha}\]
+
+今后我们主要研究
+$\sin \alpha$、 $\cos \alpha$、$\tan \alpha$、$\cot \alpha$ 四个函数。
+
+\begin{example}
+    已知单位圆中旋转半径$OP$和$OX$轴正方向成
+$300^{\circ}$角，求 $\sin300^{\circ}$, $\cos300^{\circ}$, $\tan 300^{\circ}$, $\cot300^{\circ}$。
+
+\end{example}
+
+\begin{solution}
+    设$OP$的端点$P$的坐标是$(x,y)$. 作直线$PM\bot OX$轴于$M$点，$A$点是单位圆与$OX$轴的交点$(1,0)$, 联结
+$P,A$(图6.12). 在$\triangle OPA$中，
+
+$\because\quad OP=OA=1,\quad \angle POA=360^{\circ}-300^{\circ}=60^{\circ}$
+
+$\therefore\quad \triangle OPA$是等边三角形，因此，$PM$垂直平分$OA$,
+$|x|=|OM|=\frac{1}{2}$
+\[\begin{split}
+    |y|&=|PM|=\sqrt{|OP|^2-|OM|^2}\\
+&=\sqrt{1-\left(\frac{1}{2}\right)^2}=\frac{\sqrt{3}}{2}
+\end{split}\]
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex]
+    \draw[->] (-3,0)--(3,0)node[right]{$x$};
+    \draw[->] (0,-3)--(0,3)node[right]{$y$};
+\draw[thick] (0,0) circle(2);
+\draw (0,0)--(-60:2)--(2,0);
+\draw (1,0)node[above]{$M(\tfrac{1}{2},0)$}--(-60:2)node[below]{$P(x,y)$};
+   
+\node at (2.5,0)[below]{$A(1,0)$};   
+\node at (-.25,-.25){$O$};
+\draw[->] (.5,0) arc (0:300:.5);
+\node at (150:.8){$300^{\circ}$};
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+又$\because\quad P$点在第四象限，$\therefore\quad P$点坐标是
+\[x=\frac{1}{2},\qquad y=-\frac{\sqrt{3}}{2}\]
+由此求得
+\[\sin300^{\circ}=-\frac{\sqrt{3}}{2},\qquad 
+\cos300^{\circ}=\frac{1}{2}\]
+\[
+\tan300^{\circ}=-\sqrt{3},\qquad 
+\cot300^{\circ}=-\frac{1}{\sqrt{3}}=-\frac{\sqrt{3}}{3}\]
+\end{solution}
+
+
+\begin{example}
+    $$\cos 0=1,\qquad \sin 0=0,\qquad \cos\frac{\pi}{2}=0,\qquad \sin\frac{\pi}{2}=1$$
+    \[\cos\pi=-1,\qquad \sin\pi=0,\qquad \cos\frac{3\pi}{2}=0,\qquad \sin\frac{3\pi}{2}=-1\]
+\end{example}
+
+\subsection{数值变数的三角函数与三角函数的定义域}
+在数学中两个变数之间的函数可以表示不同物理量或几
+何量之间的函数关系，例如，数学中的二次函数$y=ax^2$,
+如果$a=1$, $a$表示正方形的边长的数值，$y$就表示正方形的
+面积数值；但是当
+$a=\frac{1}{2}g$
+时，$x$表示自由落体下降的时
+间，则$y$表示下降的距离。同样，有许多物理或技术问题，
+常常要用到的三角函数，其中的自变量就不一定是角或弧而
+是时间或长度等，所以为了满足科学技术上的需要，就必需
+把角的三角函数扩充为变数$x$的三角函数。
+
+假设$x$是在函数定义域内的任意实数，根据前节
+讨论知，对应此实数有一个量数是$x$的角或弧（用弧度作
+单位），而对应于该角又有它的各三角函数值，由于这种关
+系，对于任意实数$x$就有完全确定的三角函数值$y$与之对
+应，于是得到了一个数值变数的三角函数。
+
+\begin{blk}{定义}
+ 变数$x$的三角函数就是具有弧度数$x$的角（或
+弧）的三角函数。    
+\end{blk}
+
+
+\begin{example}
+    若$x=1.54$, 求$\sin x$的值。
+\end{example}
+
+\begin{solution}
+    因为$\sin1.54=\sin1.54\text{弧度}$，
+又 $1.54\text{弧度}\approx 88^{\circ}14'$，
+
+所以
+$\sin1.54\approx \sin88^{\circ}14'\approx 0.9995$
+\end{solution}
+
+在任意大小的角、弧及数之间所能建立的对应，使得我
+们可以认为三角函数是角的函数，或是弧的函数，或是数的
+函数，其中变数由我们处理，可以解释为角或解释为弧，或
+解释为数。
+
+现在给每个三角函数确定它的定义域：
+
+设数值$\alpha$, 有单位圆上的点$P$与之对应（如图6.13），
+那么$P$点的坐标是
+\[x=\cos\alpha,\qquad y=\sin\alpha\]
+因此：
+\[\tan\alpha=\frac{y}{x}=\frac{\sin\alpha}{\cos\alpha},\qquad \cot\alpha=\frac{x}{y}=\frac{\cos\alpha}{\sin\alpha}\]
+\[ \sec\alpha=\frac{1}{x}=\frac{1}{\cos\alpha},\qquad \csc\alpha=\frac{1}{y}=\frac{1}{\sin\alpha}\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{example}
+    
+\end{example}
+
+
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{example}
+    
+\end{example}
+
+\begin{example}
+    
+\end{example}
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{example}
+    
+\end{example}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{solution}
+    
+\end{solution}

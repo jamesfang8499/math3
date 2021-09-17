@@ -1,0 +1,2134 @@
+\chapter{指数概念普遍化与对数}
+
+\section{指数概念普遍化}
+\subsection{引言}
+这一节我们要把指数的概念加以推广，除了第一册学过
+的整数指数、
+零指数外，还要引入负整数指数，正、负分数
+指数，为能够应用对数来简化乘法、除法、乘方、开方的计
+算建立初步理论基础。
+
+在推广过程中要注意以下几个方面：
+\begin{enumerate}
+\item 各种定义的条件。
+\item 探索各种定义产生的逻辑过程，
+\item 要熟练运用各种定义去计算。
+\end{enumerate}
+
+
+我们来回忆一下正整数指数幂的定义：
+
+\begin{blk}{定义1}
+$a^n=\overbrace{a\cdot a\cdots a}^{\text{$n$个}}$ （$n$是大于1的正整数），其中$a$称
+为\textbf{底数}，$n$称为\textbf{指数}，$a^n$称为以$a$为底数、$n$为指数的\textbf{幂}．当$n=1$
+时，规定$a^1=a$。
+\end{blk}
+
+在定义1中，对于底数$a$，没有任何限制，$a$
+可以是正数，也可以是负数，也可以是零；而指数$n$，必须
+是正整数，否则定义1就无意义！这样，我们称按定义1定
+义的$a^n$为正整数指数幂。
+
+我们可以证明正整数指数幂有下列性质：
+\begin{blk}{性质}
+\begin{enumerate}
+    \item $a^m\cdot a^n=a^{m+n}$ \quad （$m,n$为正整数）；
+    \item $a^m\div a^n=a^{m-n}$\quad ($m,n$为正整数，且$m>n,\; a\ne 0$)；
+    \item $(a^m)^n=a^{mn}$\quad ($m,n$为正整数)；
+    \item $(ab)^n=a^nb^n$ \quad（$n$为正整数）；
+    \item $\left(\frac{a}{b}\right)^n=\frac{a^n}{b^n}$\quad （$n$为正整数，$b\ne 0$）。
+\end{enumerate}
+\end{blk}
+
+以后将会看到，将指数概念扩充到新的范围以后，这几
+条性质依然保留，并且可以适当地合并。
+
+\subsection{零指数与负整数指数}
+
+【I】从正整数指数幂的性质可以看到：
+\begin{itemize}
+    \item 幂的\textbf{乘法}可以转化为指数\textbf{加法}，(性质1)
+    \item 幂的\textbf{除法}可以转化为指数\textbf{减法}，(性质2)
+    \item 幂的\textbf{乘方}可以转化指数\textbf{相乘}。(性质3)
+\end{itemize}
+
+要使正整数的加、减、乘、除，尤其是减、除通行无阻，
+那么指数只限制在正整数范围是不行的，例如：$a^3\div a^2=
+a^{3-2}=a^1=a$, 这个转化是没有问题的，但是
+\[a^3\div a^3 \mathop{=}^{?} a^{3-3} \mathop{=}^{?} a^0=?\]
+\[a^2\div a^4 \mathop{=}^{?} a^{2-4} \mathop{=}^{?} a^{-2}=?\]
+
+要使指数的减法通行无阻，就会出现零指数和负整数指
+数，而零指数和负整数指数是什么，过去从未见过，这就有
+必要将指数的概念加以推广，给零指数和负整数下定义。
+
+【II】探索零指数和负整数指数如何定义。
+
+我们知道$a^m\div a^n=a^{m-n}$，
+这里限制$a\ne 0$, 并且$m>n$, $m$、$n$均为正整数，现在把$m>
+n$的条件取消，这样$m$可以等于$n$. 在$m=n$的时候，上面的公
+式就是：
+\[a^m\div a^n=a^n\div a^n=a^{n-n}=a^0\quad (a\ne 0)\]
+而$a^m\div a^n$的实际内容是
+\[a^m\div a^n=\frac{a^m}{a^n}=\frac{a^n}{a^n}=1\]
+
+为了使公式$a^m\div a^n=a^{m-n}$
+也适用于$m=n$的情况，就应该
+使形式上的运算结果“$a^0$”与实际内容“1”一致起来，我们规
+定$a$的零次幂等于1, 即$a^0=1\;\;  (a\ne 0)$就合理了。
+用同样的方法，来探索$m<n$时的情况。
+
+当$m<n$时，$a^m\div a^n=a^{m-n}=a^{-(n-m)}$，这里$-(n-m)$是个负整数，我们还没有规定$a^{-(n-m)}$的意
+义。但另一方面，在$m<n$的条件下，$a^m\div a^n$的实际意义是：
+\[a^m\div a^n=\frac{a^m}{a^n}=\frac{a^m\div a^n}{a^n\div a^n}=\frac{1}{a^{n-m}}\qquad (a\ne 0)\]
+这样看来，为了使公式$a^m\div a^n=a^{m-n}$在$m<n$时也适用，规
+定：
+\[a^{-(n-m)}=\frac{1}{a^{n-m}}\quad (a\ne 0)  \]
+就可以了，也就是说，$n$是正整数的时候，应规定：
+
+
+【III】对零指数和负整数指数下定义
+
+\begin{blk}{定义2}
+    \[a^0=1\qquad  (a\ne 0)\]
+\end{blk}
+
+\begin{blk}{定义3}
+    \[a^{-n}=\frac{1}{a^n} \qquad  (a\ne 0, \quad n\text{是正整数})\]
+\end{blk}
+
+这两个定义中特别要注意“$a\ne 0$”这个条件，也就是说零
+的零次幂是没有意义的，零的负整数次幂也是没有意义的。
+
+有了定义2和定义3, 对于同底数的整数指数幂相除的
+运算法则，就可通行无阻，而不必再局限于$m>n$了，例
+如
+\[（-2)^2\div (-2)^2=(-2)^0=1\]
+\[4^5\div 4^7=4^{5-7}=4^{-2}=\frac{1}{4^2}=\frac{1}{16}\]
+
+定义1、2、3说明现在我们的指数已经扩充到整数范
+围了。
+
+【IV】性质的证明
+
+一般来说，当一个概念被推广以后，原来具有的性质可
+能有些仍然保持成立，有些就不再成立了。所以必须对原来
+的性质逐条加以研究，对那些仍然成立的性质，加以证明肯
+定，对那些不再成立的性质也应通过举反例加以否定。另
+外，新的概念是否又带来了新的性质，这是研究推广了的概
+念应该注意的一个问题，只有通过这样的研究，才能掌握推
+广了的概念。
+
+把指数概念推广到整数范围以后，上述五条性质，因条
+件起了变化，就成为：
+
+\begin{blk}{}
+\begin{enumerate}
+    \item $a^m\cdot a^n=a^{m+n}\quad (m,n\in\mathbb{Z},\;\; a\ne 0)$
+    \item $a^m\div a^n=a^{m-n}\quad (m,n\in\mathbb{Z},\;\; a\ne 0)$
+    \item $(a^m)^n=a^{mn}\quad (m,n\in\mathbb{Z},\;\; a\ne 0)$
+    \item $(a\cdot b)^n=a^{n}\cdot b^n\quad (ab\ne 0,\;\; n\in\mathbb{Z})$
+    \item $\left(\frac{a}{b}\right)^n=\frac{a^n}{b^n}\quad (ab\ne 0,\;\; n\in\mathbb{Z})$
+\end{enumerate}    
+\end{blk}
+
+现在我们来证明性质1。
+
+已知：$m,n$是任意两个整数，$a\ne 0$.
+
+求证：$a^m\cdot a^n=a^{m+n}$
+
+我们要对$m,n$分各种情况来讨论，由于$m,n$均可取正整
+数、负整数和零，即
+\[m=\begin{cases}
+    0\\ \text{正整数}\\ \text{负整数}
+\end{cases},\qquad n=\begin{cases}
+    0\\ \text{正整数}\\ \text{负整数}
+\end{cases}  \]
+因而从$m$中取出一种情况，从$n$中取出一种情况，组成一种
+情况，那么一共有$3\x3=9$种，在这九种情况中，因为$m
+=$正整数，$n=$正整数的情况以前已证过，可以略去。又由
+于实数乘法适合交换律，因而$m,n$是对称的，这样，我们只
+就下面五种情况来证明：
+\[\begin{cases}
+    m=0\\n=0
+\end{cases}\begin{cases}
+    m=\text{正整数}\\n=0
+\end{cases}\begin{cases}
+    m=\text{负整数}\\n=0
+\end{cases}\begin{cases}
+m=\text{正整数}\\  n=\text{负整数}
+\end{cases}\begin{cases}
+    m=\text{负整数}\\  n=\text{负整数}
+\end{cases}  \]
+
+\textbf{情况1:} 当$m=0$, $n=0$时，由零指数的定义，
+\[a^m\cdot a^n=a^0\cdot a^0=1\cdot 1=1=a^0=a^{m+n} \]
+$\therefore\quad a^m\cdot a^n=a^{m+n}$成立。
+
+\textbf{情况2:} 当$m$是正整数，$n=0$时，
+\[a^m\cdot a^n=a^m\cdot a^0=a^m\cdot 1=a^m=a^{m+0}=a^{m+n}\]
+$\therefore\quad a^m\cdot a^n=a^{m+n}$成立。
+
+
+\textbf{情况3:} 当$m$是负整数，$n=0$时，
+\[a^m\cdot a^n=a^m\cdot a^0=a^m\cdot 1=a^m=a^{m+0}=a^{m+n}\]
+$\therefore\quad a^m\cdot a^n=a^{m+n}$成立。
+
+\textbf{情况4:} 当$m$是正整数，$n$是负整数，那么$n=-|n|$, $|n|$为正整数。
+
+$\because\quad a^m\cdot a^n=a^m\cdot a^{-|n|}=a^m\cdot\frac{1}{a^{|n|} }=\frac{a^m}{a^{|n|}}=a^{m-|n|}=a^{m+(-|n|)}=a^{m+n} $
+
+$\therefore\quad a^m\cdot a^n=a^{m+n}$成立。
+
+\textbf{情况5：} 当$m,n$都是负整数时，那么
+$m=-|m|$, $n=-|n|$。因此：
+\[\begin{split}
+    a^m\cdot a^n&=a^{-|m|}\cdot a^{-|n|}=\frac{1}{a^{|m|}}\cdot \frac{1}{a^{|n|}}\\
+    &=\frac{1}{a^{|m|}\cdot a^{|n|}}=\frac{1}{a^{|m|+|n|}}\\
+    &=a^{-(|m|+|n|)}\\
+    &=a^{-(|m|)+(-|n|)}=a^{m+n}
+\end{split}\]
+$\therefore\quad a^m\cdot a^n=a^{m+n}$成立。
+
+综合五种情况及前面的分析，就证明了当$m,n$为任意整
+数时，$a^m\cdot a^n=a^{m+n}$成立。
+
+其它几条性质可以类似地证明。应当指出，有了定义2、3以后，对于任何整数$n$, 都有：
+\[\frac{1}{a^n}=a^{-n}\qquad (a\ne 0)\]
+这是因为：当$n$是正整数时，这就是定义3, 当$n$为零时，
+ \[\frac{1}{a^n}=\frac{1}{a^0}=\frac{1}{1}=a^0=a^{-n}\]
+ 当$n$为负整数时，$n=-|n|$
+\[\frac{1}{a^n}=\frac{1}{a^{-|n|}}=a^{|n|}=a^{-n}\]
+这样，定义3虽然是对$n$为正整数来说的，有$a^{-n}=\frac{1}{a^n}$，
+但实
+际上暗示了$n$为任意整数时，$a^{-n}=\frac{1}{a^n}$
+都有了确定的意义。
+
+有了这个公式，上面的性质2就可归结到性质1
+上。
+事实上，只要1成立，那么对于任何整数$m,n$我们
+有：
+\[a^m\div a^n=a^m\cdot \frac{1}{a^n}=a^m\cdot a^{-n}=a^{m+(-n)}=a^{m-n}\]
+
+有了这个公式，上面的性质5也可归结为性质3和4。
+事实上，只要3和4成立，那么对于任何整数$m,n$,
+我们有：
+\[\begin{split}
+    \left(\frac{a}{b}\right)^n&=\left(a\cdot\frac{1}{b}\right)^n=(a\cdot b^{-1})^n=a^n\cdot (b^{-1})^n\\
+    &=a^n \cdot b^{-n}=a^n\cdot \frac{1}{b^n}=\frac{a^n}{b^n}
+\end{split}\]
+这样，五条性质可归结为三条性质：
+\begin{enumerate}
+    \item $a^m\cdot a^n=a^{m+n}\quad (a\ne 0;\;\;m,n\in\mathbb{Z})$
+    \item $(a^m)^n=a^{mn}\quad (a\ne 0;\;\;m,n\in\mathbb{Z})$
+    \item $(a\cdot b)^n=a^n\cdot b^n \quad (ab\ne 0;\;\;n\in\mathbb{Z})$
+\end{enumerate}
+
+
+\begin{example}
+\begin{multicols}{2}  
+    \begin{enumerate}
+        \item $2^0=1$
+        \item $(0.75)^0=1$
+        \item $\left(-\sqrt{3}\right)^0=1$
+        \item $0^0$无意义
+        \item $10^{-3}=\frac{1}{10^3}=0.001$
+        \item $3(-2)^{-4}=\frac{3}{(-2)^{4}}=\frac{3}{16}$
+        \item $\left(\frac{1}{2}\right)^{-5}=2^5=32$
+        \item $(-0.25)^{-1}=\left(-\frac{1}{4}\right)^{-1}=-4$
+    \end{enumerate}
+\end{multicols}   
+\end{example}
+
+\begin{example}
+    把下列单项分式化成整式形式：
+    \[\frac{a}{3bc^2}=\frac{1}{3}ab^{-1}c^{-2},\qquad \frac{3}{2a^{-3}b^{-1}c^2}=\frac{3}{2}a^3bc^{-2}  \]
+\end{example}
+
+\begin{example}
+    把下面的数写成$a\cdot 10^n$的形式，这里$a$是含有一
+位整数的数，$n$是任意整数（把一个数写成这种形式叫 科学
+记数法）。
+    \begin{enumerate}
+        \item 1吨(t)$=1000$公斤(kg)$=10^3$公斤(kg)
+        \item  1毫米(mm)$=0.001$米(m)$=10^{-3}$米(m)
+        \item  1年$=31,556,925,975$秒(s)=$3.1556925975\x10^7$(s)$\approx 3.156\x10^7$(s)
+        \item   地球到太阳的距离$=149,640,000$公里(km)
+        $=1.4964\x10^8$(km)
+        \item    地球的质量$=5,970,000,000,000,000,000,000$(t)
+        $=5.97\x10^{21}$(t)
+        \item    原子核$U_{288}$的半径$=0.000,000,000,000,93$(cm)$=9.3\x10^{-13}$(cm)
+    \end{enumerate}
+\end{example}
+
+\begin{example}
+\begin{enumerate}
+    \item $(b^{-3})^{-2}=b^{(-3)(-2)}=b^6$
+    \item \[\begin{split}
+        \left(3a^{-2}b^2c^{-3}\right)\left(\frac{4}{5}ab^{-3}c^3\right)&=\frac{12}{5}a^{-2+ 1}b^{2+(-3)}c^{-3+3}\\
+        &=\frac{12}{5}a^{-1}b^{-1}\\
+        &=\frac{12}{5ab}
+    \end{split}\]
+    \item \[\begin{split}
+        \left(\frac{a+b}{a-b}\right)^{-3}\left(\frac{a-b}{a+b}\right)^{-2}&=\left[\left(\frac{a+b}{a-b}\right)^{-1}\right]^{3} \left(\frac{a-b}{a+b}\right)^{-2}\\
+        &=\left(\frac{a-b}{a+b}\right)^{3}\left(\frac{a-b}{a+b}\right)^{-2}\\
+        &=\left(\frac{a-b}{a+b}\right)^{3-2}=\left(\frac{a-b}{a+b}\right)^{1}\\
+        &=\frac{a-b}{a+b}
+    \end{split}\]
+\end{enumerate}
+\end{example}
+
+    
+\begin{example}
+\begin{enumerate}
+    \item \[\begin{split}
+        \frac{\left(a^{-2} b^{-3}\right)\left(-4 a^{-1} b\right)}{12 a^{-4} b^{-2}}&=\frac{-4 a^{-2-1} b^{-3+1}}{12 a^{-4} b^{-2}} \\
+    &=\frac{-4 a^{-3} b^{-2}}{12 a^{-4} b^{-2}}\\
+    &=-\frac{1}{3} a
+    \end{split}\]
+    \item \[\begin{split}
+        \left(x^{2}-y^{-2}\right)\div\left(x-y^{-1}\right) 
+    &=\left[x^{2}-\left(y^{-1}\right)^{2}\right] \div\left(x-y^{-1}\right) \\
+    &=\left(x+y^{-1}\right)\left(x-y^{-1}\right)\div \left(x-y^{-1}\right) \\
+    &=x+y^{-1}=x+\frac{1}{y}
+    \end{split}\]
+\end{enumerate}
+\end{example}
+
+
+\section*{习题1.1}
+\addcontentsline{toc}{subsection}{习题1.1}
+
+\begin{enumerate}
+    \item 换去下列各算式中的负指数：
+    \begin{multicols}{2}
+        \begin{enumerate}
+        \item $4x^{-3}y^3$
+        \item $\frac{1}{5c^{-3}}$
+        \item $\frac{4a^{-2}}{5b^{-3}}$
+        \item $\frac{3a^{-3}x^2}{5b^3y^{-4}}$
+    \end{enumerate}
+    \end{multicols}
+    
+    \item 证明下面的运算法则，如果$m,n$为任意整数，而$a\ne 0$,
+    则$(a^m)^n=a^{m\cdot n}$
+    \item 把下列的数写成$a\cdot 10^n$的形式，这里$a$是含有一位整数的数，$n$是任意整数，
+    \begin{multicols}{2}
+        \begin{enumerate}
+        \item 8900
+        \item  3,200,000
+        \item 0.000,015
+        \item 0.000,000,025
+    \end{enumerate}
+    \end{multicols}
+    
+    
+\item 下面是物理学常用的长度单位，将它化成mm并以10的幂表
+示出来：
+\begin{enumerate}
+    \item $1\text{微米}(1\mu {\rm m})=\frac{1}{1000}{\rm mm}$
+    \item $1\text{毫微米}(1 {\rm nm})=\frac{1}{1,000,000}{\rm mm}$ 
+    \item  $1\text{微微米}(1 {\rm pm})=\frac{1}{1,000,000,000}{\rm mm}$ 
+\end{enumerate}
+
+
+\item 以10的幂来表示：
+\begin{enumerate}
+    \item 1mm是多少cm；
+    \item 1${\rm cm}^3$是多少${\rm m}^3$ (Litre即升)；
+    \item 1g是多少kg, 是多少吨(t)。
+\end{enumerate}
+\item 将下面的数据用小数形式表示出来：
+\begin{enumerate}
+    \item 红血球的直径$=0.7\x10^{-8}$(cm);
+    \item 最小的细菌的长度$\approx 10^{-4}$(cm);
+    \item 钠光（黄色）的波长$=5.89\x10^{-7}$(cm);
+    \item 氢原子的直径$\approx 10^{-8}$(cm);
+    \item 氢原子的质量$=1.64\x10^{-24}$(g);
+    \item 电子的质量$=9\x10^{-28}$(g);
+    \item 铀矿石的含镭量$=3.328\x10^{-6}$\%.
+\end{enumerate}
+
+\item 完成下列运算并将所得结果中的负指数变换成正指数：
+\begin{multicols}{2}
+ \begin{enumerate}
+    \item $(2x^2)\div (3x^{-3})$
+    \item $ax^2\div x^{-1}$
+    \item $(a^{-2}x^2)\div a^4$
+    \item $(ax)^{-3}\div (bx)^{-3}$
+    \item $(2^n)^{n-1} \div (2^{n-1})^{n+1}\quad (n>1)$
+\end{enumerate}   
+\end{multicols}
+
+\item 利用整数指数幂的指数法则，计算
+\begin{multicols}{2}\begin{enumerate}  
+\item $\left\{\left[\frac{5}{3}-\left(\frac{6}{5}\right)^{-1}\right]^{-2}-\left(\frac{25}{11}\right)^{-1}\right\}^{-3}$\item $\left[\left(\frac{5 a^{-2} c^{3}}{3 x^{-3} y^{4}}\right)^{-2}\right]^{4}$
+\item $\frac{\left(3 x^{2} y^{-3}\right)^4}{\left(-2 x^{-3} y^{2}\right)^{-3}\left(-27 x^{-5} y^{2}\right)}$
+\item $\left(\frac{2}{a^{n}+a^{-n}}\right)^{-2}-\left(\frac{2}{a^{n}-a^{-n}}\right)^{-2}$
+\end{enumerate}\end{multicols}
+
+\item 求证:
+\begin{enumerate}
+    \item $\left(a+a^{-1}\right)^{2}\left(a-a^{-1}\right)^{2}=a^{4}-2+\frac{1}{a^{4}}$
+    \item $\frac{a^{-3}+b^{-3}}{a^{-1}+b^{-1}}+\frac{a^{-3}-b^{-3}}{a^{-1}-b^{-1}}=2\left(\frac{1}{a^{2}}+\frac{1}{b^{2}}\right)$
+\end{enumerate}
+
+\item 化简：
+ \begin{multicols}{2}
+\begin{enumerate}
+    \item  $\frac{a^{2}+a^{-2}-2}{a^{2}-a^{-2}}$
+    \item  $\frac{m^{3}+n^{-3}}{m+n^{-1}}+\left(m-n^{-1}\right)^{2}$
+\end{enumerate}
+\end{multicols}
+\item 求$32x^{-6}+12x^{-4}+10x^{-2}-12$除
+以$2x^{-2}-1$所得的商式
+和余数。
+\end{enumerate}
+
+\subsection{$n$次算术根}
+为了进一步把指数概念从整数范围扩充到有理数范围，
+我们先介绍一下$n$次算术根及其运算性质。
+
+\begin{blk}{定义}
+ 设$a$是一个实数，$n$是正整数，如果存在着实数
+$x$, 使得
+$$x^n=a$$
+那么，$x$就叫做\textbf{$a$的$n$次方根}，$a$叫做\textbf{被开方数}，$n$叫做\textbf{根指数}。   
+\end{blk}
+ 
+由方根的定义推知：
+\begin{enumerate}
+    \item 如果$x_1$是正数$a$的偶次方根，那么$x_1$也是$a$的偶次
+    方根。
+
+    因为如果存在$x_1$使得$x_1^n=a\; (>0)$, 那么，$(-x_1)^n=(x_1)^n=a$ ($n$为偶数），即$x_1$和$-x_1$都是正数$a$的偶次方根．比如，
+$x^4=16$, 则$x=\pm 2$都是16的四次方根。
+\item 负数的偶次方根不存在，这是因为任何数的偶次方
+都是非负数的缘故。
+\item 不等于零的任何数的奇次方根的符号与被开方数的
+符号相同。
+
+因为如果被开方数是负数$-a\; (a>0)$, 那么它的奇次方
+根，就不能是0或正数，由于0的任何奇次方是0, 正数的
+任何奇次方是正数，这就说明负数的奇次方根应该是负数；
+同样说明正数的奇次方根应该是正数。
+\item 0的方根是0。
+\end{enumerate}
+
+在本教程的第六册中，我们将证明下面的存在定理。
+
+
+\begin{blk}{定理}
+    如果$a>0$, 方程$x^n=a$存在唯一的正实数根。
+\end{blk}
+
+为明确起见，我们把这个正实数方根叫做$a$的算术根，下
+面给出它的定义和记法。
+
+
+\begin{blk}{定义}
+    如果$a$是正实数，那么$a$的正的$n$次方根叫做\textbf{$a$的$n$次
+算术根}，而零也叫零的$n$次算术根，记为$\sqrt[n]{a}$。$a$的算术平方根
+用不带根指数的符号$\sqrt{n}$表示。$\sqrt[1]{a}$这个表示$a$的符号，我们不用。
+\end{blk}
+
+例如：$2^6=32$, 2叫做32的5次方根，也是32的5次算术根，
+因此$\sqrt[5]{32}=2$; $(\pm 2)^4=16$，$2$和$(-2)$都是16的4次方根，其中2是16的4次算术根，因此$\sqrt[4]{16}=2$; $(-2)$不是16的4次算术根。因此$\sqrt[4]{16}\ne -2$, 但$-2$可写成$-\sqrt[4]{16}$。$(-3)^3=-27$, $-3$
+叫做$-27$的3次方根，但不是算术根。有的课本也用符号$\sqrt[n]{a}$
+（$a<0$, $n$是奇数）表示负数的奇次方根，例如$\sqrt[3]{-27}=-3$。
+但是负数的奇次方根总可以用对应的算术根表示出来，例如
+$\sqrt[3]{-27}=-\sqrt[3]{27}$, 一般地，$\sqrt[2n+1]{-a}=-\sqrt[2n+1]{a}\quad  (a>0)$。
+
+请注意以下几点：
+
+\begin{enumerate}
+    \item 算术根的概念含有两个条件：被开方数是非负的；
+算术根只代表方根中的非负值。以后在实数范围内，符号
+$\sqrt[n]{a}$（$a>0$）只代表算术根，因此，正数$a$的偶次方根的负值
+用$-\sqrt[n]{a}$表示。
+\item 在等式$x^n=a$中，已知$x$和$n$求$a$的过程叫做乘方运算。
+反过来，已知$a$和$n$求$x$的过程叫做开方运算，乘方运算和开
+方运算互为逆运算，由于当$a\ge 0$时，$\sqrt[n]{a}$是非负值，因此对
+于一切大于1的正整数$n$都有：
+\begin{align}
+    \left(\sqrt[n]{a}\right)^n&=a\\
+    \sqrt[n]{a^n}&=a
+\end{align}
+
+事实上，设$\sqrt[n]{a}=x$, 按定义，$x^n=a$, 所以$\left(\sqrt[n]{a}\right)^n=a$。
+
+在$a<0$的场合，可以验知：当$n$是奇数时，等式(1.1)、
+(1.2)对于负数的奇次方根仍保持；而当$n$是偶数时，等式(1.1)
+无意义，而(1.2)的右端是$|a|$, 不是$a$, 即$a=|a|$, 这是因
+为算术根只代表非负数的缘故。
+
+例如：$\sqrt{(-2)^2}+\sqrt[3]{-27}+\sqrt[5]{243}=\sqrt{(-2)^2}+\sqrt[3]{(-3)^3}+\sqrt[5]{3^5}=2-3+3=2$
+
+\item 符号$\sqrt[n]{\quad }$叫做$n$次根号，如果根号下是一个算式，例如$\sqrt{1-a}$，$\sqrt[3]{\frac{x}{y}}$
+等等，我们称它为根式。当根号下的算式
+的值不为负数时，它的$n$次算术根才有意义。
+
+例如：$\sqrt{(a-2)^2}=\begin{cases}
+    a-2 & a\ge 2\\
+    2-a & a<2
+\end{cases},\quad \sqrt{(1-a)} \text{ 在$a\le 1$的情形下有意义}$
+
+\end{enumerate}
+
+下面我们介绍$n$次算术根的性质。
+
+\begin{blk}{性质1：乘积的开方法则}
+设$n$为正整数，$a,b$为正实数，那么
+$$\sqrt[n]{ab}=\sqrt[n]{a}\cdot \sqrt[n]{b}$$
+\end{blk}
+
+\begin{proof}
+    因为$\left(\sqrt[n]{a}\cdot \sqrt[n]{b}\right)^n=\left(\sqrt[n]{a}\right)^n\cdot \left(\sqrt[n]{b}\right)^n=ab$
+    
+    按方根定义，$\sqrt[n]{a}\cdot \sqrt[n]{b}$是$ab$的$n$次方根，又因为$a,b$是正
+    数，当然积$ab$仍是正数，且算术根的积$\sqrt[n]{a}\cdot \sqrt[n]{b}$也是正数，
+    这就是说，$\sqrt[n]{a}\cdot \sqrt[n]{b}$是正数$ab$的$n$次算术根；另一方面，$ab$
+    的$n$次算术根是$\sqrt[n]{ab}$, 根据$ab$的$n$次算术根的唯一性得到
+    $$\sqrt[n]{ab}=\sqrt[n]{a}\cdot \sqrt[n]{b}$$
+\end{proof}
+
+\begin{blk}{推论}
+\[\sqrt[n]{a_1a_2\cdots a_n}=\sqrt[n]{a_1}\cdot \sqrt[n]{a_2}\cdots \sqrt[n]{a_n}\]
+\end{blk}
+
+例如：\[\begin{split}
+    \sqrt[3]{60\x 18\x 25}&=\sqrt[3]{(2^2\x 3\x 5)(2\x 3^2)(5^2)}\\
+    &=\sqrt[3]{2^3\x 3^3\x 5^3}\\
+    &=2\x 3\x 5=30
+\end{split}\]
+
+\begin{blk}{性质2：幂的开方法则}
+设$m,n$是正整数，$a>0$, 那么，$\sqrt[n]{a^m}=\left(\sqrt[n]{a}\right)^m$。
+
+\end{blk}
+
+\begin{proof}
+由性质1的推论得，
+\[\sqrt[n]{a^m}=\underbrace{\sqrt[n]{a\cdot a\cdots a}}_{\text{$m$个}}=\underbrace{\sqrt[n]{a}\cdots \sqrt[n]{a}}_{\text{$m$个}}=\left(\sqrt[n]{a}\right)^m\]
+\end{proof}
+
+\begin{blk}{性质3：商的开方法则}
+    设$n$为正整数，$a,b>0$, 那么，
+\[\sqrt[n]{\frac{a}{b}}=\frac{\sqrt[n]{a}}{\sqrt[n]{b}}\] 
+\end{blk}
+
+\begin{proof}
+$\because\quad \left(\frac{\sqrt[n]{a}}{\sqrt[n]{b}}\right)^n=\frac{\left(\sqrt[n]{a}\right)^n}{\left(\sqrt[n]{b}\right)^n}=\frac{a}{b}$
+
+又$\because\quad a>0,\quad   b>0,\quad \frac{a}{b}>0,\quad \frac{\sqrt[n]{a}}{\sqrt[n]{b}}>0$
+
+$\therefore\quad \frac{\sqrt[n]{a}}{\sqrt[n]{b}}$是$\frac{a}{b}$的$n$次算术根
+
+$\therefore\quad \sqrt[n]{\frac{a}{b}}=\frac{\sqrt[n]{a}}{\sqrt[n]{b}}$
+
+\end{proof}
+
+\begin{blk}{性质4：根式的开方法则}
+    设$m,n$是正整数，$a>0$, 那么，
+\[\sqrt[m]{\sqrt[n]{a}}=\sqrt[mn]{a}\]
+\end{blk}
+
+\begin{proof}
+    $\because\quad \left(\sqrt[m]{\sqrt[n]{a}}\right)^{mn}=\left[\left(\sqrt[m]{\sqrt[n]{a}}\right)^m\right]^n=\left(\sqrt[n]{a}\right)^n=a$
+
+    又$\because\quad a>0,\quad \sqrt[m]{\sqrt[n]{a}}>0 $
+    
+    $\therefore\quad \sqrt[n]{a}$是$a$的$mn$次算术根，
+
+    $\therefore\quad \sqrt[m]{\sqrt[n]{a}}=\sqrt[mn]{a}$
+\end{proof}
+
+
+\begin{blk}{性质5：幂指数与根指数相约法则}
+设$m,n,k$为正整数，$a>0$, 那么，
+\[\sqrt[nk]{a^{mk}}=\sqrt[n]{a^m} \]  
+\end{blk}
+
+\begin{proof}
+$\because\quad \left(\sqrt[n]{a^m}\right)^{nk}=\left[\left(\sqrt[n]{a^m}\right)^n\right]^k=\left(a^m\right)^k=a^{mk}$
+
+又$\because\quad a>0,\quad \sqrt[n]{a^m}>0,\quad a^{mk}>0 $
+    
+$\therefore\quad \sqrt[n]{a^m}$是$a^{mk}$的$nk$次算术根，
+
+$\therefore\quad \sqrt[nk]{a^{mk}}=\sqrt[n]{a^m} $
+\end{proof}
+
+最后强调，这些性质是在$a>0$的前提下成立的，对于
+$a<0$, 有些根式也许仍有意义，但法则就不适用了，例如，性
+质5:
+
+设$a=-8$, 那么，
+$\sqrt[6]{(-8)^2}=\sqrt[6]{64}=2$, 而$\sqrt[3]{-8}=\sqrt[3]{(-2)^3}=-2$，
+因此，$\sqrt[6]{(-8)^2}\ne \sqrt[3]{-8}$。
+
+
+
+\begin{example}
+    化简下列各式：
+\begin{enumerate}
+\item $\sqrt[4]{25 x^{2} y^{2}} \quad(x, y \ge 0)$
+\item  $\sqrt[6]{5^{4} a^{4} b^{2}}\quad (a, b \ge 0)$
+\item $\sqrt{3 x^{2 a+2}}\quad (x \ge 0)$
+\item $\sqrt[6]{27(u+v)^{18}}\quad (u,v\ge 0)$
+\item $(a-b) \sqrt{\frac{a^{2}+a b}{a^{2}-2 a b+b^{2}}}\quad (a, b>0)$
+\item $\sqrt[3]{16 \sqrt{2}}$
+\item $\sqrt[4]{4 x^{6}}\quad (x \in \mathbb{R})$
+\end{enumerate}
+\end{example}
+
+\begin{solution}
+\begin{enumerate}
+    \item $\sqrt[4]{25 x^{2} y^{4}}=\sqrt[4]{\left(5 x y^{2}\right)^{2}}=\sqrt{5 x y^{2}}$
+    \item $\sqrt[6]{5^{4} a^{4} b^{2}}=\sqrt[6]{\left(5^{2} a^{2} b\right)^{2}}=\sqrt[3]{5^{2} a^{2} b}=\sqrt[3]{25 a^{2} b}$
+    \item $\sqrt{3 x^{2 n+2}}=\sqrt{3} \cdot \sqrt{\left(x^{n+1}\right)^{2}}=\sqrt{3} x^{n+1}$
+    \item \[\begin{split}
+        \sqrt[6]{27(u+v)^{18}}&=\sqrt[6]{3^3\left[(u+v)^{6}\right]^{3}}\\
+        &=\sqrt[6]{[3 (u+v)^{6}]^3}=\sqrt{3(u+v)^{6}}
+        \\
+        &=\sqrt{3}\sqrt{(u+v)^6}=\sqrt{3}(u+v)^3
+    \end{split}\]
+    \item \[\begin{split}
+        (a-b) \sqrt{\frac{a^{2}+a b}{a^{2}-2 a b+b^{2}}}&=(a-b) \frac{\sqrt{a^2+ab}}{\sqrt{(a-b)^2}}\\
+        &=(a-b)\frac{\sqrt{a(a+b)}}{|a-b|}\\
+        &=\begin{cases}
+            \sqrt{a(a+b)}, & a>b>0\\
+            -\sqrt{a(a+b)}, & b>a>0
+        \end{cases}
+    \end{split}\]
+\item \[\begin{split}
+    \sqrt[3]{16 \sqrt{2}}&=\sqrt[3]{\sqrt{16^2}\cdot \sqrt{2}}\\
+    &=\sqrt[3]{\sqrt{16^2 \cdot 2}}=\sqrt[6]{16^2 \cdot 2}\\
+    &=\sqrt[6]{2^8\cdot 2}=\sqrt[6]{2^9}=\sqrt{2^3}=2\sqrt{2}
+\end{split}\]
+\item \[\begin{split}
+    \sqrt[4]{4 x^{6}}&=\sqrt[4]{2^2 |x|^{6}}=\sqrt{2|x|^3}\\
+    &=\sqrt{2\cdot |x|^2\cdot |x|}=\sqrt{2}|x|\sqrt{|x|}\\
+    &=\begin{cases}
+        \sqrt{2}x\sqrt{x} , & x\ge 0\\
+        -\sqrt{2}x\sqrt{-x} , & x<0
+    \end{cases}
+\end{split}\]
+\end{enumerate}
+\end{solution}
+
+
+\begin{example}
+    把$\sqrt{2}$，$\sqrt[3]{-3}$，$\sqrt[4]{4}$化成同次式（指数相同的
+    根式叫做同次根式）
+\end{example}
+
+\begin{solution}
+$\because\quad \sqrt[3]{-3}=-\sqrt[3]{3},\quad \sqrt[4]{4}=\sqrt{2}$
+
+$\therefore\quad $只需要考虑将$\sqrt{2}$, $\sqrt[3]{3}$化成同次根式
+\[\begin{split}
+\sqrt{2}&=\sqrt[6]{2^3}=\sqrt[6]{8}\\
+\sqrt[3]{-3}&=-\sqrt[3]{3}=-\sqrt[6]{3^2}=-\sqrt[6]{9}\\
+\sqrt[4]{4}&=\sqrt{2}=\sqrt[6]{8}
+\end{split}\]
+\end{solution}
+
+\begin{ex}
+\begin{enumerate}
+    \item 求出下列方根的值：
+    \begin{multicols}{2}
+\begin{enumerate}
+    \item $\sqrt[4]{10000}$
+    \item $\sqrt[4]{1}$
+    \item $\sqrt[4]{256}$
+    \item $\sqrt[4]{\frac{1}{16}}$
+    \item $\sqrt[4]{\frac{1}{625}}$
+    \item $\sqrt[5]{100000}$
+    \item $\sqrt[5]{0}$
+    \item $\sqrt[5]{0.00001}$
+    \item $\sqrt{\frac{4}{9}}$
+    \item $\sqrt[4]{\frac{1}{81}}$
+    \item $\sqrt[6]{64}$
+    \item $\sqrt[3]{0.064}$
+    \item $\sqrt[5]{0.00243}$
+    \item $\sqrt[10]{0}$
+    \item $\sqrt[3]{-2 \frac{10}{27}}$
+\end{enumerate}        
+    \end{multicols}
+
+\item 计算下面方根，准确到0.1
+\[\sqrt[4]{25},\qquad \sqrt[6]{27},\qquad \sqrt[8]{16},\qquad \sqrt[10]{32} \]
+
+\item 约简下列根式中被开方数的指数和根指数：
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\sqrt[6]{36 x^{2}}$
+    \item $\sqrt[4]{25 y^{2}}$
+    \item $\sqrt[8]{2^{4} a^{4} b^{6}}$
+    \item $\sqrt[16]{14^{4^{4m} b^{8m}}}$
+\end{enumerate}
+\end{multicols}
+这里，$a>0,\;\; b>0,\quad x,y\in\mathbb{R}$
+
+
+\item 计算下列各题（题中字母都是正的）：
+\begin{multicols}{2}
+    \begin{enumerate}
+    \item $\sqrt[3]{\frac{8 x^{3} y^{6}}{27 x^{6} y^{9}}}$
+    \item $\sqrt[n]{\frac{a^{n} b^{2n}}{x^{3 n} y^{n}}}$
+    \item $\sqrt{\frac{25(a+b)^{2}}{(c-d)^{4}}}$
+    \item $\sqrt[3]{-\frac{(a-b)^{3 n}}{(x+y)^{6n}}}$
+    \item $\sqrt[n]{\frac{(a+b)^{2 n}}{a^{3 n}(a-b)^{n}}}$
+\end{enumerate}
+\end{multicols}
+
+\item 化简下列各式:
+\begin{multicols}{2}
+    \begin{enumerate}
+    \item $\sqrt{2 \sqrt{3}}$
+    \item $\sqrt[3]{2 \sqrt{5}}$
+    \item $\sqrt{3\sqrt[3]{2}}$
+    \item $\sqrt[4]{5 \sqrt{2}}$
+    \item $\sqrt{\sqrt[3]{a^{4} b^{2}}}$
+    \item $\sqrt{x^{3} \sqrt[3]{x}}$
+    \item $\sqrt{\frac{x}{y} \sqrt{\frac{x}{y}}}$
+    \end{enumerate}
+\end{multicols}
+\end{enumerate}
+     
+\end{ex}
+
+
+\subsection{最简根式和同类根式}
+根式作运算，计算结果用根式表示时，根式应为最简根
+式，最简根式指：
+\begin{enumerate}
+    \item 被开方数的每一个因式的指数都小于根指数；
+    \item 根号内的式子不含分母；
+    \item 根指数与被开方
+数的指数互质。
+\end{enumerate}
+
+把根式化为最简根式的方法是：
+\begin{enumerate}
+    \item 移因式到根号外，例如：\[\sqrt[n]{a^nb}=\sqrt[n]{a^n}\cdot \sqrt[n]{b}=a\sqrt[n]{b}\;\;(a\ge 0)\]
+    \item 移因式到根号内，例如：\[a\sqrt[3]{\frac{1}{a^2}}=\sqrt[3]{a^3}\cdot \sqrt[3]{\frac{1}{a^2}}=\sqrt[3]{\frac{a^3}{a^2}}=\sqrt[3]{a}\;\;(a>0)\]
+    \item 化去根号内式子的分母，例如
+    \begin{enumerate}
+        \item 如果$ab>0$, 那么$\sqrt{\frac{a}{b}}=\sqrt{\frac{ab}{b^2}}=\frac{\sqrt{ab}}{\sqrt{b^2}}=\frac{\sqrt{ab}}{|b|}$
+        \item 如果$a>0$, $b>0$, 且$n>m$, 那么
+        \[\sqrt[n]{\frac{a}{b^m}}=\sqrt[n]{\frac{ab^{n-m}}{b^mb^{n-m}}}=\frac{\sqrt[n]{ab^{n-m}}}{\sqrt[n]{b^n}}=\frac{\sqrt[n]{ab^{n-m}}}{b} \]
+    \end{enumerate}
+\item 约去根指数与被开方数的指数的公因数，例如，
+\[\sqrt[6]{8x^3}=\sqrt[6]{(2x)^3}=\sqrt{2x}\quad (x>0)\]
+\end{enumerate}
+
+\begin{example}
+    化下面根式为最简根式：
+\begin{enumerate}
+    \item \[\begin{split}
+        \frac{5 a^{2}}{7 b}\sqrt{\frac{49 b^{3}}{5 a}} &=\frac{5 a^{2}}{7 b} \sqrt{\frac{\left(7^{2} b^{2} b\right)(5 a)}{5^{2} a^{2}}} \\
+    &=\frac{5 a^{2}}{7 b} \cdot \frac{7 b}{5 a} \sqrt{5 a b} \\
+    &=a \sqrt{5 a b} \qquad(a>0, b>0) \\
+    \end{split}\]
+    \item \[\begin{split}
+        \frac{2 a^{2}}{3 b} \sqrt[3]{\frac{b^{3}}{a^{4}}-\frac{b^{5}}{a^{6}}} &=\frac{2 a^{2}}{3 b}\sqrt[3]{\frac{a^{2} b^{3}-b^{5}}{a^{6}}} \\
+    &=\frac{2 a^{2}}{3 b} \sqrt[3]{\frac{b^{3}\left(a^{2}-b^{2}\right)}{a^{6}}} \\
+    &=\frac{2 a^{2}}{3 b} \cdot \frac{b}{a^{2}} \cdot \sqrt[3]{a^{2}-b^{2}} \\
+    &=\frac{2}{3} \sqrt[3]{a^{2}-b^{2}} \qquad(a \neq 0, b>0)
+    \end{split}\]
+\end{enumerate}
+\end{example}
+
+\begin{example}
+    作下面根式的乘法和除法：
+\begin{enumerate}
+    \item $$5\sqrt[4]{2a}\cdot \sqrt[4]{8a^3}=5\sqrt[4]{16a^4}=5\sqrt[4]{(2a)^4}=5\x 2a=10a\qquad (a\ge 0)$$
+    \item \[\begin{split}
+        \sqrt{\frac{3}{4}} \cdot \sqrt[4]{\frac{4}{3}}&=\sqrt[4]{\left(\frac{3}{4}\right)^{2}} \cdot \sqrt[4]{\frac{4}{3}}=\sqrt[4]{\left(\frac{3}{4}\right)^{2} \cdot \frac{4}{3}}\\
+&=\sqrt[4]{\frac{3}{4}}=\sqrt{\frac{3}{2^{2}}}=\sqrt[4]{\frac{3 \times 2^{2}}{2^{4}}}=\frac{\sqrt[4]{12}}{2}
+    \end{split}\]
+    \item $\frac{16 \sqrt{3}}{\sqrt{2}}=\frac{16 \sqrt{3} \cdot \sqrt{2}}{\sqrt{2} \cdot \sqrt{2}}=8 \sqrt{6}$
+    \item $\frac{5}{\sqrt[3]{4}}=\frac{5 \sqrt[3]{2}}{\sqrt[3]{2^2} \sqrt[3]{2}}=\frac{5 \sqrt[3]{2}}{\sqrt[3]{2^{3}}}=\frac{5}{2} \sqrt[3]{2}$
+\end{enumerate}
+\end{example}
+
+几个根式化成最简根式后，如果根指数相同，根号内的
+式子也相同，这几个根式叫做同类根式。
+
+
+\begin{example}
+    $\sqrt[3]{8ax^3}$和$\sqrt[6]{64a^2y^{12}}$是同类根式吗？
+\end{example}
+    
+\begin{solution}
+    由于：
+\[\begin{split}
+    \sqrt[3]{8ax^3}&=2x\sqrt[3]{a}\\
+    \sqrt[6]{64a^2y^{12}}&=2y^2\sqrt[6]{a^2}=2y^2\sqrt[3]{a}\qquad (x\ge 0,\;\; a\ge 0)
+\end{split}\]    
+    $\therefore\quad \sqrt[3]{8ax^3}$和$\sqrt[6]{64a^2y^{12}}$同类根式。
+\end{solution}
+
+
+\begin{example}
+    $\sqrt{\frac{2x}{3}}$, $\sqrt{\frac{6}{x}}$, $\sqrt{6x}$是同类根式吗？
+\end{example}
+
+
+\begin{solution}
+    由于：
+\[\begin{split}
+    \sqrt{\frac{2x}{3}}&=\sqrt{\frac{2x\cdot 3}{3\cdot 3}}=\sqrt{\frac{6x}{3^2}}=\frac{\sqrt{6x}}{3}=\frac{1}{3}\sqrt{6x} \\
+    \sqrt{\frac{6}{x}}&= \sqrt{\frac{6x}{x^2}}=\frac{\sqrt{6x}}{x}=\frac{1}{x}\sqrt{6x}
+\end{split}\]    
+    $\therefore\quad \sqrt{\frac{2x}{3}},\; \sqrt{\frac{6}{x}},\;  \sqrt{6x}$是同类根式。
+\end{solution}
+
+根式相加减，就是把同类根式分别合并。
+
+
+\begin{example}
+    \[\begin{split}
+       &\quad  \frac{2}{3}x\sqrt{9x}+6x\sqrt{\frac{x}{4}}-x^2\sqrt{\frac{1}{x}}\\
+&=2x\sqrt{x}+3x\sqrt{x}-x\sqrt{x}\\
+&=4x\sqrt{x}
+    \end{split}\]
+\end{example}
+    
+\begin{example}
+    \[\begin{split}
+        &\quad 15\sqrt[3]{4}-3\sqrt[3]{32}-16\sqrt[3]{\frac{1}{16}}-\sqrt[3]{108}\\
+        &=15\sqrt[3]{4}-6\sqrt[3]{4}-4\sqrt[3]{4}-3\sqrt[3]{4}\\
+        &=2\sqrt[3]{4}
+    \end{split}\] 
+\end{example}
+
+\begin{ex}
+\begin{enumerate}
+    \item 说明下面根式是同类根式：
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\sqrt[3]{24}$和$\sqrt[3]{81}$
+    \item $\sqrt[3]{54}$和$\sqrt[3]{16}$
+    \item $\sqrt{216}$和$\sqrt{\frac{3}{8}}$
+    \item $\sqrt[3]{\frac{72}{343}}$和$\sqrt[3]{41\frac{2}{3}}$
+    \item $\sqrt[4]{\frac{1}{27}}$和$\sqrt[4]{0.1875}$
+\end{enumerate}
+\end{multicols}
+    \item  将下面根式化为同次根式：
+    \begin{multicols}{2}
+\begin{enumerate}
+    \item $\sqrt{2},\; \sqrt[3]{5}$
+    \item $\sqrt[3]{2},\; \sqrt[4]{3}$
+    \item $\sqrt[4]{x^8},\; \sqrt[6]{y^5}$
+    \item $\sqrt[3]{xy^2},\; \sqrt{yz},\; \sqrt[4]{xz^3}$
+    \item $\sqrt{\frac{1}{a}+\frac{1}{x}},\; \sqrt[3]{\frac{1}{a}-\frac{1}{x}}$
+\end{enumerate}
+\end{multicols}
+    \item 作下面根式的加减法：
+\begin{enumerate}
+    \item $\sqrt[3]{40}+\left(\frac{3}{2}\sqrt[3]{-5}-2\sqrt[3]{\frac{1}{5}}\right)$
+    \item $\left(3\sqrt[3]{32}+\sqrt[3]{\frac{1}{9}}-\sqrt[3]{108}\right)-\left(16\sqrt[3]{\frac{1}{16}}-4\sqrt[3]{\frac{1}{72}}\right)$
+\end{enumerate}
+    \item 作下面根式的乘除法：
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\sqrt{a}\cdot \sqrt[4]{\frac{x}{a}}$
+    \item $\sqrt{\frac{2}{3}}\cdot \sqrt[3]{\frac{3}{2}}\cdot \sqrt[6]{\frac{1}{2}}$
+    \item $\left(\sqrt{2}-\sqrt[3]{4}+\sqrt[4]{8}\right)\cdot \sqrt{2}$
+    \item $\sqrt{140}\div \sqrt{20}$
+    \item $\sqrt[4]{8}\div \sqrt{2}$
+    \item $\sqrt[6]{3}\div \sqrt[12]{18}$
+    \item $\left(\sqrt[9]{8}\right)^4$
+    \item $\left(\sqrt[9]{27}\right)^4$
+\end{enumerate}
+\end{multicols}
+\end{enumerate}
+\end{ex}
+
+\subsection{分数指数幂}
+我们再把指数幂的概念由整数指数幂推广到分数指数
+幂，先来探索如何合理地定义$a^{\tfrac{1}{4}}$，$a^{\tfrac{3}{4}}$的意义。
+
+假设符号$a^{\tfrac{1}{4}}$，$a^{\tfrac{3}{4}}$
+有意义，并且适合整数指数幂法则$(a^m)^n=a^{mn}$，
+那么对于$a^{\tfrac{1}{4}}$，$a^{\tfrac{3}{4}}$
+应用这个法则就得到
+$\left(a^{\tfrac{1}{4}}\right)^4=a$和$\left(a^{\tfrac{3}{4}}\right)^4=a^3$。这就是说，可以把$a^{\tfrac{1}{4}}$，$a^{\tfrac{3}{4}}$
+看作方程$x^4=a,\; x^4=a^3$的根。实际上这两个方程的唯一正实数解分别是$\sqrt[4]{a}$和$\sqrt[4]{a^8}$, 即有等式$\left(\sqrt[4]{a}\right)^4=a$, $\left(\sqrt[4]{a^3}\right)^4=a^3$成
+立。因此，我们定义$a^{\tfrac{1}{4}}=\sqrt[4]{a}$，$a^{\tfrac{3}{4}}=\sqrt[4]{a^3}$是合理的。
+
+下面给出一般的定义：
+\begin{blk}{定义4}
+若$a>0$，$m,n$是正整数，我们规定：
+ \[a^{\tfrac{m}{n}}=\sqrt[n]{a^m},\qquad a^{-\tfrac{m}{n}}=\frac{1}{a^{\tfrac{m}{n}}}\]
+\end{blk}
+
+例如：
+\[5^{\tfrac{3}{4}}=\sqrt[4]{5^3},\quad 2^{\tfrac{3}{2}}=\sqrt{a^3},\quad 4^{\tfrac{1}{3}}=\sqrt[3]{4},\quad a^{-\tfrac{4}{3}}=\frac{1}{a^{\tfrac{4}{3}}}=\frac{1}{\sqrt[3]{a^4}} \]
+
+有了定义4, 我们的指数就推广到了有理数了。
+
+对于分数指数，还需要讨论它的合理性问题。这个问题
+的提法是这样的。设有一个正有理数$r$, 按照有理数的性质，
+一定有两个正整数$m,n$, 使得$r=\frac{m}{n}$，
+那么按照定义4，
+\[a^r=a^{\tfrac{m}{n}}=\sqrt[n]{a^m}\qquad (a>0)\]
+但另一方面，$r$还有其它正分数表示法，例如，
+$\frac{2m}{2n}$
+就是另一个不同的表示法，设
+$\frac{m_1}{n_1}$是$r$的另一个任意正分数表示法，
+那么按定义4，
+\[a^r=a^{\tfrac{m_1}{n_1}}=\sqrt[n_1]{a^{m_1}}\qquad (a>0)\]
+
+于是，对于同一个正有理数$r$, $a^r$就有很多（实际上是无
+穷多）个形式上不同的表示式，而$a^r$当然被规定为一个确定
+的数，所以必须证明$a^r$的任何两个不同的表示式是相等的。
+这就是下面的定理。
+
+\begin{blk}{定理}
+    设$a$是任意给定的正实数，$m,n,m_1,n_1$是正整
+    数且$\frac{m}{n}=\frac{m_1}{n_1}$，
+    则$a^{\tfrac{m}{n}}=a^{\tfrac{m_1}{n_1}}$   
+\end{blk}
+
+\begin{proof}
+由于$\frac{m}{n}=\frac{m_1}{n_1}$，因而$mn_1=m_1n$，故
+\[a^{mn_1}=a^{m_1n}\]
+
+$\because\quad a^{\tfrac{m}{n}}=\sqrt[n]{a^m}=\sqrt[nn_1]{a^{mn_1}}\qquad 
+a^{\tfrac{m_1}{n_1}}=\sqrt[n_1]{a^{m_1}}=\sqrt[nn_1]{a^{m_1n}}$
+
+$\therefore\quad \sqrt[nn_1]{a^{mn_1}}=\sqrt[nn_1]{a^{m_1n}}$，即：
+\[a^{\tfrac{m}{n}}=a^{\tfrac{m_1}{n_1}}\]
+\end{proof}
+    
+这就解决了定义的合理性的问题。不仅如此，它还告诉
+我们，可以改变有理数的分母以适应各种不同的需要。
+
+例如：$5^{\tfrac{1}{2}}=5^{\tfrac{2}{4}}=5^{\tfrac{3}{6}}=\cdots$
+
+\begin{rmk}
+    分指数幂的定义不考虑底是负数的情形，因为这
+    时分指数幂不再具有上述的重要性质．例如，$(-1)^{\tfrac{1}{3}}=\sqrt[3]{-1}=-1$, 同时$(-1)^{\tfrac{2}{6}}=\sqrt[6]{(-1)^2}$=1, 所以$(-1)^{\tfrac{1}{3}}\ne (-1)^{\tfrac{2}{6}}$。又$0^{-\tfrac{m}{n}}$没有
+意义，因此分指数幂的底限制为正数。
+\end{rmk}
+
+有了分数指数幂的定义，上面讲过的三条性质在新的范
+围内就可叙述为：
+\begin{blk}{性质}
+\begin{enumerate}
+    \item  $a^r\cdot a'^s=a^{r+s}$\quad ($r,s$是有理数，$a>0$);
+    \item  $(a^r)^s=a^{rs}$\quad ($r,s$是有理数，$a>0$);
+    \item  $(ab)^r=a^r\cdot b^r$\quad ($r$是有理数，$a,b>0$)。
+\end{enumerate}  
+\end{blk}
+
+我们只对性质1作出证明，其它性质的证明留给同学
+自己去考虑。
+
+性质1的证明：设$a>0$, $r,s$为有理数，我们证明
+$a^r a^s=a^{r+s}$
+
+\begin{proof}
+\textbf{情形1 } 若$r,s$都是正有理数时，则$r=\frac{m}{n}$, $s=\frac{\ell}{k}$, 
+这里$m,n,\ell,k$都是正整数。
+\[\begin{split}
+a^r a^s&= a^{\tfrac{m}{n}}\cdot a^{\tfrac{\ell}{k}} =\sqrt[n]{a^m}\cdot \sqrt[k]{a^{\ell}}\\
+&=\sqrt[nk]{a^{mk}}\cdot \sqrt[nk]{a^{\ell n}}\\
+&=\sqrt[nk]{a^{mk}\cdot a^{n\ell}}=\sqrt[nk]{a^{mk+n\ell}}\\
+&=a^{\tfrac{mk+n\ell}{nk}}=a^{\tfrac{mk}{nk}+\tfrac{n\ell}{nk}}\\
+&=a^{\tfrac{m}{n}+\tfrac{1}{k}}=a^{r+s}
+\end{split}\]
+$\therefore\quad a^r a^s=a^{r+s}$
+
+\textbf{情形2 } 若$r<0$, $s<0$, 则$r=-|r|$, $s=-|s|$.
+\[\begin{split}
+a^r\cdot a^s &= a^{-|r|}a^{-|s|}=\frac{1}{a^{|r|}}\cdot \frac{1}{a^{|s|}}\\
+&=\frac{1}{a^{|r|}a^{|s|}}=\frac{1}{a^{|r|+|s|}}\\
+&=a^{-(|r|+|s|)}=a^{-|r|+(-|s|)}\\
+&=a^{r+s}
+\end{split}\]
+$\therefore\quad a^r a^s=a^{r+s}$
+
+
+\textbf{情形3 } 若$r>0$, $s<0$, 则$|s|=\frac{\ell}{k}$, $r=\frac{m}{n}$, 
+$m,n,\ell,k$都是正整数，则
+\[\begin{split}
+a^r a^s&=a^r\cdot  a^{-|s|}=\frac{a^r}{a^{|s|}}\\
+&=\frac{a^{\tfrac{m}{n}}}{a^{\tfrac{\ell}{k}}}=\frac{\sqrt[n]{a^m}}{\sqrt[k]{a^{\ell}}}\\
+&=\frac{\sqrt[nk]{a^{mk}}}{\sqrt[nk]{a^{n\ell}}}=\sqrt[nk]{\frac{a^{mk}}{a^{n\ell}}}\\
+&=\sqrt[nk]{a^{mk-n\ell}}=a^{\tfrac{mk-n\ell}{nk}}\\
+&=a^{\tfrac{m}{n}-\tfrac{\ell}{k}}=a^{r-|s|}\\
+&=a^{r+s}
+\end{split}\]
+$\therefore\quad a^r\cdot  a^s=a^{r+s}$
+
+（若$r<0$, $s<0$则根据交换律也是成立的）
+
+此外，$r,s$有一个为零的情形，性质1显然成立，故
+$a^ra^s=a^{r+s}$对任意有理数$r,s$成立。
+\end{proof}
+
+\begin{example}
+求下面各分指数幂的值：
+\begin{enumerate}
+\item $18^{\tfrac{1}{2}}=\left(3^2\cdot 2\right)^{\tfrac{1}{2}}=3\cdot 2^{\tfrac{1}{2}}=3\sqrt{2}$
+\item $100^{-\tfrac{3}{2}}=(10^2)^{-\tfrac{3}{2}}=10^{-3}=\frac{1}{10^3}=0.001$
+\item $\left(\frac{81}{625}\right)^{-\tfrac{3}{4}}=\left[\left(\frac{3}{5}\right)^4\right]^{-\tfrac{3}{4}}=\left(\frac{3}{5}\right)^{-3}=\left(\frac{5}{3}\right)^3=\frac{125}{27}$
+\end{enumerate}
+\end{example}
+    
+\begin{example}
+    用分指数幂作下面根式运算：
+\begin{enumerate}
+    \item $\sqrt[4]{a^3}\div \sqrt[3]{a}=a^{\tfrac{3}{4}}\cdot a^{-\tfrac{1}{3}}=a^{\tfrac{3}{4}-\tfrac{1}{3}}=a^{\tfrac{5}{12}}=\sqrt[12]{a^5}$
+    \item $\sqrt{a^3\cdot a\sqrt{a}\cdot a^6 \sqrt[3]{a}}=\left(a^3\cdot a^{1\tfrac{1}{2}}\cdot a^{6\tfrac{1}{3}}\right)^{\tfrac{1}{2}}=\left(a^{10\tfrac{5}{6}}\right)^{\tfrac{1}{2}}=a^{5\tfrac{5}{12}}=a^{5}\cdot \sqrt[12]{a^5}$
+\end{enumerate}
+    
+\end{example}
+
+\begin{example}
+    化简下面算式：
+\begin{enumerate}
+    \item \[\begin{split}
+&\frac{5 x^{-\tfrac{2}{3}} y^{\tfrac{1}{2}}}{\left(-\frac{1}{4}x^{-1} y^{-\tfrac{1}{3}}\right)\left(-\frac{5}{6} x^{-\tfrac{1}{3}} y^{-\tfrac{1}{6}}\right)} \\
+&=24 x^{-\tfrac{2}{3}+1+\tfrac{1}{3}} y^{\tfrac{1}{2}+\tfrac{1}{3}+\tfrac{1}{6}}=24 x^{\tfrac{2}{3}} y \\
+&=24 y \sqrt[3]{x^{2}}
+\end{split}\]
+\item \[\begin{split}
+& \quad   \left(a^{2} x+a x^{1.5} \right)\left(a^{1.5} x^{0.5}+a^{0.5} x\right)^{-1}\\
+&=(a x)\left(a+x^{0.5}\right)\left[a^{0.5} x^{0.5} \left(a+x^{0.5}\right)\right]^{-1}\\
+&=(a x)(a x)^{-0.5}\left(a+x^{0.5}\right)\left(a+x^{0.5}\right)^{-1}\\
+&=(a x)^{0.5}\left(a+x^{0.5}\right)^{0}\\
+&=(a x)^{0.5}=\sqrt{a x}
+\end{split}\]
+\item \[\begin{split}
+ &\quad   \frac{m-n}{m^{\tfrac{1}{2}}-n^{\tfrac{1}{2}}}-\frac{m^{\tfrac{3}{4}}+n^{\tfrac{3}{4}}}{m^{\tfrac{1}{4}}+n^{\tfrac{1}{4}}} \\
+&=\frac{\left(m^{\tfrac{1}{2}}\right)^2-\left(n^{\tfrac{1}{2}}\right)^2}{m^{\tfrac{1}{2}}-n^{\tfrac{1}{2}}}-\frac{\left(m^{\tfrac{1}{4}}\right)^3+\left(n^{\tfrac{1}{4}}\right)^3}{m^{\tfrac{1}{4}}+n^{\tfrac{1}{4}}} \\
+&=m^{\tfrac{1}{2}}+n^{\tfrac{1}{2}}-\left[\left(^{\tfrac{1}{4}}\right)^2- m^{\tfrac{1}{4}}n^{\tfrac{1}{4}}+\left(n^{\tfrac{1}{4}}\right)^2\right]\\
+&=m^{\tfrac{1}{4}}n^{\tfrac{1}{4}}=\sqrt[4]{mn}
+\end{split}\]
+\end{enumerate}
+\end{example}
+
+由例1.15看出，有了分数指数，根式就可转化为幂，根式
+的运算转化为幂的运算，这就有可能简化计算工作，为以后
+的对数计算在理论上作了准备。
+
+\section*{习题1.2}
+
+\addcontentsline{toc}{subsection}{习题1.2}
+\begin{enumerate}
+    \item 求下面分指数幂的值：
+\begin{multicols}{3}
+\begin{enumerate}
+    \item $8^{\tfrac{4}{3}}$
+    \item $16^{-\tfrac{3}{2}}$
+    \item $9^{-\tfrac{5}{2}}$
+    \item $\left(\frac{27}{8}\right)^{-\tfrac{1}{3}}$
+    \item $25^{-\tfrac{1}{2}}$
+    \item $\left(2\frac{1}{4}\right)^{-\tfrac{3}{2}}$
+    \item $\left(3\frac{3}{8}\right)^{-\tfrac{1}{3}}$
+    \item $(0.008)^{-\tfrac{2}{3}}$
+    \item $54^{\tfrac{1}{3}}$
+    \item $(500)^{\tfrac{1}{3}}$
+\end{enumerate}
+\end{multicols}
+(i)，(j)化为最简根式。
+
+\item 按照$\left(\frac{2}{5}\right)^{\tfrac{1}{3}}=\left(\frac{2\cdot 25}{5\cdot 25}\right)^{\tfrac{1}{3}}=\frac{50^{\tfrac{1}{3}}}{5} $ 的样子将分母变成有理数：
+\begin{multicols}{3}
+\begin{enumerate}
+    \item $\left(\frac{2}{3}\right)^{\tfrac{1}{2}}$
+    \item $\left(\frac{5}{12}\right)^{\tfrac{1}{2}}$
+    \item $\left(\frac{1}{2}\right)^{\tfrac{1}{3}}$
+    \item $\left(\frac{4}{3}\right)^{\tfrac{1}{3}}$
+    \item $\left(\frac{2}{5}\right)^{\tfrac{1}{4}}$
+    \item $\left(\frac{4}{3y^2}\right)^{\tfrac{1}{4}}$
+    \item $\left(\frac{1}{10x^3}\right)^{\tfrac{1}{4}}$
+    \item $\left(\frac{2x}{3y^2}\right)^{\tfrac{1}{3}}$
+\end{enumerate}
+\end{multicols}
+
+\item 通过扩分（应用分式的基本性质）将下列分式的分母变成有理数：
+
+例：$\frac{1}{a^{\tfrac{2}{3}}}=\frac{1\cdot a^{\tfrac{1}{3}}}{a^{\tfrac{2}{3}}\cdot a^{\tfrac{1}{3}}}=\frac{a^{\tfrac{1}{3}}}{a}=\frac{\sqrt[3]{a}}{a}$
+\begin{multicols}{3}
+    \begin{enumerate}
+\item $\frac{4}{8^{\tfrac{1}{2}}}$
+\item $\frac{10}{5^{\tfrac{1}{3}}}$
+\item $\frac{1}{x^{\tfrac{1}{4}}}$
+\item $\frac{1}{a^{\tfrac{2}{3}}}$
+\item $\frac{10a}{(2a^3)^{\tfrac{1}{3}}}$
+    \end{enumerate}
+\end{multicols}
+
+\item 按照$2\cdot \left(\frac{1}{4}\right)^{\tfrac{1}{3}}=\left(\frac{8}{4}\right)^{\tfrac{1}{3}}=2^{\tfrac{1}{3}}$的方法做
+\begin{multicols}{2}
+    \begin{enumerate}
+\item $2\cdot \left(\frac{1}{2}\right)^{\tfrac{1}{3}}$
+\item $3\cdot \left(\frac{1}{3}\right)^{\tfrac{1}{3}}$
+\item $\frac{1}{2} \left(64\right)^{\tfrac{1}{5}}$
+\item $a \left(\frac{1}{a}\right)^{\tfrac{3}{2}}$
+    \end{enumerate}
+\end{multicols}
+\item 用根式表示指数幂：
+\begin{multicols}{3}
+    \begin{enumerate}
+\item $a^{\tfrac{4}{5}}$
+\item $b^{-\tfrac{1}{2}}$
+\item $c^{-\tfrac{3}{5}}$
+\item $\left(a^{\tfrac{4}{7}}\right)^{-3}$
+\item $a^{\tfrac{1}{3}}b^{\tfrac{2}{3}}c^{-\tfrac{1}{3}}$
+    \end{enumerate}
+\end{multicols}
+
+\item 用正指数幂表示下列根式：
+\begin{multicols}{2}
+    \begin{enumerate}
+\item $\sqrt[4]{b^{-3}}$
+\item $\left(\sqrt{2}\right)^{-\tfrac{3}{5}}$
+\item $\left(\frac{1}{\sqrt[4]{x^{-5}}}\right)^{-2}$
+\item $\frac{\sqrt[3]{a^2}}{\sqrt[3]{b}}$
+    \end{enumerate}
+\end{multicols}
+\item 用有理指数幂表示下列各式：
+\begin{multicols}{2}
+    \begin{enumerate}
+\item $\sqrt[3]{a^4}$
+\item $\sqrt[5]{b^{11}}$
+\item $\frac{1}{c\sqrt[5]{c^4}}$
+\item $\sqrt{\frac{1}{x^5}}$
+\item $\frac{3}{\sqrt[5]{y^3}}$
+\item $\frac{a^{\tfrac{1}{2}}}{\sqrt{5x^3}}$
+\item $\frac{2\sqrt{a^{-3}}}{3\sqrt[3]{5^5}}$
+    \end{enumerate}
+\end{multicols}
+
+
+\item 用分指数幂计算：
+\begin{multicols}{2}
+    \begin{enumerate}
+\item $2\sqrt{2}\cdot \sqrt[4]{2}\cdot \sqrt[8]{2}$
+\item $\frac{\sqrt{x}\cdot \sqrt[3]{x^2}}{x\sqrt[6]{x}}$
+\item $\frac{a^5\sqrt[3]{a}}{\sqrt{a^3}\sqrt[6]{a^3}}$
+\item $\sqrt{\sqrt[3]{4}}$
+\item $\sqrt[3]{a\sqrt[4]{a^3}}$
+\item $\left(\sqrt[3]{5}-\sqrt{125}\right)\div \sqrt[4]{5}$
+\item $\sqrt[3]{a^{-2}}\cdot \sqrt{a^{-3}}$
+    \end{enumerate}
+\end{multicols}
+
+\item 化简下列各式：
+\begin{multicols}{2}
+    \begin{enumerate}
+\item $a^{\tfrac{1}{4}}a^{\tfrac{1}{3}}$
+\item $\left(\frac{1}{2}x^{\tfrac{1}{2}}y^{-\tfrac{1}{2}}z\right)\left(-\frac{2}{3}x^{-1}y^{-\tfrac{1}{3}}z^{\tfrac{1}{2}}\right)$
+\item $\left(x^{\tfrac{1}{2}}y^{-\tfrac{2}{3}}\right)^6$
+\item $\frac{15a^{\tfrac{1}{2}}b^{\tfrac{1}{3}}c^{\tfrac{3}{4}}}{25a^{-\tfrac{1}{2}}b^{\tfrac{1}{3}}c^{\tfrac{5}{4}}}$
+\item $a^{\tfrac{1}{3}}b^{\tfrac{2}{3}}\div a^{-\tfrac{2}{3}}b^{\tfrac{4}{3}}$
+\item $\left(a^{\tfrac{1}{2}}\sqrt[3]{b^2}\right)^{-3}\div \sqrt{b^{-4}\sqrt{a^{-2}}}$
+\item $\frac{a^{-\tfrac{1}{2}}b^{-\tfrac{3}{4}}}{a^{\tfrac{1}{3}}b^{\tfrac{1}{2}}}\div \frac{a^{\tfrac{5}{6}}}{b^{-\tfrac{1}{6}}}$
+\item $\left(8b^{-\tfrac{1}{3}}x^{-\tfrac{4}{3}}b\sqrt[4]{x^{\tfrac{4}{3}}}\right)^{\tfrac{1}{3}}$
+\item $\left[\left(x^{\tfrac{1}{m-n}}\right)^{m-\tfrac{n^2}{m}}\right]^{\tfrac{m}{m+n}}$
+\item $x\sqrt{x\sqrt{x\sqrt{x}}}$
+    \end{enumerate}
+\end{multicols}
+
+\item 分解下列各式为因式的积：
+\[a^{\tfrac{2}{3}}-b^{\tfrac{2}{3}},\qquad x^{\tfrac{3}{2}}-y^{\tfrac{3}{2}},\qquad x^{-3}-27y^{-3} \]
+
+\item 计算：
+\begin{multicols}{2}
+    \begin{enumerate}
+\item $\left(a^{\tfrac{1}{2}}b^{\tfrac{1}{2}}\right)^2$
+\item $\left(a^{\tfrac{1}{3}}-b^{-\tfrac{2}{3}}\right)\left(a^{\tfrac{2}{3}}+b^{-\tfrac{2}{3}}+b^{-\tfrac{4}{3}}\right)$
+\item $\left(a^{m}+a^{\tfrac{m}{2}}+1\right)\left(a^{-m}+a^{\tfrac{m}{2}}+1\right)$
+\item $\left(m^{\tfrac{3}{2}}+n^{\tfrac{3}{2}}\right)\div \left(m^{\tfrac{1}{2}}+n^{\tfrac{1}{2}}\right)$
+\item $\frac{a-b}{a^{\tfrac{1}{3}}-b^{\tfrac{1}{3}}}-\frac{a+b}{a^{\tfrac{1}{3}}+b^{\tfrac{1}{3}}}$
+    \end{enumerate}
+\end{multicols}
+\end{enumerate}
+
+\subsection{无理指数幂}
+由于无理指数幂的概念要用到实数完备性或极限存在定
+理，我们这里不作详细介绍，只指出$a^{\alpha}$（$a>0$, $\alpha$是无理数），例如$2^{\sqrt{2}}$, $10^{\sqrt{8}}$, $3^{\pi}$等等，仍有确定意义，即它仍
+代表一个确定的实数，并且也满足指数运算的三个法则：
+\[\begin{split}
+    a^{\alpha}\cdot a^{\beta}&=a^{\alpha+\beta}\\
+    \left(a^{\alpha}\right)^{\beta}&=a^{\alpha\beta}\\
+    (ab)^{\alpha}&=a^{\alpha}\cdot b^{\alpha}
+\end{split}\]
+这里$a$, $b$大于零；$\alpha$, $\beta$是无理数。
+
+于是指数法则可以进一步推广，得到下面的普遍定理。
+
+\begin{blk}{定理}
+    指数运算法则$a^{\alpha}\cdot a^{\beta}=a^{\alpha+\beta}$, $\left(a^{\alpha}\right)^{\beta}=a^{\alpha\beta}$, $(ab)^{\alpha}=a^{\alpha}\cdot b^{\alpha}$ ($a,b>0$)对于任何实数$\alpha, \beta$成立。
+\end{blk}
+
+在实际应用中，我们常用有理指数幂去近似地代替无理
+指数幂，例如$\sqrt{2}\approx 1.414$, $10^{\sqrt{2}}\approx 10^{1.414}$。
+因此，在这里
+我们只要求同学知道上述结论就可以了。
+
+\section{对数和常用对数}
+\subsection{对数的定义}
+
+在前面我们引入了有理指数的概念，并指出对于正实数
+$a$与任意实数$\alpha$, $a^{\alpha}$都有明确的意义；在学习指数时，我们回
+顾一下，同底指数幂有一些运算公式：
+\[\begin{split}
+    a^{m}\cdot a^n&=a^{m+n}\\
+    a^{m}\div a^n&=a^{m-n}\\
+    (a^m)^n&=a^{mn}\\
+    \sqrt[n]{a}&=a^{\tfrac{m}{n}}
+\end{split}\]
+这里幂指数$m,n$为任意实数，根指数$n$是大于1的自然数，
+$a$为正实数。
+
+这就是说，同底的幂相乘转化为指数相加；同底的幂相
+除转化为指数相减；幂的乘方转化为指数相乘；幂的开方转
+化为指数相除，对于数值的计算，加法和减法显然比乘法和
+除法容易得多，譬如我们用2的$n$次幂可以简捷地算出式子：
+$M=\frac{512^2\x 64}{32^3\x 256}$的值。
+\[M=\frac{(2^9)^2\x 2^6}{(2^5)^3\x 2^8}=2^{18+6-15-8}=2^1=2\]
+因此，我们自然就希望把这一性质用到实际计算工作中去，
+使计算简化。
+
+现在的问题是，任意两个正数相乘，能否应用上述简化
+的思想来计算？即，如果$M$和$N$均为任意正实数，能否实现
+下述过程：
+\begin{center}
+\begin{tikzpicture}[>=latex]
+\node at (0,0){\Large  $N\x M=a^b\x a^c=a^{b+c}\quad (a>0,\; \text{且} a\ne 1)$};
+\draw[->](-4.7,-.3)--(-4.7,-1)--(-2.5,-1)--(-2.5,-.3);
+\draw[->](-3.5,.3)--(-3.5,1)--(-1.3,1)--(-1.3,.3);
+\node at (-3,0){\Large ?};
+\end{tikzpicture}
+\end{center}
+
+\begin{rmk}
+    因为1以外的正数不可能等于1的任何次幂，所
+以这里必须限定$a\ne 1$。
+\end{rmk}
+
+要把任意正数的乘法转化为同底的幂的乘法，从而用指
+数相加来完成，关键在于任意一个正数$N$能否写成一个已知
+数$a$ ($a>0$且$a\ne1$)的幂$a$的形式，换句话说，就是给了一个
+不等于1的正实数$a$作为底数，那么对于任意给定的正实数
+$N$, 是否有唯一的实数$b$存在，使得$N=a$, 只要这个问题解
+决了，上述的想法就可实现，回答是肯定的，这就是：
+
+\begin{blk}{定理}
+    设$a>0$且$a\ne 1$, 那么对于任意给定的正实数$N$
+存在唯一的实数$b$, 使得
+\[a^b=N\]
+\end{blk}
+ 
+定理的严格证明需要较多的理论，我们将在第六册给出
+它的证明。
+
+现在我们利用这个定理再介绍一个新的概念和一个新的
+符号如下：
+
+\begin{blk}{定义}
+    设$a$是一个不等于1的正实数，$N$是任意给定的
+正实数，如果实数$b$使得等式
+\[a^b=N\]
+成立，那么$b$就叫做\textbf{以$a$为底$N$的对数}，记为$\log_a N=b$, $N$叫
+做\textbf{真数}。
+\end{blk}
+ 
+从定义里可以看出，下面两个式子是等价的：
+\[a^b=N  \Longleftrightarrow \log_a N=b\]
+前者叫做\textbf{指数式}，后者叫做\textbf{对数式}。
+
+由定义知道，求对数是求方幂的一种逆运算。若给出底数
+$a$和指数$b$就是求方幂$N$, 反过来，若给出底数$a$和方幂$N$, 
+求指数$b$, 就是求对数$b=\log_a N$; 若给出指数$b$和方幂$N$, 求底数$a$, 这就是求方根$a=N^{\tfrac{1}{b}}$, 这三个等式，$\log_a N=b$, $a^b=N$
+和$a=N^{\tfrac{1}{b}}$是等价的，即如果$a$、$b$、$N$三个数满足其中一
+个等式，那么它们也满足另外两个等式。
+
+
+
+
+\begin{example}
+    将下列指数式换成对数式：
+\begin{enumerate}
+    \item $10^2=100\quad \Longleftrightarrow \quad \log_{10}100= 2$
+    \item $3^5=243\quad \Longleftrightarrow \quad\log_3 243=5$
+    \item $4^{\tfrac{1}{4}}=\sqrt{2}\quad \Longleftrightarrow \quad \log_4\sqrt{2}=\frac{1}{4}$
+    \item $2^10=1024\quad \Longleftrightarrow \quad \log_2 1024=10$
+    \item $3^{-1}=\frac{1}{3}\quad \Longleftrightarrow \quad \log_3\frac{1}{3}=-1$
+\end{enumerate}
+\end{example}
+
+
+
+\begin{example}
+    求下面等式中的$x$值：
+\begin{enumerate}
+    \item $\log_{64}x=-\frac{2}{3}  \quad \Longleftrightarrow \quad x=(64)^{-\tfrac{2}{3}}=\left(4^3\right)^{-\tfrac{2}{3}}=4^{-2}=\frac{1}{16} $
+    \item  $ \log_x 8 =6 \quad \Longleftrightarrow \quad x^6=8,\quad x=(2^3)^{\tfrac{1}{6}}=\sqrt{2} $
+    \item  $ \log_9 27=x \quad \Longleftrightarrow \quad 9^x=27,\quad 3^{2x}=3^3 $
+    
+    $\therefore\quad 2x=3,\quad x=\frac{3}{2}$
+\end{enumerate}
+\end{example}
+
+同学们想一想怎样证明下面两个对数的重要性
+质：
+\[\log a=1\qquad (a>0,\; a\ne 1)\]
+即底的对数恒等于1;
+\[\log 1=0\qquad (a>0,\; a\ne 1)\]
+即1的对数，对于任何底恒等于0。
+
+对某数连续地完成两个互逆的运算得到的数就是原来这
+个数，例如
+$$(2+3)-3=2,\qquad (2\x3)\div 3=2$$
+因此如
+果给出数$N$, 求出以$a$为底$N$的对数以后，接着再求以$a$为底
+该对数为指数的幂，结果仍等于$N$. 这一点可将对数式
+$\log_a N=b$代入指数式$a^b=N$中的$b$得到下面的恒等式：
+\begin{equation}
+    a^{\log_a N}=N
+\end{equation}
+
+这个恒等式也说明$\log_a N$就是方程$a^b=N$的唯一解。
+
+如果给出数$b$, 我们求出$a$的$b$次幂后，接着再求这个幂
+以$a$为底的对数，这相当于把方幂$a^b=N$代入等式$\log_a N=b$中
+的真数$N$得到恒等式：
+\begin{equation}
+    b=\log_a a^b
+\end{equation}
+
+
+
+\begin{example}
+计算
+\begin{multicols}{3}
+\begin{enumerate}
+    \item $3^{\log_3 243}$
+    \item $\log_3 27$
+    \item $4^{1+\log_4\sqrt{2}}$
+    \item $\log_{10}0.1$
+    \item $5^{\log_5 2 -1}$
+\end{enumerate}
+\end{multicols}
+\end{example}
+
+\begin{solution}
+\begin{enumerate}
+    \item $3^{\log_3 243}=243$
+    \item $\log_3 27=\log_3 3^3=3$
+    \item $4^{1+\log_4\sqrt{2}}=4\cdot 4^{\log_4\sqrt{2}}=4\sqrt{2}$
+    \item $\log_{10}0.1=\log_{10}10^{-1}=-1$
+    \item $5^{\log_5 2 -1}=\frac{5^{\log_5 2}}{5}=\frac{2}{5}$
+\end{enumerate}    
+\end{solution}
+
+\begin{example}
+ 试将以下四式写成2的方幂：
+ \[\sqrt{2},\qquad \sqrt{8},\qquad 3,\qquad \sqrt[3]{3}\]   
+\end{example}
+  
+\begin{solution}
+\begin{enumerate}
+    \item $\sqrt{2}=2^{\tfrac{1}{2}}$
+    \item $\sqrt{8}=2^{\tfrac{3}{2}}$
+    \item $3=2^{\log_2 3}$
+    \item $\sqrt[3]{3}=2^{\log_2 \sqrt[3]{3}}$
+\end{enumerate}
+\end{solution} 
+
+
+\begin{ex}
+\begin{enumerate}
+    \item 计算下列各式的值：
+\begin{multicols}{3}
+\begin{enumerate}
+    \item $2^{0.5}\cdot 8^{0.5}$
+    \item $\frac{10^{-2.5}}{10^{0.5}}$
+    \item $\left(5^{\tfrac{1}{3}}\right)^3$
+    \item $\left(\frac{49}{225}\right)^{-\tfrac{1}{2}}$
+    \item $(16\x 81)^{-0.25}$
+\end{enumerate}
+\end{multicols}   
+
+\item 求下列各式中的$x$, 指出哪个是幂的运算？哪个是求对
+数？哪个是开方运算？
+\begin{multicols}{3}
+    \begin{enumerate}
+        \item $3^4=x$
+        \item $x^3=1000$
+        \item $10^x=0.001$
+    \end{enumerate}
+    \end{multicols}  
+\item 求真数：
+\begin{multicols}{3}
+\begin{enumerate}
+    \item $\log_2 x=3$
+    \item $\log_4 x=-2$
+    \item $\log_3 N=0$
+    \item $\log_3 N=1$
+    \item $\log_{\sqrt{2}} x=4$
+    \item $\log_{0.1} x=-1$
+\end{enumerate}
+\end{multicols}  
+\item 求底数：
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\log_x 216 = 3 $
+    \item $\log_x \frac{1}{81} = 4 $
+    \item $\log_x \frac{1}{64} = -3 $
+    \item $\log_x \sqrt{8} = \frac{3}{4} $
+\end{enumerate}
+\end{multicols}  
+
+\item 求对数：
+\begin{multicols}{3}
+\begin{enumerate}
+    \item $\log_{10} 10000=x$
+    \item $\log_{10} 0.001=x$
+    \item $\log_4 256=x$
+    \item $\log_{\tfrac{1}{3}} 9=x$
+    \item $\log_3 \frac{1}{27}=x$
+    \item $\log_9\frac{1}{9}=x$
+    \item $\log_5 1=x$
+    \item $\log_{0.04} 5=x$
+    \item $\log_{3\sqrt{3}}\frac{1}{27}=x$
+\end{enumerate}
+\end{multicols} 
+
+\item 利用恒等式$\log_a a^b=b,\quad (a>0,\; a\ne 1)$计算：
+\begin{multicols}{3}
+    \begin{enumerate}
+        \item $\log_3\sqrt[4]{3}$
+        \item $\log_2\sqrt{2}$
+        \item $\log_5\frac{1}{\sqrt[3]{5}}$
+        \item $\log_3\sqrt{27}$
+        \item $\log_a\frac{1}{a^n}$
+        \item $\log_a \frac{1}{\sqrt[n]{a}}$
+    \end{enumerate}
+    \end{multicols} 
+
+\item 求对数$x$：
+\begin{multicols}{3}
+    \begin{enumerate}
+        \item $2^x=8$
+        \item $2^x=0.125$
+        \item $3^x=1$
+        \item $4^x=2$
+        \item $4^x=0.5$
+        \item $10^x=10\sqrt{10}$
+        \item $2^x=\frac{\sqrt[5]{2}}{2}$
+        \item $5^x=\sqrt[3]{5^2}$
+        \item $10^x=\frac{1}{\sqrt[4]{1000}}$
+        \item $2^x=3$
+        \item $\left(\sqrt{2}\right)^x=10$
+    \end{enumerate}
+    \end{multicols} 
+
+\item 根据恒等式$a^{\log_a N}=N$, 求：
+\begin{multicols}{3}
+    \begin{enumerate}
+        \item $2^{\log_2 8}$
+        \item $3^{\log_3 7}$
+        \item $36^{\log_6 2}$
+        \item $25^{\log_5 3}$
+        \item $81^{0.5\log_9 7}$
+        \item $81^{\tfrac{1}{2}\log_3 7}$
+        \item $5^{\log_5 10-1}$
+        \item $2^{\log_2 5+1}$
+    \end{enumerate}
+    \end{multicols} 
+\end{enumerate} 
+\end{ex}
+
+\subsection{对数的性质}
+在前面我们说明了对于每个正实数$x$都有唯一的以$a$为底
+的对数$\log_a x$和它对应，于是，
+\[\begin{split}
+   M(M>0)&\longrightarrow \log_a M,\quad \text{使得 } a^{\log_a M}=M \\
+   N(N>0)&\longrightarrow \log_a N,\quad \text{使得 } a^{\log_a N}=N \\
+   M\cdot N(M>0,\; N>0)&\longrightarrow \log_a (M\cdot N),\quad \text{使得 } a^{\log_a (MN)}=MN \\
+   \frac{M}{N}(M>0,\; N>0)&\longrightarrow \log_a \frac{M}{N},\quad \text{使得 } a^{\log_a \tfrac{M}{N}}=\frac{M}{N} \\
+   M^u(M>0,\; u\in\mathbb{R})&\longrightarrow \log_a M^u,\quad \text{使得 } a^{\log_a M^u}=M^u \\
+   \sqrt[n]{M}(n\ge 1,\; n\in\mathbb{Z})&\longrightarrow \log_a \sqrt[n]{M},\quad \text{使得 } a^{\log_a \sqrt[n]{M}}=\sqrt[n]{M} \\
+\end{split}\]
+
+现在我们来研究怎样求：
+\begin{enumerate}
+    \item 积的对数；
+    \item 商的对数；
+    \item $u$次方幂的对数；
+    \item $n$次方根的对数。
+\end{enumerate}
+
+显然对数的性质与指数法则有密切关系，譬如，对应于
+指数法则$a^u\cdot a^v=a^{u+v}$，就有下面的对数法则：
+
+\begin{blk}{性质1}
+    两个正数乘积的对数，等于这个积的因数的对
+数的和，即
+\[\log_a(MN)=\log_a M+\log_a N\]
+\end{blk}
+
+\begin{proof}
+    根据恒等式，有
+    \begin{equation}
+        M=a^{\log_a M},\qquad N=a^{\log_a N}
+    \end{equation}
+    那么将指数法则：$a^u\cdot a^v=a^{u+v}$应用到(1.5), 得到
+\[MN=a^{\log_a M}\cdot a^{\log_a N}=a^{\log_a M+\log_a N}\]
+    根据对数定义得到
+    \[\log_a MN = \log_a M + \log_a N\]
+\end{proof}    
+
+对应于指数法则$\frac{a^u}{a^v}=a^{u-v}$，就有对数法则：
+    
+\begin{blk}{性质2}
+    一个商的对数等于分子与分母的对数的差，即
+    \[\log_a \frac{M}{N}=\log_a M-\log_a N\]
+\end{blk}
+
+\begin{proof}
+将指数法则$\frac{a^u}{a^v}=a^{u-v}$
+应用到(1.5), 得到：
+\[\frac{M}{N}=\frac{a^{\log_a M}}{a^{\log_a N}}=a^{\log_a M-\log_a N}\]
+根据对数定义得到：
+\[\log\frac{M}{N}=\log_a M -\log_a N\]
+\end{proof}    
+
+对应于指数法则$(a^m)^n=a^{mn}$就有对数法则： 
+\begin{blk}{性质3}
+    一个幂的对数，等于幂底数的对数与指数的
+积，即
+\[\log_a M^u =u\log_a M\]
+\end{blk}
+  
+\begin{proof}
+    将指数法则$(a^m)^n=a^{mn}$应用到(1.5)得到
+\[M^u=\left(a^{\log_a M}\right)^u=a^{u\log_a M}\]
+根据对数定义得到
+\[\log_a M^u = u\log_a M\]
+\end{proof}
+    
+性质3的特殊情况是：
+
+\begin{blk}{性质4}
+ $M(M>0)$的$n$次算术根的对数等于根指数的
+倒数乘以被开方数的对数，即
+\[\log_a\sqrt[n]{M}=\frac{1}{n}\log_a M\]
+\end{blk}
+
+\begin{rmk}
+    \begin{enumerate}
+        \item 由性质2可得$\log_a\frac{1}{M}=-\log_a M\; (M>0)$；
+        \item 一般来说，$\log_a(M\pm N)\ne \log_a M\pm \log_a N$；
+        \item 上述四个性质说明，如果先对算式取对数，即把算式
+        过渡到对数，然后根据对数运算法则，两个数相乘与相除可以
+        化为它们的对数相加与相减，一个数的乘方与开方可以化为
+        把它的对数乘以或除以指数，这样计算简捷得多，以后我们还
+        要进一步说明，如何把计算对数的结果再还原到算式的结果。
+    \end{enumerate}
+\end{rmk}
+    
+\begin{example}
+已知 $\log _{10} 2=0.3010$, 求 $\log_{10} 5, \log_{10} 40$,
+    $\log_{10} 5000$
+\end{example}
+
+\begin{solution}
+\[\begin{split}
+  \log _{10} 5&=\log _{10} \frac{10}{2}=\log _{10} 10-\log _{10} 2=1-0.3010=0.6990 \\
+   \log _{10} 40&=\log_{10}(4 \times 10)\\
+   &=\log_{10} 2^{2}+\log_{10} 10=2 \log_{10} 2+1\\
+    &=2 \times(0.3010)+1=1.6020\\
+    \log _{10} 5000&=\log _{10}(5 \times 1000)=\log _{10} 5+\log _{10} 10^{3}\\
+    &=\left(\log_{10} 10-\log_{10} 2\right)+3 \log _{10} 10\\
+    &=4-0.3010=3.6990
+\end{split}\]
+\end{solution}
+
+
+\begin{example}
+已知$\log_{10}2=0.3010$，$\log_{10}3=0.4771$，求$\log _{10} 0.2$, $\log _{10} \sqrt{1.5}$, $\log _{10} 450$
+\end{example}    
+
+\begin{solution}
+    \[\begin{split}
+        \log _{10} 0.2 &=\log _{10} \frac{2}{10}=\log _{10} 2-\log _{10} 10\\ 
+        &=0.3010-1 =-0.6990\\
+        \log _{10} \sqrt{1.5} &=\frac{1}{2} \log _{10} \frac{3}{2}=\frac{1}{2}\left(\log _{10} 3-\log _{10} 2\right)\\
+        &=\frac{1}{2}(0.4771-0.3010)=0.08805\\
+        \log _{10} 450 &=\log_{10}\frac{3^2\x 10^2}{2}=\log_{10}(3\x 10)^2-\log_{10} 2\\
+        &=2\left(\log_{10}3+\log_{10}10\right) -\log_{10}2\\
+        &=2(0.4771+1)-0.3010=2.6532
+\end{split}\]
+注意：在解题时常用到$\log_a a=1$, $\log_a 1=0$。
+\end{solution}    
+
+求任何单项式的对数就是求该式中各因式的对数的代数
+和。
+    
+\begin{example}
+    已知$y=\frac{(a-b)^3\sqrt[3]{c}}{\sqrt[5]{(a+b)^2d^3}}$，求$\log_c y$
+\end{example}
+
+\begin{solution}
+\[\begin{split}
+    \log_c y&=\log_c \frac{(a-b)^3\sqrt[3]{c}}{\sqrt[5]{(a+b)^2d^3}}\\ 
+&=\log_c (a-b)^3\cdot \sqrt[3]{c}  -\log_c \sqrt[5]{(a+b)^2d^3}\\
+&=\log_c (a-b)^3+ \log_c \sqrt[3]{c}  -\frac{1}{5}\log_c {(a+b)^2d^3}\\
+&=3\log_c (a-b)+\frac{1}{3}\log_c  c-\frac{1}{5}[2\log_c (a+b)+3\log_c d]\\
+&=3\log_c (a-b)+\frac{1}{3}-\frac{2}{5}\log_c (a+b)-\frac{3}{5}\log_c d
+\end{split}\]
+\end{solution}
+
+所谓代数式的还原法就是由一个单项式的对数式反求这
+个单项式。
+
+\begin{example}
+已知$\log_2 x=\log_2 a+2\log_2 b-\frac{1}{3}\log_2 c$，求$x$。
+\end{example}
+
+\begin{solution}
+    \[\log_2 x=\log_2 a+\log_2 b^2-\log_2 \sqrt[3]{c}=\log_2 ab^2-\log_2 \sqrt[3]{c}
+=\log_2 \frac{ab^2}{\sqrt[3]{c}}\]
+根据同底的两个对数相等，则它的真数相等，得出
+\[x=\frac{ab^2}{\sqrt[3]{c}}\]
+\end{solution}    
+
+
+\begin{example}
+    已知$\log_a N=\log_ac+b$, 求$N$。
+\end{example}
+
+
+\begin{solution}
+\[\log_a N=\log_a c+\log_a a^b=\log_a c\cdot a^b\]
+根据同底的两个对数相等则其真数相等，得出
+\[N=c\cdot a^b\] 
+\end{solution}
+
+\begin{blk}{性质5}
+    以$b$为底$N$的对数，除以以$b$为底$a$的对数的商，
+可以换作以$a$为底$N$的对数
+\[\log_a N=\frac{\log_b N}{\log_b a}\]
+这个公式叫做换底公式。
+\end{blk}
+
+
+\begin{proof}
+    因为$N=a^{\log_a N}$，两边取以b为底的对数，得到
+    \[\log_b N = \log_b (a^{log_aN} )\]
+    应用对数法则(性质3), 得到
+\[\log_b N=(\log_a N)\log_ba\]
+即
+\[\log_a N=\frac{\log_b N}{\log_b a}\]
+
+\end{proof}
+
+
+\begin{blk}{推论}
+    $$\log_ab=\frac{1}{\log_ba}$$
+\end{blk}
+
+
+\begin{example}
+已知$\log_{10}2=0.3010$，求$\log_2 5$。
+\end{example}
+
+\begin{solution}
+\[\log_2 5=\log_2 \frac{10}{2}=\log_2 10-\log_2 2=\frac{1}{\log_{10}2}-1=\frac{1}{0.3010}-1=\frac{699}{301}\] 
+\end{solution}    
+
+\begin{example}
+    已知$\log_{10}2=a$, $\log_{10}7=b$，求$\log_{8}9.8$。
+\end{example}
+
+\begin{solution}
+\[\begin{split}
+    \log_{8}9.8&=\frac{\log_{10}9.8}{\log_{10}8}=\frac{\log_{10}\frac{2\x 7^2}{10}}{\log_{10}2^3}\\
+    &=\frac{\log_{10}2+2\log_{10}7-\log_{10}10}{3\log_{10}2}\\
+    &=\frac{a+2b-1}{3a}
+\end{split}\]
+\end{solution}
+
+\section*{习题1.3}
+\addcontentsline{toc}{subsection}{习题1.3}
+\begin{enumerate}
+    \item 利用对数性质将下面的式子变形：
+    \begin{multicols}{2}
+\begin{enumerate}
+    \item $\log_a a^2b^2$
+    \item $\log_x x\sqrt{y}$
+    \item $\log_x\frac{\sqrt[3]{x}}{y^2}$
+    \item $\log_a\frac{b^3}{\sqrt{a}}$
+    \item $\log_a(ab)^3$
+    \item $\log_a\left(\frac{x}{y}\right)^4$
+    \item $\log_a\sqrt[4]{\frac{x^3}{y}}$
+    \item $\log_a\frac{uv^3}{w^2}$
+\end{enumerate}        
+    \end{multicols}
+
+\item 求下列各式中$\log_{10}x$的展开式：
+\begin{enumerate}
+    \item $x=6a\frac{\sqrt{2(a-b)c}}{5(a-b)^2}$
+    \item $x=5m^{\tfrac{3}{4}}n^{\tfrac{1}{3}}\sqrt[3]{\frac{2\cos\alpha}{3}},\quad (0^{\circ}\le \alpha\le 90^{\circ})$
+    \item $x=\sqrt[5]{\left(\frac{1}{a^2b^2\sqrt[4]{c^3}}\right)^3}$
+    \item $x=\sqrt{\frac{\sqrt{ab}}{a^{-1}}\cdot \sqrt[3]{a^{-1}b^{-2}}}$
+\end{enumerate}
+\item 求证：
+\begin{enumerate}
+    \item $\log_a (e^x+2+e^{-x})+\log_a(e^x-2+e^{-x})=2\log_a(e^x-e^{-x})$
+    \item $\log_a(m^3+3m^2+3m+1)-\log_a(n^3+3n^2+3n+1)=3\log_a\frac{m+1}{n+1}$
+\end{enumerate}
+
+\item 已知$\log_{10} x=\log_{10} a+\log_{10} b-3\log_{10} c$, 求$x$。
+\item 求下列各式的值：
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\frac{1}{2}\log_{3} 9$
+    \item $\log_{4} 2+\log_{4} 8$
+    \item $3\log_{10} 2-\log_{10} 80$
+    \item $\log_{5} 10-\log_{5}\frac{2}{\sqrt{5}} $
+\end{enumerate}
+\end{multicols}
+\item 若$\log_{10} 2=0.3010$,
+计算$\log_{2} 13+\frac{1}{2}\log_{2} 25+\log_{2} \frac{4}{7}-\log_{2}\frac{13}{35} $
+\item 已知$\log_{10} 2=0.3010$, $\log_{10}3=0.4771$,
+求$\log_4 3$和$\log_3 2$
+
+\item  试证$\log_{a^k}b=\frac{\log_ab}{k}$
+
+\item 计算：
+$(\log_23+\log_49)(\log_34 +\log_92)$
+\item 计算：$\log_ab\cdot \log_b c\cdot \log_ca$ ($a,b,c$是不等于1的正
+数)。
+\end{enumerate}  
+
+\subsection{常用对数}
+\subsubsection{近似数计算常识}
+本节要介绍常用对数表，对数表所列对数几乎全是近似
+数，我们不仅在数学用表中遇到近似数，其实在日常生活
+中，有关度量和计算大量物件或计算无理数的的结果，都得
+用近似数来表示。因此，在介绍常用对数之前，我们特别介
+绍下面几点关于近似数的常识。
+
+在度量和计算中所遇到的数有两种情况：一种是能够
+用一个数准确地表示某一个量。例如，在一堂课内出席学生
+50人，一星期有7天，这些数都与实际完全符合，叫做该量
+的准确量。但是在中午一小时内，经过北京天安门广场的人
+数，就未必能用一个数准确地表示，又比如说约2000人出席
+全校大会，“约”这个字说明2000这数是近似的．在计算大量数
+目的物件时，常常要用近似数来表示。
+
+度量一个量，都不能做到绝对准确，所得结果总会含有
+一些误差的，这误差的大小，要看度量仪器的质量以及作度
+量的人是否有经验而定。例如，若用最小分度为1毫米的尺
+子量一金属杆的长度时，所得结果为1.234米，这表示真实长
+度在1.2335米和1.2345米之间．
+
+\begin{blk}{定义1}
+    一个量的准确数（有时说准确值）与近似数（或
+    近似值）的差，叫做这个\textbf{近似数（值）的误差}。
+\end{blk}
+
+
+设$x$是某量的准确数（值），并且$x=3.283$, 则称$a=3.2$
+是$x$的一个不足近似数（值），$b=3.3$是$x$的一个过剩近似数
+（值）。把$x$用它的不足近似数$a$来代替，所产生的误差是：
+\[x-a=3.283-3.2=0.083\]
+如果取$x$的过剩近似数（值），那么这个近似值的误差是：
+\[x-b=3.283-3.3=-0.017\]
+
+显然，不足近似值的误差总是正的，而过剩近似值的误
+差总是负的。
+
+\begin{blk}{定义2 }
+    一个量的准确数与近似数的差的绝对值，叫做
+这个\textbf{近似数的绝对误差}。
+\end{blk}
+
+
+在我们所举的例子中，不足近似值$a$的绝对误差：
+\[|x-a|=|0.083|=0.083\]
+而过剩近似值$b$的绝对误差：
+\[|x-b|=|-0.017|=0.017\]
+
+近似数（值）的绝对误差，表示近似数和该准确数相差多
+少，绝对误差越小说明这个近似数越精确。
+
+在度量长度时，一个量的准确长度是不知道的，但可以
+估计它在哪个范围内。因此近似数的绝对误差的准确值也是
+不知道的，但可以估计出近似数的绝对误差不超过什么数。
+
+\begin{blk}{定义3}
+    设$x$是某量的准确数，$a$是它的近似的数（值），如
+    果这个近似数（值）的绝对误差不超过数$h$, 也就是说满足条
+    件$|x-a|\le h$, 那么$a$叫做$x$的\textbf{精确到$h$的近似数（值）}。    
+\end{blk}
+
+例如：$|x-a|=0.083<0.1,\quad |x-b|=0.017<0.1$，因此：
+3.2和3.3分别叫做3.283的精确到0.1的不足
+近似值和过剩近似值。
+
+前面用最小分度为1毫米的尺子度量金属杆所得到的近
+似值1.234的绝对误差不超过0.0005（米），因此它是精确到
+万分之五（米）的近似值。
+
+\subsubsection{数的四舍五入法和近似数的有效数字}
+准确数据四舍五入时，也会出现近似数，如果某校有
+2003人，当参观者问校长说“学校有多少人？”时，他大概会
+说四舍五入得约数2000人。
+
+把分数$\frac{2}{13}$
+化为小数时，得到无穷循环小数$\frac{2}{13}\approx 0.\dot{1}5384\dot{6}$
+
+在实际计算上，我们常把这种小数取到小数点后某一位
+为止，比方说取到千分之一位，而按四舍五入法舍去其后各
+位数字，于是得：
+$\frac{2}{13}\approx 0.154$。
+
+四舍五入法就是略去几位数字时，如果略去的第一位数
+字小于5, 那么把留下的最末一位数字保留不动；如果略去
+的第一位数字大于或等于5, 那就把留下的最末一位数字加
+上1, 用四舍五入法写出来的数，比单单略去最后几位数后写
+出的数准确些。
+
+例如，0.154就比0.153更接近$\frac{2}{13}$。
+
+$\because\quad \left|\frac{2}{13}-0.154\right|<0.0002,\quad \left|\frac{2}{13}-0.153\right|<0.0009$
+
+$\therefore\quad $0.151比0.153更接近$\frac{2}{13}$。
+
+估计近似数的准确度的最简便的方法之一，是算出它的
+有效数字的个数。
+
+\begin{blk}{定义4}
+    若近似数的误差不超过其末一位数字的一－个单
+位，那么该数的一切数字；除了左起第一个非零数字之前的
+荐以外，都叫有效数字。
+\end{blk}
+
+
+例如，0.154和0.153都是
+的取3位有效数字的数，即
+$\frac{2}{13}$
+的近似值0.154或0.153具有三位有效数字。把准确数
+1.9996四舍五入到千分之一位，得2.000, 这时所有四个数字，
+连三个零在内，都是有效数字，即它是有四个有效数字的
+数。
+
+\begin{blk}{定义5}
+    若近似数的误差大于最末一位数字的一个单
+    位，那么它的最末一个数字叫不可靠的。  
+\end{blk}
+
+把0.1535作为$\frac{2}{13}$
+的近似数时，那么它的最末一个数字5
+就是不可靠的，因为
+$\left|\frac{2}{13}-0.1535\right|>0.0003$
+
+把学校人数2135四舍五入到百位数得2100,这里最末两
+个零是不可靠的数字，2100是有两个有效数字的数。
+
+如果近似数末后的零不是有效数字，我们规定把它写得
+小一些，这样21{\small00}表示具有两个有效数字的近似数。
+
+用科学记数法表示的数在10的方幂前面的数字代表有效
+数字。
+
+例如，0.0000437有三位有效数字，它的标准写法是
+$4.37\x10^{-8}$, 前面2100的标准写法是$2.1\x10^3$.
+
+在计算近似数时，我们必须指明精确到几位有效数字。
+例如0.09235716, 若取三位有效数字的精确度，我们就写成：
+$9.24\x10^{-2}$. 若是$70,454,620,000$取四位有效数字的精确度
+就写成$7.045\x10^{10}$.
+
+\begin{rmk}
+前面例子有效数字中，最后一位数字都已经过四
+舍五入的处理了，如果最后一例中，取二位有效数字的精
+度，就要写作$7.0\x10^{10}$, 不可以写作$7\x10^{10}$。  
+
+不要把“小数点后的数字”跟“有效数字”等同起来，数0.000175有三个有效数字，但总共有六个小数点后的数字。
+\end{rmk}
+
+关于近似数的计算规则如下：
+\begin{blk}{法则1}
+    近似数相加（减）时，其中小数位数最少的近似
+    数有几个数位，它们的和（差）就保留几个小数数位。  
+\end{blk}
+
+\begin{example}
+    已知$\pi\approx 3.1416$, $a=2.4$, $b=0.047$。
+求$\pi+a+b$。
+\end{example}    
+
+\begin{solution}
+
+
+
+    
+\end{solution}
+
+\begin{example}
+    
+\end{example}
+    
+\begin{example}
+    
+\end{example}
+    
+\begin{solution}
+    
+\end{solution}
+\begin{example}
+    
+\end{example}
+
+
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+    
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{example}
+    
+\end{example}
+
+
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}    
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}    
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
