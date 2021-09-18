@@ -877,20 +877,111 @@ $\sin1.54\approx \sin88^{\circ}14'\approx 0.9995$
 设数值$\alpha$, 有单位圆上的点$P$与之对应（如图6.13），
 那么$P$点的坐标是
 \[x=\cos\alpha,\qquad y=\sin\alpha\]
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex]
+\draw[->] (-2,0)--(2,0)node[right]{$x$};
+\draw[->] (0,-2)--(0,2)node[right]{$y$};
+\draw (0,0) circle (1.5);
+\draw (0,0)--(60:1.5)node[right]{$P(\cos\alpha,\sin\alpha)$}--(1.5/2,0)node[below]{$M$};
+\node at (-.25,-.25){$O$};\node at (2,0)[below]{$A(1,0)$};
+\draw[->] (.5,0) arc (0:60:.5);
+\node at (30:.7){$\alpha$};
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+
 因此：
 \[\tan\alpha=\frac{y}{x}=\frac{\sin\alpha}{\cos\alpha},\qquad \cot\alpha=\frac{x}{y}=\frac{\cos\alpha}{\sin\alpha}\]
 \[ \sec\alpha=\frac{1}{x}=\frac{1}{\cos\alpha},\qquad \csc\alpha=\frac{1}{y}=\frac{1}{\sin\alpha}\]
 
+\begin{enumerate}
+    \item 函数 $\cos\alpha$和$\sin\alpha$的定义域是开区间$-\infty<\alpha<+\infty$,
+    即$(-\infty,+\infty)$, 这是因为 $\cos\alpha$和$\sin\alpha$是单位圆上对应
+    于数$\alpha$的点$P$的横坐标和纵坐标，它们对于任何实数$\alpha$都
+    有明确的值。
+\item 函数$\tan\alpha$的定义域是除去形如$\frac{\pi}{2}+k\pi\; (k\in\mathbb{Z})$的数的实数集：
+    \[\left\{\alpha\Big|\alpha\in\mathbb{R},\; \alpha\ne \frac{\pi}{2}+k\pi, \; k\in\mathbb{Z} \right\} \]
+    即正切的定义域是无限个开区间组成的一个集：
+\[\cdots, \left(-\frac{3\pi}{2},-\frac{\pi}{2}\right), \left(-\frac{\pi}{2},\frac{\pi}{2}\right), \left(\frac{\pi}{2},\frac{3\pi}{2}\right),\left(\frac{3\pi}{2},\frac{5\pi}{2}\right),\cdots\]
+这是因为$\tan\alpha =\frac{y}{x}$
+是单位圆上$P$点
+的纵坐标对横坐标之比，唯有当$x=0$时它失去意义，单位圆
+上与$x=0$对应的点只有$(0,1)$和$(0,-1)$, 与$(0,1)$点对应的
+一切实数是$\alpha=\frac{\pi}{2}+2k\pi\; (k\in\mathbb{Z})$, 与$(0,-1)$点对应的一
+切实数是$\alpha=-\frac{\pi}{2}+2k\pi\; (k\in\mathbb{Z})$, 和$(0,1)$点、$(0,-1)$
+点这两点对应的一切实数可以合并写成：
+\[\alpha=\frac{\pi}{2}+k\pi\qquad  (k\in\mathbb{Z})\]
+\item 函数$\cot\alpha$的定义域是除去形如$k\pi\;  (k\in\mathbb{Z})$的数的实
+数集：$\{\alpha|\alpha\in\mathbb{R},\; \alpha\ne k\pi ,k\in\mathbb{Z}\}$, 即余切的定义域是无
+限个开区间组成的一个集：
+\[\cdots, (-\pi ,0),(0,\pi ),(\pi ,2\pi ),\cdots\]
+\item 函数$\sec\alpha$的定义域与正切函数$\tan\alpha$的定义域$\left\{\alpha\Big|\alpha\in\mathbb{R},\;  \alpha\ne \frac{\pi}{2}+k\pi ,k\in\mathbb{Z}\right\}$相同。
+\item 函数$\csc\alpha$的定义域与余切函数$\cot\alpha$的定义域$\{\alpha|\alpha\in\mathbb{R},\; \alpha\ne k\pi ,k\in\mathbb{Z}\}$相同。
+\end{enumerate}
 
+\subsection{三角函数的正负}
+设单位圆上点$P$与数$\alpha$对应，以后我们把与$\alpha$对应，
+处在标准位置，以$\alpha$（弧度）为量数的角$\angle AOP$简称为角$\alpha$。
 
+\begin{enumerate}
+    \item 若$P$点在第一象限（或者角$\alpha$终边在第一象限），
+则$P$点的横坐标$x>0$, 纵坐标$y>0$, 因此，
+$$\cos\alpha>0,\qquad \sin\alpha>0, \qquad\tan\alpha=\frac{\sin\alpha}{\cos\alpha}>0,\qquad \cot\alpha=\frac{\cos\alpha}{\sin\alpha}>0$$
+\item 若$P$点在第二象限（或者角$\alpha$终边在第二象限），
+则$P$点的横坐标$x<0$, 纵坐标$y>0$, 因此，
+$$\cos\alpha<0,\qquad \sin\alpha>0, \qquad\tan\alpha=\frac{\sin\alpha}{\cos\alpha}<0,\qquad \cot\alpha=\frac{\cos\alpha}{\sin\alpha}<0$$
+\item 若$P$点在第三象限（或者角$\alpha$终边在第三象限），
+则$P$点的横坐标$x<0$, 纵坐标$y<0$, 因此，
+$$\cos\alpha<0,\qquad \sin\alpha<0, \qquad\tan\alpha=\frac{\sin\alpha}{\cos\alpha}>0,\qquad \cot\alpha=\frac{\cos\alpha}{\sin\alpha}>0$$
+\item 若$P$点在第四象限（或者角$\alpha$终边在第四象限），
+则$P$点的横坐标$x>0$, 纵坐标$y<0$, 因此，
+$$\cos\alpha>0,\qquad \sin\alpha<0, \qquad\tan\alpha=\frac{\sin\alpha}{\cos\alpha}<0,\qquad \cot\alpha=\frac{\cos\alpha}{\sin\alpha}<0$$
+\end{enumerate}
 
-
-
-
-
-
-
-
+总之，三角函数的符号可以由单位圆上$P$点在哪一象
+限，或者由角$\alpha$的终边在哪一象限决定，如图6.14所示。
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex]
+\begin{scope}
+\draw[->] (-1.5,0)--(1.5,0)node[right]{$x$};
+\draw[->] (0,-1.5)--(0,1.5)node[right]{$y$};
+\node at (-.25,-.25){$O$};
+\draw (0,0) circle(1);
+\foreach \x/\xcorr in {+/{.5,.5}, -/{-.5,.5}, -/{-.5,-.5}, +/{.5,-.5}}
+{
+    \node at (\xcorr) {$\x$};
+}
+\node at (0,-2){$\cos\alpha$和$\sec\alpha$};
+\end{scope}
+\begin{scope}[xshift=4cm]
+    \draw[->] (-1.5,0)--(1.5,0)node[right]{$x$};
+    \draw[->] (0,-1.5)--(0,1.5)node[right]{$y$};
+    \node at (-.25,-.25){$O$};
+    \draw (0,0) circle(1);
+    \foreach \x/\xcorr in {+/{.5,.5}, +/{-.5,.5}, -/{-.5,-.5}, -/{.5,-.5}}
+    {
+        \node at (\xcorr) {$\x$};
+    }
+    \node at (0,-2){$\sin\alpha$和$\csc\alpha$};
+    \end{scope}
+    \begin{scope}[xshift=8cm]
+\draw[->] (-1.5,0)--(1.5,0)node[right]{$x$};
+\draw[->] (0,-1.5)--(0,1.5)node[right]{$y$};
+\node at (-.25,-.25){$O$};
+\draw (0,0) circle(1);
+\foreach \x/\xcorr in {+/{.5,.5}, -/{-.5,.5}, +/{-.5,-.5}, -/{.5,-.5}}
+{
+    \node at (\xcorr) {$\x$};
+}
+\node at (0,-2){$\tan\alpha$和$\cot\alpha$};
+\end{scope}
+\end{tikzpicture}
+    \caption{}
+\end{figure}
 
 
 
