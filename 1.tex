@@ -1875,260 +1875,991 @@ $9.24\x10^{-2}$. 若是$70,454,620,000$取四位有效数字的精确度
 \end{example}    
 
 \begin{solution}
-
-
-
-    
+\begin{enumerate}
+\item 找出小数位数最少的近似数，这样的近似数是
+    2.4。
+    \item 把其它的近似数四舍五入，比所找出的近似数多保
+    留一位：
+    \[\pi\approx 3.1416\approx 3.14,\qquad 0.047\approx 0.05\]
+    \item 作近似数的加法：$3.14+2.47+0.05=5.59$
+    \item 把所得结果四舍五入，保留内位数与所找出的近似
+    数的位数相同，用四舍五入到十分位：
+    \[5.59\approx 5.6\]
+    于是
+    \[\pi+a+b\approx 5.6\]
+    当近似数相减时，可以同样处理。
+\end{enumerate}
 \end{solution}
 
 \begin{example}
-    
+已知$x\approx 6.3\x10^3$, $y=3.26\x10^5$，
+求$x-y$。
 \end{example}
     
-\begin{example}
-    
-\end{example}
     
 \begin{solution}
-    
-\end{solution}
-\begin{example}
-    
-\end{example}
-
-
-
-\begin{solution}
-    
+\[\begin{split}
+     x-y&=6.3\x10^3-3.26\x10^5\\
+&=10^5(6.3\x10^{-2}-3.26)=(0.063-3.26)\x10^5\\
+&=(-3.197)\x10^5\\
+&\approx -3.20\x 10^5\\
+&=-320000
+\end{split}\]   
 \end{solution}
 
-\begin{example}
-    
-\end{example}
+\begin{blk}{法则2}
+近似数相乘（除）时，有效数字位数最少的因数
+有几位有效数字，它们的积（商）就保留几位数字（不算前边
+的零）。
+\end{blk}
 
-\begin{solution}
-    
-\end{solution}
-    
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
 
 \begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{example}
-    
+    已知$u=95.64$, $v=0.28$，
+求积$u\cdot v$。
 \end{example}
 
 
 \begin{solution}
+\begin{enumerate}
+    \item 找出有效数字位数最少的因数，这样的因数是0.28（两位有效数字）。
+    \item 把因数95.64四舍五入，使它比有效数字位数最少的
+因数多一位有效数字：$95.64\approx 95.6$（四舍五入取到三位有效数字；最后一
+个数字是备用数字）。
+\item 相乘后得到积：
+\[95.6\x0.280=26.768\]
+\item 把这个结果四舍五入，使其数字个数与有效数字位
+数最少的因数含有的有效数字位数相同：
+$26.768\approx 27$。
+
+于是$u\cdot v=27$。
+\end{enumerate}
+\end{solution}
+
+在计算近似数的商时，应用上面同样的法则。
+
+\begin{example}
+设$x\approx 0.823$, $y=1.34$, 计算：
+$\frac{xy}{x+y}$的近似值。
+\end{example}
+
+
+\begin{solution}
+\begin{enumerate}
+    \item 求出积$xy$的近似值：$xy\approx 0.823\x1.34=1.10282\approx 1.103$
     
+    （在$x$和$y$的近似值中，都有三位有效数字，所得结果保留四个
+数字；有一个数宇是备用数字）。
+\item 求出$x+y$的近似值：
+$x+y\approx 0.823+1.34=2.163$
+
+（$y$的近似数中，小数点后有两位；$x$的近似数中，小数点后
+有三位，所得结果保留到小数点后三位，有一个数字是备用数
+字）。
+\item 求出商$\frac{xy}{x+y}$的近似值：
+\[\frac{xy}{x+y}\approx \frac{1.103}{2.163}\approx 0.5099\]
+（不算备用数字，在分子与分母的近似值中，都含有三位有效
+数字，计算结果，不算整数位上的零，共有四个数字，有一
+个数字是备用数字。）
+
+\item 把上述结果四舍五入到三个数字（不算个位数上的零）：
+\[\frac{xy}{x+y}\approx 0.510\]
+\end{enumerate}    
+\end{solution}
+
+\begin{ex}
+\begin{enumerate}
+    \item 下列由四舍五入得到的近似数，各精确到哪一位，各有几个有效数字？
+\begin{multicols}{3}
+\begin{enumerate}
+    \item 306万
+    \item 25.7
+    \item 0.004
+    \item 0.01063
+    \item 830000
+    \item $2.60\x10^5$
+\end{enumerate}
+\end{multicols}
+
+    \item 
+    用四舍五入法，按要求对下列各数取近似数：
+\begin{enumerate}
+    \item 0.33428（精确到0.001）
+    \item 64.8（精确到1）
+    \item 0.05069（保留三个有效数字）
+    \item 1.4963（精确到0.01）
+    \item 83230（保留1个有效数字）
+    \item 80230（保留2个有效数字）
+\end{enumerate}
+
+    \item 已知$x$和$y$, 求$x$与$y$的积的近似值：
+        \begin{enumerate}
+\item $x\approx 15.94,\qquad y\approx  0.85$
+\item $x\approx 1.754\x10^8,\qquad y\approx 6.9\x10^{-5}$
+\item $x\approx  8.42\x10^{-4},\qquad y\approx 9.81\x10^5$
+        \end{enumerate}
+
+    \item 
+    已知$x$和$y$的近似值，求商$\frac{x}{y}$
+    的近似值：
+\begin{enumerate}
+    \item $x\approx 18.28,\qquad y\approx 0.54$
+    \item $x\approx 0.36,\qquad y\approx 0.0238$
+    \item $x\approx 4.5\x10^7,\qquad y\approx 2.79\x10^5$
+\end{enumerate}
+
+    \item 求下列各式的近似值：
+\begin{enumerate}
+    \item $3x-5y$, 其中$x\approx 46.24,\qquad y\approx 25.2$
+    \item $\frac{x+y}{x-y}$，其中$x\approx 2.08,\qquad y\approx 10.2$
+    \item $x^2-2x+7$, 其中$x\approx 1.44$
+\end{enumerate}
+\end{enumerate}
+\end{ex}
+
+\subsubsection{常用对数}
+    以10为底的对数叫做常用对数。在数值的计算上常要用
+    到以10为底的对数一些特性。为了书写的方便，我们约定
+    把$\log_{10}N$的底10略去不写，用专门的记号“$\lg$”代替“$\log_{10}$”，例
+    如
+\[ \log_{10} 100=2 \qquad \text{简写成}\qquad  \lg100=2\]
+    以后，如果没有指明对数的底，就认为所说的对数是常用对
+    数，例如说“2的对数是0.3010”就是指2的常用对数是0.3010。
+    也就是
+ \[   lg2=0.3010\]
+  
+ 下面我们要看看，常用对数对于数值计算究竟有哪些便
+    利的性质。
+
+为了说明常用对数的特性，我们首先把真数用科学记数
+法写出来，也就是把它表示为一个1和10之间的数与10的幂的
+积，即$u\x10$, 这里$1\le u<10$, $k\in\mathbb{Z}$, 例如光的速度是每秒
+186,000公里表示为$1.86\x10^5$每秒公里，一个电子的质量是
+0.000,000,000,000,000,000,000,000,000,910,83克表示为
+$9.1083\x10^{-28}$克，把一个数用科学记数法写出的规则是：
+
+\begin{enumerate}
+    \item 把整数部分有$p+1$位的数$N$的小数点，向左移动$p$
+    位得到只有一位整数的数$u$, 这样就有$N=u\x10^p\; (p\ge0)$。
+    \item 把左起第一个非零数字前面有$p$个零（包括个位数上
+    的一个零）的纯小数N的小数点，向右移动$p$位得到只有一位
+    整数的数$u$, 这样就有$N=u\x10^{-p}\; (p\ge1)$。
+\end{enumerate}
+
+如果已知$\lg2.23=0.3482$, 我们只须通过观察10的方幂
+    的对数，就可以求得和$0.223$的有效数字相同，而只有小数点位置不同的数（即这种形式：$2.23\x10^p$, 或$2.23\x10^{-p}$,
+    $p\in\mathbb{N}$的数）的常用对数，这也就是常用对数的好处。例如：
+\[\begin{split}
+\lg22.3&=\lg(2.23\x 10)=\lg2.23+\lg 10=0.3483+1\\
+\lg223&=\lg(2.23\x 10^2)=\lg2.23+\lg 10^2=0.3483+2\\
+\lg2230&=\lg(2.23\x 10^3)=\lg2.23+\lg 10^3=0.3483+3\\
+\lg22300&=\lg(2.23\x 10^4)=\lg2.23+\lg 10^4=0.3483+4\\
+\lg0.223&=\lg(2.23\x 10^{-1})=\lg2.23+\lg 10^{-1}=0.3483-1\\
+\lg0.0223&=\lg(2.23\x 10^{-2})=\lg2.23+\lg 10^{-2}=0.3483-2
+\end{split}\]
+
+我们定义常用对数中的正的纯小数部分叫做对数的尾
+数，而把它的整数部分叫做对数的首数，注意常用对数的尾
+数一定是正的，首数可以是任何整数，它的数值等于真数在
+科学记数形式下的10的幂指数，在上面的对数中，0.3483是
+尾数，整数$+1,+2,+3,+4,-1,-2$是相应对数的首
+数，$\lg2.23$的首数是0。
+
+现在我们把常用对数的一些特性总结如下：
+\begin{enumerate}
+    \item 10的方幂的常用对数是整数。
+因为
+\[\lg 10^n=n\lg10=n,\qquad n\in\mathbb{Z}\]
+
+看下表：
+\begin{center}
+\begin{tabular}{c|ccccccccc}
+    \hline
+$u$ & $\cdots$ &0.001& 0.01&0.1&1&10&100&1000&$\cdots$\\
+\hline
+$\lg u$ & $\cdots$ &$-3$&$-2$&$-1$&0&1&2&3&$\cdots$\\
+\hline
+\end{tabular}
+\end{center}
+ 
+从表中看出$\lg10^u$的值随幂指数增大而增大。
+由此进一步推知：
+\begin{enumerate}
+    \item 如果$u>1$, $\lg u$便是正的；
+    \item  如果$0<u<1$, $\lg u$便是负的；
+    \item    如果$u<0$或$u=0$, $\lg u$无意义。
+\end{enumerate}
+
+
+\item 当$u$是10的整数指数幂以外的有理数时，$\lg u$是无理
+数（证明略去）。
+
+这也就是说，常用对数表中所列的对数值几乎全是有理
+近似值。
+\item 如果$u$是一位整数的数，那么它的对数是一个正的纯
+小数，它的首数等于零。
+
+因为由上表可以看出，当$1<u<10$时，便有$0<\lg u<1$。
+\item 10的整数次幂以外的任何正数的常用对数，可以写
+成首数加尾数的形式，这种形式的数是常用对数的人为形
+式。
+\end{enumerate}
+
+因为
+\[\begin{split}
+    \lg(u\x10^p)&=\lg u+p \qquad (0<\lg u<1,\; p\in\mathbb{N})\\
+&=\text{正的纯小数}+\text{正整数$p$}
+\end{split}\]
+或者
+\[\lg(u\x10^{-p})=\text{正的纯小数}+\text{负整数$(-p)$}\]
+
+利用这个性质，我们可以按下面的规则写对数的首数和
+尾数：
+\begin{enumerate}
+\item 大于1的真数的对数的首数，等于这个真数的整数位
+数减1；
+
+小于1的真数的对数的首数是一个负整数，它的绝对值
+等于这个真数第一个非零数字前面零的个数（包括个位上的
+零在内）。
+
+根据上面把一个数用科学记数法写出的规则和对数的性
+质，这个结论是自明的。
+
+\item 真数的对数尾数只决定于它的各个数字的排列顺序
+而与小数点的位置无关，因此，只是小数点位置不同的那些
+数，它们的对数尾数都相同。
+\end{enumerate}
+
+为了书写上的简便，我们把首数和尾数中间的“$+$”号略
+去不写，当首数是负数的时候，把“$-$”号放在这个整数的上
+面，例如：
+\[\begin{split}
+    \lg 12.3&=1+0.0899=1.0899\\
+    \lg 0.123&=-1+0.0899=\bar{1}.0899\\
+    \lg 0.0123&=-2+0.0899=\bar{2}.0899\\
+\end{split}\]
+
+\begin{rmk}
+   整数部分上的“$-$”号只管整数部分，而不管小数
+部分，即：$\bar{1}.0899\ne -1.0899$。
+\end{rmk}
+
+
+\begin{example}
+    已知$\lg4=0.6021$, 试举出5个数，它们的对数
+    尾数都是0.6021.
+\end{example}
+
+\begin{solution}
+    因为同一个对数的尾数所对应的真数仅仅是小数点
+的位置不同，所以0.04, 0.4, 40, 400, 4000等数的对数尾
+数都是0.6021。
+\end{solution}
+
+\begin{example}
+    已知$\lg x=4.028$, $\lg y=0.1234$, $\lg z=-4.653$,
+    分别判断$x,y,z$是大于1还是小于1的数。大于1
+    时，有几位整数？小于1时，第一个不等于零的数字前面有
+    几个零（包括个位上的零）？
+\end{example}
+
+\begin{solution}
+    $x$是大于1的数，有5位整数；
+$y$是大于1的数，有1位整数；
+因为
+\[
+    \lg z=-4.653=-4+(-0.653)=-5+(1-0.653)=\bar{5}.347<0,
+\]
+所以$z$是小于1的数，第一个不是零的有效数字前面有5个
+零（包括个位数上的零）。
 \end{solution}
 
 
 \begin{example}
-    
+    若$\lg4.86=0.6866$, 求$\lg\sqrt[3]{0.0486}$。
+\end{example}
+
+
+\begin{solution}
+\[\begin{split}
+    \lg\sqrt[3]{0.0486}&=\frac{1}{3}\lg0.0486=\frac{1}{3}(-2+0.6866)\\
+    &=\frac{1}{3}(-3+1.6866)\\
+    &=-1+0.5622=\bar{1}.5622
+\end{split}\]
+\end{solution}
+
+\begin{rmk}
+    例1.34解释了对于一个有负首数的对数的计算常用
+的技巧，假如我们求四次根，那么我们必须把$0.6822-2$写
+成$-4+2.6822$, 并且它们被四除。
+\end{rmk}
+
+下面再给出几个有负首数的对数作四则运算的例子：
+\begin{itemize}
+    \item 加法\[\begin{split}
+    \bar{2}.3758+\bar{3}.7189&=(-2+0.3758)+(-3+0.7189)\\
+&=-5+1.0947=\bar{4}.0947
+\end{split}\]
+    \item 减法\[\begin{split}
+    \bar{3}.7239-\bar{4}.8241&=(-4+1.7239)-(-4+0.8241)\\
+&=0.8998
+\end{split}\]
+    \item 乘法\[\begin{split}
+ \bar{3}.2373\x5&=(-3+0.2373)\x5\\
+&=-15+1.1865=\overline{14}.1865   
+\end{split}\]
+    \item 除法\[\begin{split}
+\bar{2}.6365\div 4&=(-4+2.6866)\div 4\\
+&=-1+0.6717=\bar{1}.6717
+\end{split}\]
+\end{itemize}
+
+\begin{ex}
+\begin{enumerate}
+    \item 求下列各数的常用对数：
+\[10^{-5},\qquad 10^5,\qquad 0.0000001,\qquad 1000000\]
+
+\item 已知$\lg 3=0.4771$, 求：
+\[\lg0.003,\qquad \lg0.03,\qquad \lg0.3,\qquad \lg30,\qquad \lg300,\qquad \lg3000\]
+
+\item \begin{enumerate}
+    \item 把下列各数用负数来表示：
+    \[\bar{1}.3235,\quad \bar{2}.5638,\quad \bar{1}.8436,\quad \bar{2}.4957,\quad \bar{4}.9879\]
+    \item 把下列各数改成负首数与正尾数的和：
+    \[-0.3678,\quad-1.8394,\quad-0.2310,\quad-0.0840,\quad-3.0251\]
+\end{enumerate}
+
+\item  完成下列运算，用首数$+$尾数表示结果。
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\bar{1}.5436+2.3892$
+    \item $\bar{1}.1546+\bar{2}.9835$
+    \item $0.7658-1.3456$
+    \item $\bar{1}.2396-0.7459$
+    \item $0.1518-\bar{1}.2836$
+    \item $0.3215-\bar{2}.9217$
+    \item $1-\bar{1}.28123$
+    \item $2-\bar{2}.15343$
+    \item $\bar{1}.2432\cdot 3$
+    \item $0.1546\cdot (-2)$
+    \item $\bar{1}.7638\cdot (-3)$
+    \item $2.5146\cdot (-1.2)$
+    \item $\bar{2}.2817\div 2$
+    \item $\bar{2}.1536\div 3$
+    \item $\bar{2}.7235\div 4$
+    \item $\bar{1}.6274\div (-3)$
+    \item $\bar{1}.8236\div (-0.2)$
+    \item $\bar{2}.6548\div (-0.3)$  
+\end{enumerate}
+\end{multicols}
+
+\item 若$\lg6444$的尾数是0.8092, 求：
+\[\lg0.6444,\qquad \lg6444000,\qquad \lg0.0006444\]
+\item 已知$\lg32.5=1.5119$, 求下面对数式中的真数$x$:
+\[\lg x=0.5119,\qquad \lg x=2,5119,\qquad \lg x=\bar{4}.5119\]
+\item \begin{enumerate}
+\item $3^{10}$是几位整数？
+\item $3^{100}$是几位整数？
+\item $(0.03)^{10}$在小数点和第一个有效数字之间一共有多少
+个零？（提示：$\lg3=0.4771$）
+\end{enumerate}
+\end{enumerate}
+\end{ex}
+
+\subsubsection{对数表}
+在上一节里，我们知道任意一个正数的对数都可以分成
+两个部分，其中第一部分首数可以从观察中直接求出，第二部
+分尾数，只要知道了1到10以内的数的对数，也就可以求出．
+但是，怎样来求1到10以内的数的对数呢？
+
+因为10的整数指数幂以外的所有有理数，它们的对数都
+是无理数，所以要求一个正数的对数，一般只能得到某一精
+度的近似值，为了应用上的方便，人们把1到10以内的数的
+对数（也就是对数的尾数）制成了各种精确的对数尾数表，例
+如在《四位数学用表》里，就载有具有四位有效数字的对数尾
+数表。
+
+这个表里所载的对数尾数，都是用四舍五入的法则求到
+小数第四位的，因此，这里的对数尾数是精确到0.0001的近
+似值。
+
+现在，我们举例来说明利用这个表找一个数的对数尾数
+的方法。
+
+因为仅仅是小数点位置不同的数，它们的对数的尾数都
+相同，所以我们从一个数查它的对数的尾数时，可以不管真
+数的小数点，只把它看成是若干位的整数，例如，要查
+0.005036, 50.36, 0.5036, 503600的对数的尾数，都只要查
+5036的对数的尾数就可以了。
+
+求一个数的对数时，要先由真数的小数点的位置确定对
+数的首数，然后由真数查出对数的尾数，最后把首数和尾数
+合写在一起。
+
+\begin{example}
+    求下列各数的对数：
+\[523,\qquad 51,\qquad 0.5,\qquad 50.36,\qquad 5.448,\qquad 53842\]
 \end{example}
 
 \begin{solution}
-    
+\begin{enumerate}
+    \item  因为523的整数位数是3, 所以它的对数的首数
+    是2, 从对数表可以查得对数尾数是0.7185，
+
+    $\therefore\quad \lg523=2.7185$
+    \item  因为51的整数位数是2, 所以它的对数的首数是
+    1, 而51的对数尾数和510的对数尾数相同，查表得0.7076,
+
+    $\therefore\quad \lg51=1.7076$
+    \item  因为0.5的第一个不为零的数5前面有一个零（包括
+    个位数上的零），所以它的对数的首数是$\bar{1}$, 而0.5的对数尾数
+    和500的对数尾数相同，查表得0.6990，
+
+    $\therefore\quad \lg0.5=\bar{1}.6990$
+    \item  因为50.36的整数位数是2, 所以它的对数的首数
+    是1, 而50.36对数尾数和5036的对数尾数相同，我们先查
+    前三位数的对数尾数得0.7016, 再加上第四位数字的修正值
+    0.0005, 得0.7021,
+
+    $\therefore\quad \lg50.36=1.7021$
+    \item  因为5.448的整数位数是1, 所以它的对数的首数
+    是0, 查表得5448的对数尾数是0.7362,
+
+    $\therefore\quad \lg5.448=0.7362$
+    \item  因为53842的整数位数是5, 所以它的对数的首数是
+    4, 要求出它的对数尾数，首先把它四舍五入，变成只有四
+    位有效数字的数$5.384\x10^4$, 查表得5384的对数尾数是
+    0.7311,
+
+    $\therefore\quad \lg53842\approx \lg53840=4.7311$
+\end{enumerate}
 \end{solution}    
+
 \begin{example}
-    
+    求下列各数的对数：
+    \[36.5,\qquad 804.7,\qquad 0.26 ,\qquad 0.00453 ,\qquad 945686\]
 \end{example}
 
 \begin{solution}
-    
+\[\begin{split}
+    \lg 36.5&=1.5623\\
+    \lg 804.7&=2.9057\\
+    \lg 0.26&=\bar{1}.4150\\
+    \lg 0.00453&= \bar{3}.6561\\
+    \lg 945686  &\approx  \lg945700=5.9757
+\end{split}\]
 \end{solution}
+    
+\subsubsection{反对数表}
+已知对数求真数，要用《反对数表》（或者叫做“真数表”）。
+反对数表的查法和对数表的查法相类似。
+
+
+
+    
+
 
 
 \begin{example}
-    
+    已知$\lg A=2.2715$, 求$A$.
 \end{example}
 
 \begin{solution}
-    
+    由于对数的首数只与真数的小数点位置有关，而对
+数的尾数只与组成真数的数字（第一个不是零的数字前面的
+零不计算在内）有关，所以
+\begin{enumerate}
+    \item 先由对数尾数0.2715查反对数表，查得1868,这就
+    是与所求的真数只有小数点位置不同的整数；
+    \item 再由首数确定小数点的位置，因为首数是2, 所以
+    真数的整数位数是$2+1=3$, 于是得
+    $$A=186.8$$
+\end{enumerate}
 \end{solution}    
+
+\begin{rmk}
+    对数的首数是用来定位，查反对数表时，不要把它计入。
+\end{rmk}
+
+
 \begin{example}
-    
+   已知$\lg B=\bar{3}.261$, 求$B$. 
 \end{example}
 
 \begin{solution}
-    
+由对数尾数0.261, 查反对数表得1824; 又因首数
+    是$-3$, 所以$B$的第一个有效数字前面有3个0（包括个位上
+    的零），于是得
+    \[B=0.001824\]
+\end{solution}    
+
+\begin{example}
+    已知$\lg x=-0.73248$, 求$x$.
+\end{example}
+
+\begin{solution}
+$\because\quad -0.73248=\bar{1}.26752\approx \bar{1}.2675$
+
+$\therefore\quad x=0.1881$
+\end{solution}  
+
+\begin{ex}
+\begin{enumerate}
+    \item 查表求下面各数的对数：
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0.7
+    \item 0.015
+    \item 2.4
+    \item 25.6
+    \item 0,146
+    \item 0.0084
+    \item 1.02
+    \item 0.208
+    \item 0.0000809
+    \item 5436
+    \item 342.3
+    \item 0.9032
+    \item 0.0638153
+    \item 236743
+    \item 0.547936
+\end{enumerate}
+\end{multicols}
+    \item 求下面对数各相应的真数：
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item 1.7482
+            \item 0.4362
+            \item $\bar{1}.6415$
+            \item 2.6149
+            \item 3.2648
+            \item $\bar{2}.18176$
+            \item $\bar{3}.9340$
+            \item $\bar{4}.7267$
+            \item 0.9236
+            \item $\bar{1}.1015$
+        \end{enumerate}
+        \end{multicols}   
+    \item 求下面各对数的值：
+     \begin{multicols}{2}
+        \begin{enumerate}
+            \item $\lg\cos60^{\circ}$
+            \item $\lg\sin^3 60^{\circ}$
+            \item $\lg\sqrt[3]{\cos 45^{\circ}}$
+            \item $\lg\sqrt[5]{0.00162}$
+        \end{enumerate}
+        \end{multicols}    
+\end{enumerate}
+\end{ex}
+
+\subsubsection{利用对数计算}
+
+\begin{example}
+    利用对数计算：$\frac{341\x 0.06794\x 8.7}{0.9832\x 4780}$
+\end{example}
+
+\begin{solution}
+设$A=\frac{341\x 0.06794\x 8.7}{0.9832\x 4780}$
+那么两边取对数
+\[\begin{split}
+    \lg A&=(\lg 341+\lg0.06794+\lg8.7)-(\lg0.9832+\lg4780)\\
+&=(2.5328+\bar{2}.8322+0.9395)-(\bar{1}.9927+3.6794)\\
+&=2.3045-3.6721=\bar{2}.6324
+\end{split}\]
+查反对数表，得到
+\[A=0.04289\]    
+\end{solution}    
+
+
+\begin{example}
+    已知三角形的面积公式
+    \[\Delta=\sqrt{s(s-a)(s-b)(s-c)}\]
+    这里$a,b,c$是三角形三条边的长，其中
+    $s=\frac{a+b+c}{2}$。
+
+    如果$a\approx 15.37$cm, $b\approx 21.42$cm, $c\approx13.83$cm,
+    求三角形$ABC$的面积。
+\end{example}
+
+\begin{solution}
+由题意可得：
+\[s=\frac{1}{2}(15.37+21.42+13.83)=25.31\]
+\[s-a=9.94,\qquad s-b=3.89,\qquad s-c=11.48\]
+因此：
+\[\begin{split}
+    \lg \Delta&=\frac{1}{2}\bigl[\lg s+\lg(s-a)+\lg(s-b)+\lg(s-c)\bigr]\\
+&=\frac{1}{2}\bigl[1.4033+0.9974+0.5899+1.0599\bigr]\\
+&=2.0253
+\end{split}\]
+$\therefore\quad \Delta=106({\rm cm}^2)$.
+\end{solution}    
+
+\begin{example}
+    利用对数计算$(-2.31)^3\x\sqrt[5]{0.072}$
+\end{example}
+
+\begin{solution}
+    设$A=(-2.31)^3\x\sqrt[5]{0.072}=-2.31^3\x\sqrt[5]{0.072}$，那么
+\[\begin{split}
+    |A|&=2.31^3\x \sqrt[5]{0.072}\\
+\lg|A|&=3\lg 2.31+\frac{1}{5}\lg 0.072\\
+&=3\x 0.3636+\frac{1}{5} \bar{2}.8573\\
+&=1.0908+\frac{1}{5}(0.8573-2)\\
+&=0.8623
+\end{split}\]
+因此$|A|=7.283 \quad \Rightarrow\quad A=-7.283$
+\end{solution}    
+
+
+\begin{example}
+    在$\triangle ABC$中，已知$a=62.24$, $b=74.83$, $A=
+27^{\circ}18'$, 解这个三角形。
+\end{example}
+
+\begin{solution}
+    这里$A$是锐角，并且$a<b$, 我们先计算$\lg\sin B$。
+\[\sin B=\frac{b\sin A}{a}=\frac{74.83\sin 27^{\circ}18'}{62.24}\]
+\[\begin{split}
+    \lg\sin B&=\lg 74.83+\lg \sin 27^{\circ}18'-\lg 62.24\\
+&=1.8741+\bar{1}.6615-1.7941\\
+&=\bar{1}.7415
+\end{split}\] 
+因为$\lg\sin B<0$，即$0\le \sin B<1$, 且$b>a$, 所以这题有两解，
+查表得：
+\[B_1=33^{\circ}28',\qquad B_2=180^{\circ}-B_1=146^{\circ}32'\]
+\[\begin{split}
+    C_1&=180^{\circ}-(A+B_1)=180^{\circ}-60^{\circ}46' =119^{\circ}14' \\
+    C_2&=180^{\circ}-(A+B_2)=180^{\circ}-173^{\circ}50'=6^{\circ}10'
+\end{split}\]
+
+\[c_1=\frac{a\sin C_1}{\sin A}=\frac{62.24\sin 119^{\circ}14'}{\sin 27^{\circ}18'}\]
+
+\[\begin{split}
+    \lg c_1&= \lg 62.24+\lg \sin 119^{\circ}14'-\lg \sin 27^{\circ}18'\\
+    &=1.7941+\bar{1}.9365-\bar{1}.6615\\
+    &=2.0691
+\end{split}\]
+$\therefore\quad c_1=117.2$
+
+\[c_2=\frac{a\sin C_2}{\sin A}=\frac{62.24\sin 6^{\circ}10'}{\sin 27^{\circ}18'}\]
+
+\[\begin{split}
+    \lg c_2&= \lg 62.24+\lg \sin 6^{\circ}10'-\lg \sin 27^{\circ}18'\\
+    &=1.7941+\bar{1}.0311-\bar{1}.6615\\
+    &=1.1637
+\end{split}\]
+$\therefore\quad c_2=14.57$。
+\end{solution}  
+
+指数中含有未知数的方程叫做\textbf{指数方程}。一般地，借助
+于在指数方程两边取对数，可以求得它的解。
+
+\begin{example}
+    若某城市现有人口10万，按照每年1.1\%的比率
+    增长，在$t$年后有人口多少？约经过多少年，这个城市的人
+    口数就将比现在增加一倍？
+\end{example}
+
+\begin{solution}
+设$y$代表$t$年后的人口数，于是
+\[\begin{split}
+    t=0,&\quad y_0=10\\
+t=1,&\quad y_1=10+10\x1.1\%=10(1+1.1\%)\\
+t=2,&\quad y_2=y_1+y_1\x1.1\%=y_1(1+1.1\%)=10(1+1.1\%)^2\\
+t=3,&\quad y_3=y_2+y_2\x1.1\%=y_2(1+1.1\%)=10(1+1.1\%)^3\\
+\cdots & \qquad \cdots\cdots\cdots\\
+t=t,&\quad y_t=10(1+1.1\%)^t
+\end{split}\]
+
+设$t$年后的人口数比现在增加一倍，依题意，$t$满足
+下面的指数方程：
+\[10\x(1.011)^t=20\]
+即：$1.011^t=2$。
+
+在上式两边取对数得：$t\lg 1.011=\lg 2$
+\[t=\frac{\lg2}{\lg1.011}\approx\frac{0.3010}{0.0047}\approx 64\]
+答：约经过64年人口增加一倍。
 \end{solution}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\section*{习题1.4}
+\addcontentsline{toc}{subsection}{习题1.4}
+
+\begin{enumerate}
+    \item 利用对数进行计算：
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\frac{154.8 \times 5.436}{12.72}$
+    \item $\frac{54.83 \times 1.367}{2.832}$
+    \item $\frac{103.8 \times 20.97}{5.174 \times 13.62}$
+    \item $\frac{9.738 \times 21.09}{48.72 \times 0.8478}$
+    \item $\frac{92.17^{2} \times 5.14^{3}}{2.184^{4} \times 0.5386^{2}}$
+    \item $\frac{1.894^{4} \times 23.40^{3}}{44.15^{2} \times 0.9647^{3}}$
+    \item  $\frac{8.150^{2} \times \sqrt[3]{14.36}}{24.38 \times \sqrt{8.734}}$
+    \item $ \frac{12.48^{3} \times \sqrt[4]{5.760}}{1.842 \times \sqrt[3]{673.8}}$
+    \item $(-5.32)^{3}+\sqrt[4]{0.0294}$
+    \item $\frac{\sqrt[3]{-0.536}}{3.89^{2} \times 0.924^{2}}$
+\end{enumerate}
+\end{multicols}
+\item 三角形的三条边的长分别是$a\approx 8.975$cm，$b \approx 7.863$cm, $c\approx 6.456$cm, 求它的面积。
+
+\item  计算：
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\frac{\sin 47^{\circ} 13'}{\tan22^{\circ} 27'}$
+    \item $\frac{\sin 34^{\circ} 17' \times \tan82^{\circ} 6'}{\cos 12^{\circ} 37'}$
+\end{enumerate}
+\end{multicols}
+\item 已知$\triangle ABC$中，$a\approx30$m, $B=22.5^{\circ}$, $C=112.5^{\circ}$, 求$\triangle ABC$的面积。
+
+\item 在$\triangle ABC$中，$a=23.64$dm, $A=97^{\circ}15'$, $C=15^{\circ}31'$,
+求$b,c$。
+\item 
+平行四边形的对角线$d\approx 15.67$dm, 它和两个邻边的夹
+角$\alpha=47^{\circ}15'$, $\beta=26^{\circ}7'$, 求平行四边形的边长和各角的大小。
+
+\item 已知$\triangle ABC$中，$a=324.1$m, $b=417.2$m, $C=113^{\circ}14'$,
+求$c$和它的面积。
+\item 已知$\triangle ABC$中，$b=63$, $c=36$, $C=29^{\circ}23'$, 求$B$。
+\item 某工厂在五年内总产值每年平均增长19.2\%, 求第五年
+的总产值对第一年增长的百分数。
+\item 如果劳动生产率平均每年比上一年提高10.4\%, 那么
+大约要经过几年可以提高到原来的2倍。
+\item 解下面的方程：
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $4^{x}=2^{\tfrac{x+1}{x}}$
+    \item $3^{x-3}-3^{x-1}=80$
+    \item $5^{2x}-23.5^x-50=0$
+    \item $8^{5-3x}=12^{4-2x}$
+    \item $5^{1-x}=6^{x-3}$
+    \item $\begin{cases}
+        2^x\cdot 5^y=1\\
+        5^{x+1}\cdot 2^y=2
+    \end{cases}$
+\end{enumerate}
+\end{multicols}
+
+\item 海中有一小岛$B$, 它的周围3海里内都有暗礁，今有一艘
+海轮从西向东航行，若它在$A$点测得$\angle BAD=24^{\circ}$, 再
+行5.2海里到$D$, 测得$\angle BDC=67^{\circ}$, 问海轮航向不变直向
+东行有无触礁危险。
+\item 为在河的两岸$A,B$间架一桥，需要精确测算$A$、$B$两
+点间的距离，测量人员在
+岸边$A$点附近另取一点
+$C$, 并量出$AC=30.5$米，分
+别测出$\angle A=75^{\circ}12'$, 
+$\angle C=58^{\circ}51'$, 求$AB$的长。
+\item 一人观测$A,B$两物体，
+发现它们分别位于正北和
+北$36^{\circ}$西的方向，若此人向
+西北与向前进1.2公里，看到$A,B$二物分别位于东北
+和正东方向，求$A,B$二物距离。
+\item  如图，货轮在海上以35海里/时的速度沿着方位角（从
+指北方向顺时针转到目标方向线的水平角）为$148^{\circ}$的方
+向航行，为了确定船位，在$B$点观测灯塔$A$的方位角是
+$126^{\circ}$, 航行半小时后到达$C$点，观测灯塔$A$的方位角是
+$78^{\circ}$。求货轮到达$C$点时与灯塔$A$的距离（精确到1海里）。
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=.7]
+    \fill[rotate=30, cyan!20] (-.5,0.5) rectangle (6.5,2.5);
+    \draw[rotate=30] (-.5,.5)--(6.5,.5)    ;
+    \draw[rotate=30]  (-.5,2.5)--(6.5,2.5)    ;  
+\draw[dashed] (0,0)node[left]{$A$}--(75.2:4.5)node[above]{$B$}--(5,0);
+\draw (5,0)node[right]{$C$}--node[below]{30.5m}(0,0);
+
+
+    \end{tikzpicture}
+    \caption{第13题}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1.5]
+    \draw (0,0)node[left]{$B$}--(3,-2)node[right]{$A$}--(1.5,-2.5)node[below]{$C$}--(0,0);
+\draw[->] (0,0)--(0,.75)node[right]{北};
+\draw[->] (1.5,-2.5)--(1.5,-2.5+.75);
+\draw[->] (0,.5)  arc (90:-28:.5);
+\node at (31:.5)[right] {$126^{\circ}$};
+\draw[->] (0,.25)  arc (90:-56:.25);
+\node at (17:.25)[right]{$148^{\circ}$};
+\draw[->] (1.5,-2) arc (90:15:.5)node[above=10pt]{$78^{\circ}$};
+    \end{tikzpicture}
+    \caption{第15题}
+    \end{minipage}
+    \end{figure}
+
+\item  某气象站每天定时施放气球进行高空观测，为了知道
+气球离地面的高度，两观测员在$A,B$两点同时、同向
+测得气球仰角$\alpha=45^{\circ}$, $\beta=34^{\circ}36'$, 且知道$A,B$两点相
+距118米，求气球离地面的高度，已知测量仪器的高度为
+1米（精确到1米）。
+\item  在山顶铁塔上$B$处测得地面上一点的俯角$\alpha=54^{\circ}40'$，
+在塔底$C$处测得点$A$的俯角$B=50^{\circ}1'$，已知铁塔$BC$部
+分高27.3米，求山高$CD$（精确到1米）。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[scale=1, >=latex]
+\draw (0,0)node[left]{$E$} rectangle (5,1);
+\draw (0,1)node[left]{$D$}--(0,4)node[left]{$C$}--(5,1)node[right]{$B$};
+\draw (0,4)--(3,1)node[above]{$A$}--(3,0);
+
+\draw[<->] (2,1) arc (180:90+45:1)node[left=5pt]{$\alpha$};
+\draw[<->] (4,1) arc (180:180-32:1)node[left=5pt]{$\beta$};
+\draw[<->] (5,.7) --node[below]{118m}(3,.7);
+\end{tikzpicture}
+    \caption{第16题}
+\end{figure}
+
+\end{enumerate}
+
+\section*{复习题一}
+\addcontentsline{toc}{section}{复习题一}
+\begin{enumerate}
+    \item 计算：
+\begin{enumerate}
+\item    $3^{0}+3^{-1}-\left(1\frac{7}{9}\right)^{0.5}$
+\item   $\left[1-(0.5)^{-2}\right] \div\left(-\frac{27}{8}\right)^{\tfrac{1}{3}}$
+\item    $\left(2 \frac{3}{5}\right)^{0}+4^{-2} \times\left(2 \frac{1}{4}\right)^{\tfrac{1}{2}}-(0.01)^{0.5}$
+\item   $\left(2 \frac{10}{27}\right)^{-\tfrac{2}{3}}-\left[(0.01)^{\sin\tfrac{\pi}{6}}+\left(6 \frac{1}{4}\right)^{-0.5}\right]$
+\end{enumerate}
+\item 计算：
+\begin{enumerate}
+    \item $3^{\log_{3} 9}$
+    \item $3^{1-\log _{3} 7}$
+    \item $5^{2 \log _{5} 3}-15 \log _{5} 1+\log _{3} \frac{1}{9}$
+    \item $4\lg 2+3 \lg 5-\frac{1}{5} \lg 5$
+    \item $(\lg 5)^{2}+\lg 2 \cdot \lg 50$
+    \item $\lg 5 \cdot \lg 20+(\lg 2)^{2}$
+    \item $\lg 12.5-\lg  \frac{5}{8}+\lg\sin 30^{\circ}$
+    \item $\log _{2} \cos \frac{\pi}{4}-\log _{2} \sin \frac{\pi}{6}$
+    \item $\log _{3} \frac{1}{27}+\log _{\tfrac{1}{2}} 8+\log _{2} 8+\log _{4} 64$
+    \item $\frac{5 \lg 6-\lg 3}{1+\frac{1}{2} \lg 0.36+\frac{1}{3} \lg 8}$
+    \item $\left(\log _{9} 5\right) \cdot\left(\log _{25} 27\right)$
+    \item $2^{\tfrac{1}{5 \log _{5}4}}$
+\end{enumerate}
+
+  \item 化简：
+ \begin{enumerate}
+    \begin{multicols}{2}
+     \item $\frac{\left(a^{\tfrac{3}{5}}b^{-\tfrac{6}{5}}\right)^{-\tfrac{1}{2}}\sqrt[5]{a^4}}{\sqrt[5]{b^3}}$
+     \item $\left(\frac{8x^{-3}}{\sqrt{y^3z^{-6}}}\right)^{-\tfrac{1}{3}}$
+     \item $\sqrt[3]{\frac{8a^3b^6}{27c^3d^9}}$
+     \item $8x^{-\tfrac{1}{3}}\sqrt{y^{-\tfrac{1}{3}}x\sqrt[4]{y^{\tfrac{4}{3}}}}$
+     \item $\left(2x^{\tfrac{1}{2}}+3y^{-\tfrac{1}{4}}\right)\left(2x^{\tfrac{1}{2}}-3y^{-\tfrac{1}{4}}\right)$
+     \item $\left(m^{\tfrac{3}{2}}+n^{\tfrac{3}{2}}\right)\div \left(m^{\tfrac{1}{2}}+n^{\tfrac{1}{2}}\right)$
+     \item $\frac{a-b}{a^{\tfrac{1}{3}}-b^{\tfrac{1}{3}}}-\frac{a+b}{a^{\tfrac{1}{3}}+b^{\tfrac{1}{3}}}$
+    \end{multicols}
+     \item $(1-x^2)^{-\tfrac{1}{2}}-[(1+x)(1-x)]^{\tfrac{1}{2}}-x^2 [(1+x)(1-x)]^{-\tfrac{1}{2}}$
+ \end{enumerate} 
+
+ \item 利用对数进行计算：
+ \begin{multicols}{2}
+\begin{enumerate}
+ \item $\frac{8.15^{2} \times \sqrt[3]{14.36}}{24.38 \times \sqrt{8.734}}$
+ \item $\sqrt[5]{\frac{2.591^{4} \times \sqrt[3]{0.0836}}{1.147^{2}}}$
+ \item $(-5.32)^{3}+\sqrt[4]{0.0294}$
+ \item $\sqrt[3]{79.836+\sqrt{156.374}}$
+\end{enumerate}
+ \end{multicols}
+
+\item \begin{enumerate}
+    \item 已知 $\log _{12} 27=a$, 求证 $\log _{6} 16=\frac{4(3-a)}{3+a}$.
+    \item 已知 $a^{2}+b^{2}=6 a b\; (a>0, b>0)$,
+ 求证 $\lg \frac{a-b}{2}=\frac{1}{2}(\lg a+\lg b)$.
+\end{enumerate}
+
+\item  解下面方程：
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item  $\begin{cases}
+            5^{x}=2^{-y} \\ 
+            5^{2+y}=2^{2-x}
+        \end{cases}$
+        \item  $\begin{cases}
+            2^{x}=3^{y}\\ 
+            2^{y-1}=3^{x-1}
+        \end{cases}$
+        \item $x^{\lg x+2}=1000$
+        \item $\log_2\log_3\log_5x =0$
+        \item $\begin{cases}
+            x^5y^3=5\\x^2y^7=11
+        \end{cases}$
+\end{enumerate}
+\end{multicols}
+
+\item 下图表示曲柄机构装置的图样，连接杆$MK$的长$\ell=125$
+cm, 曲柄$OK$的长$r=25$cm,连杆与汽缸的轴$OM$成$\alpha$角，
+曲柄与同一轴成角$\phi$(例如$\phi=50^{\circ}$), 求活塞$M$的位移$x$
+（这里$x$为活塞由左端位置所走的距离）。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex, scale=1.7]
+    \draw[dashdotted] (-5,0)--(1.2,0);
+    \draw (-4.5,.5) rectangle (-2.5,-.5);
+    \draw (0,0) circle (.75);
+    \node at (-.75,0)[left]{$K_0$};
+    \node at (.75,0)[right]{$K_1$};
+\draw [fill=gray!20](-3.5,.5) rectangle (-3.6,-.5);
+\draw[very thick] (0,0)node[below]{$O$}--node[above]{$r$}(90+45:.75)node[above]{$K$}--node[above]{$\ell$}(-3.5,0)node[below]{$M$};
+\draw [dashed](-4.3,.5)node[below]{$M_0$}--(-4.3,-.5);
+\draw [dashed](-2.7,.5)node[below]{$M_1$}--(-2.7,-.5);
+\draw (-.35,0) arc (180:180-45:.35)node[left=2pt]{$\phi$};
+\draw[dashed] (90+45:.75)--(-.75/1.414,0);
+\draw[|<->|] (-4.3,-.7)--node[fill=white]{$x$}(-3.5,-.7);
+
+\draw (-2,0) arc (0:10:1.5);
+\node at (-2,.2)[right]{$\alpha$};
+\end{tikzpicture}
+    \caption{第7题}
+\end{figure}
+
+\item 如图，两个建筑物水平距离为32.6米，从$A$点观测$B$点
+的俯角是$35^{\circ}12'$, 观测$C$点的俯角为$43^{\circ}24'$, 求此二建
+筑物的高。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex]
+\fill [pattern=north east lines] (0,0) rectangle (-.5,4);   
+\draw (0,0)--(0,4)node[above]{$A$}--(3,4);
+\fill [pattern=north east lines] (5,0) rectangle (5.5,1);   
+\draw (5,0)--(5,1)--(5.5,1);
+\draw (0,0)--(0,-1);
+\draw (5,0)--(5,-1);
+\draw[<->](0,-.5)--node[fill=white]{32.6m}(5,-.5);
+\node at (0,-.2) [left]{$D$};
+\node at (5,-.2) [right]{$C$};
+\draw (0,4)--(5,0);\draw (0,4)--(5,1)node[above]{$B$};
+\draw(-1,0)--(6,0);
+
+\end{tikzpicture}
+    \caption{第8题}
+\end{figure}
+
+\item 一只渔船在航行中不幸遇险，发出警报，在遇险南西10
+海里处有一具货轮，收到警报后立即侦察，发现这只渔
+船的航向是东$15^{\circ}$南，正在用每小时9海里的速度向某
+小岛靠近，如果要在40分钟内把这只渔船营救出来，求
+货轮航行方向和速度（精确到分）。
+\item 
+在塔的正西处$A$点测得塔顶的仰角是$45^{\circ}$, 在它的东南
+处$B$点测得仰角是$60^{\circ}$, $AB$相距为266尺。求塔高。
+
+
+
+
+
+
+
+
+
+
+
+\end{enumerate}
 
 
