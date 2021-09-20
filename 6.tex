@@ -1211,6 +1211,248 @@ $\cot\alpha$& $\sqrt{3}$ &1& $\frac{\sqrt{3}}{3}$\\
   \end{equation}  
 \end{blk}
 
+\begin{proof}
+设$\alpha$ 和$-\alpha$ 是处在标准位置（即如图6.16所示）
+的，按相反的旋转方向且有相同绝对值的角，于是这两个角
+的终边关于$Ox$轴对称。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex]
+\draw[->] (-2,0)--(2,0)node[right]{$x$};
+\draw[->] (0,-2)--(0,2)node[right]{$y$};
+\draw (0,0) circle (1.5);
+\draw[->](0,0)--(120:1.5)node[above]{$P_{\alpha}$};
+\draw[->](0,0)--(-120:1.5)node[below]{$P_{-\alpha}$};
+\draw[->] (.5,0) arc (0:120:.5);
+\draw[->] (.75,0) arc (0:-120:.75);
+\node at (60:.5)[above] {$\alpha$};
+\node at (-60:.75)[below] {$-\alpha$};
+\node at (2,0)[above]{$A(1,0)$};
+\node at (-.25,-.25){$O$};
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+
+设它们的终边与单位圆交于
+$P_{\alpha}$和$P_{-\alpha}$ 两点，此两点也必定
+关于$Ox$轴对称。
+
+根据三角函数的定义，
+\begin{itemize}
+    \item $P_{\alpha}$点的坐标是$(\cos\alpha ,\sin\alpha)$；
+    \item $P_{-\alpha}$
+点的坐标是$(\cos(-\alpha ),\sin(-\alpha ))$。
+\end{itemize}
+
+因此，由它们关于$Ox$轴的
+对称性便知道它们的横坐标相等，纵坐标是相反数，也就
+是说
+\[\cos(-\alpha )=\cos\alpha ,\qquad \sin(-\alpha )= -\sin\alpha\]
+
+由此，
+\[\begin{split}
+    \tan(-\alpha)&=\frac{\sin(-\alpha)}{\cos(-\alpha)}=\frac{-\sin\alpha}{\cos\alpha}=-\tan\alpha\\
+    \cot(-\alpha)&=\frac{\cos(-\alpha)}{\sin(-\alpha)}=\frac{\cos\alpha}{-\sin\alpha}=-\cot\alpha\\
+\end{split}\]
+\end{proof}
+
+\begin{example}
+求$\cos\left(-\frac{\pi}{6}\right)$，$\sin \left(-\frac{\pi}{6}\right)$，$\tan\left(-\frac{\pi}{6}\right)$，$\cot\left(-\frac{\pi}{6}\right)$的值。    
+\end{example}
+
+\begin{solution}
+\[\begin{split}
+\cos\left(-\frac{\pi}{6}\right)&=\cos\frac{\pi}{6}=\frac{\sqrt{3}}{2}  \\
+\sin\left(-\frac{\pi}{6}\right)&=-\sin\frac{\pi}{6}=-\frac{1}{2} \\
+\tan\left(-\frac{\pi}{6}\right)&=-\tan\frac{\pi}{6}=-\frac{\sqrt{3}}{3}   \\
+\cot\left(-\frac{\pi}{6}\right)&=-\cot\frac{\pi}{6}=-\sqrt{3}
+\end{split}\]
+\end{solution}
+
+\begin{example}
+    下面函数哪些是偶函数，哪些是奇函数，哪些都
+不是？
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $g(x)=1-\cos x$
+    \item $F(x)=x-\sin x$
+    \item $h(x)=x^2\cos x$
+    \item $y(x)=\frac{x+\sin x}{x-\sin x}$
+\end{enumerate}
+\end{multicols}
+\end{example}
+
+\begin{solution}
+\begin{enumerate}
+    \item $\because\quad g(-x)=1-\cos(-x)=1-\cos x=g(x)$
+    
+    $\therefore\quad g(x)$是偶函数。
+    \item $\because\quad F(-x)=(-x)-\sin(-x)=-x-(-\sin x)=-(x-\sin x)=-F(x)$
+    
+    $\therefore\quad F(x)$是奇函数。
+    \item $\because\quad h(-x)=(-x)^2\cos(-x)=x^2\cos x=h(x)$
+    
+    $\therefore\quad h(x)$是偶函数。
+    \item $\because\quad y(-x)=\frac{(-x)+\sin (-x)}{(-x)-\sin (-x)}=\frac{-(x+\sin x)}{-(x-\sin x)}=\frac{x+\sin x}{x-\sin x}=y(x)$
+    
+    $\therefore\quad y(x)$是偶函数。
+\end{enumerate}
+\end{solution}
+
+\begin{ex}
+    下面函数哪些是偶函数，哪些是奇函数，哪些都不是？
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $f(x) =|\sin x|$
+    \item $H(x)=x^2 +\sin x$
+    \item $\phi(x)=\cos x\sin x$
+    \item $G(x)=\frac{1-\cos x}{1+\cos x}$
+    \item $f(t)=\frac{t^2+\sin t^2}{1+\sin^2 t}$
+    \item $y=\tan (x+2)$
+    \item $y=-\tan 2x+2$
+    \item $y=\tan (3-x)$
+\end{enumerate}
+\end{multicols}
+\end{ex}
+
+\subsection{$2\pi\pm\alpha$与$\alpha$的三角函数间的关系}
+根据三角函数的定义可以知道，终边相同的角的同一三
+角函数的值相等，即
+\begin{equation}
+\begin{split}
+    \sin(\alpha+2k\pi )=\sin\alpha,&\qquad \cos(\alpha+2k\pi )=\cos\alpha \\
+\tan(\alpha+2k\pi ) =\tan\alpha,&\qquad \cot(\alpha+2k\pi )=\cot\alpha
+\end{split}
+\end{equation}
+其中$k\in\mathbb{Z}$。
+
+利用上面的公式可以把求任意角的三角函数值的问题，
+转化为求0到$2\pi$间角的三角函数值的问题。
+
+\begin{example}
+    求下列三角函数值：
+\begin{multicols}{3}
+\begin{enumerate}
+    \item $\sin(-1480^{\circ}10')$
+    \item $\cos\left(\frac{9\pi}{4}\right)$
+    \item $\tan\left(-\frac{11\pi}{3}\right)$
+\end{enumerate}
+\end{multicols}
+\end{example}
+
+\begin{solution}
+\begin{enumerate}
+    \item 
+$\sin(-1480^{\circ}10')=-\sin(1480^{\circ}10')=-\sin(4\x 360^{\circ}+40^{\circ}10')=-\sin 40^{\circ}10'=-0.6451$
+\item $\cos\left(\frac{9\pi}{4}\right)=\cos\left(2\pi+\frac{\pi}{4}\right)=\cos\frac{\pi}{4}=\frac{\sqrt{2}}{2}$
+\item $\tan\left(-\frac{11\pi}{3}\right)=\tan\left(-4\pi+\frac{\pi}{3}\right)=\tan\frac{\pi}{3}=\sqrt{3}$
+\end{enumerate}
+\end{solution}
+
+在上面公式中，若令$k=1$, 则有
+\begin{equation}
+    \begin{split}
+        \sin(2\pi+\alpha)=\sin\alpha,&\qquad \cos(2\pi+\alpha)=\cos\alpha \\
+    \tan(2\pi+\alpha) =\tan\alpha,&\qquad \cot(2\pi+\alpha)=\cot\alpha
+    \end{split}
+    \end{equation}
+
+现在来看$2\pi-\alpha$的各三角函数值：
+\[\begin{split}
+    \sin(2\pi-\alpha)&=\sin[2\pi+(-\alpha)]=\sin(-\alpha)=-\sin\alpha\\
+    \cos(2\pi-\alpha)&=\cos[2\pi+(-\alpha)]=\cos(-\alpha)=\cos\alpha\\
+    \tan(2\pi-\alpha)&=\tan[2\pi+(-\alpha)]=\tan(-\alpha)=-\tan\alpha\\
+    \cot(2\pi-\alpha)&=\cot[2\pi+(-\alpha)]=\cot(-\alpha)=-\cot\alpha\\    
+\end{split}\]
+
+于是有
+\begin{equation}
+    \begin{split}
+        \sin(2\pi-\alpha)=-\sin\alpha,&\qquad \cos(2\pi-\alpha)=\cos\alpha \\
+    \tan(2\pi-\alpha) =-\tan\alpha,&\qquad \cot(2\pi-\alpha)=-\cot\alpha
+    \end{split}
+    \end{equation}
+
+\begin{example}
+    求下列各三角函数值：
+\begin{multicols}{3}
+\begin{enumerate}
+    \item $\sin\frac{11\pi}{6}$
+    \item $\cos\frac{13\pi}{8}$
+    \item $\cot310^{\circ}18'$
+    \item $\sin\left(-\frac{17}{3}\pi\right)$
+    \item $\tan(-324^{\circ}18')$
+\end{enumerate}
+\end{multicols}
+\end{example}
+
+\begin{solution}
+\begin{enumerate}
+    \item $\sin\frac{11\pi}{6}=\sin\left(2\pi-\frac{\pi}{6}\right)=-\sin\frac{\pi}{6}=-\frac{1}{2}$
+    \item $\cos\frac{13\pi}{8}=\cos\left(2\pi-\frac{3\pi}{8}\right)=\cos\frac{3\pi}{8}=\cos67^{\circ}30'=0.3827$
+    \item $\cot310^{\circ}18'=\cot(360^{\circ}-49^{\circ}42')=-\cot49^{\circ}42'=-0.8481$
+    \item $\sin\left(-\frac{17}{3}\pi\right)=\sin\left(-6\pi+\frac{\pi}{3}\right)=\sin\frac{\pi}{3}=\frac{\sqrt{3}}{2}$
+    
+或者
+\[\sin\left(-\frac{17}{3}\pi\right)=-\sin\frac{17\pi}{3}=-\sin\left(6\pi-\frac{\pi}{3}\right)=-\sin\left(-\frac{\pi}{3}\right)=\sin\frac{\pi}{3}=\frac{\sqrt{3}}{2}\]
+
+    \item $\tan(-324^{\circ}18')=-\tan324^{\circ}18'=-\tan(360^{\circ}-35^{\circ}42')=-(-\tan 35^{\circ}42')=\tan 35^{\circ}42'=0.7186$
+\end{enumerate}    
+\end{solution}
+
+\subsection{$\frac{\pi}{2}\pm\alpha$与$\alpha$的三角函数间的关系}
+
+$\frac{\pi}{2}\pm\alpha$与$\alpha$的三角函数间有下述关系：
+\begin{equation}
+    \begin{split}
+\sin\left(\frac{\pi}{2}+\alpha\right)=\cos\alpha,&\qquad \cos\left(\frac{\pi}{2}+\alpha\right)=-\sin\alpha\\
+\tan\left(\frac{\pi}{2}+\alpha\right)=-\cot\alpha,&\qquad \cot\left(\frac{\pi}{2}+\alpha\right)=-\tan\alpha        
+    \end{split}
+\end{equation}
+
+\begin{proof}
+    设$P$和$P'$是单位圆上的点，且$\angle POP'=\frac{\pi}{2}$。
+    若$P$点分别在第一、二、三、四象限，那么$P'$点就依次在
+    第二、三、四、一象限，如图6.17所示。
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex]
+    \draw[->] (-2,0)--(2,0)node[right]{$x$};
+    \draw[->] (0,-2)--(0,2)node[right]{$y$};
+    \draw (0,0) circle (1.5);
+\draw [thick](0,0)--(30:1.5)node[right]{$P$}--(1.5*1.732/2,0)node[below]{$M$};
+\draw [thick](0,0)--(30+90:1.5)node[above]{$P'$}--(0,1.5*1.732/2)node[right]{$M'$};
+\node at (-.25,-.25){$O$};
+\draw[->] (1,0) arc (0:30:1)node[right]{$\alpha$};
+\draw[->] (.5,0) arc (0:30+90:.5);
+\node at (60:.7){$\alpha+\tfrac{\pi}{2}$};
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+    从$P$点和$P'$点分别向$Ox$轴和$Oy$轴引垂线$PM$, 
+
+    
+\end{proof}
+
+\begin{example}
+    
+\end{example}
+
+
+\begin{solution}
+    
+\end{solution}
+
+\begin{example}
+    
+\end{example}
+
+\begin{solution}
+    
+\end{solution}
 
 
 
@@ -1222,65 +1464,9 @@ $\cot\alpha$& $\sqrt{3}$ &1& $\frac{\sqrt{3}}{3}$\\
     
 \end{solution}
 
-\begin{solution}
-    
-\end{solution}
-
-
 \begin{example}
     
 \end{example}
-
-\begin{example}
-    
-\end{example}
-
-\begin{example}
-    
-\end{example}
-
-
-\begin{example}
-    
-\end{example}
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{solution}
-    
-\end{solution}
-
-
-\begin{example}
-    
-\end{example}
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
 
 \begin{solution}
     
