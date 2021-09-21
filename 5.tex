@@ -982,11 +982,11 @@ $\frac{\sqrt{5}-1}{2}$个单位再向上移$\frac{\sqrt{5}-1}{2}$个单位
 得来。
 \end{solution}
 
-\section*{习题5.3}
-\addcontentsline{toc}{subsection}{习题5.3}
+\section*{习题5.1}
+\addcontentsline{toc}{subsection}{习题5.1}
 
 \begin{enumerate}
-    \item 把下列各图象画在同－坐标系里进行比较：
+    \item 把下列各图象画在同一坐标系里进行比较：
 \begin{enumerate}
     \item $y=x,\qquad  y=x+2,\qquad  y=x^2-2$
     \item $y=-x^2,\qquad y=-x^2+2,\qquad y=-x^2-2$
@@ -998,7 +998,7 @@ $\frac{\sqrt{5}-1}{2}$个单位再向上移$\frac{\sqrt{5}-1}{2}$个单位
     \item 已知函数$y=2(x-3)^2$, 不作出图象而说出：
 \begin{enumerate}
 \item 图象的顶点，对称轴方程，开口方向；
-\item 函数有沒有极大值或极小值？这些值是多少？$x$等
+\item 函数有没有极大值或极小值？这些值是多少？$x$等
     于什么值时，函数有这些值？
     \item $x$在什么区间时函数是递减的，递增的？
     \item $x$取什么值时函数等于零？
@@ -1029,7 +1029,7 @@ $\frac{\sqrt{5}-1}{2}$个单位再向上移$\frac{\sqrt{5}-1}{2}$个单位
     \end{enumerate}
 \end{multicols}
 
-\item 处于靜止状态的物体从40米的高处下落，计算$t$秒后物
+\item 处于静止状态的物体从40米的高处下落，计算$t$秒后物
 体离地面的高度$h$米的公式是$h=40-5t^2$
 \begin{enumerate}
     \item 经过两秒钟物体离地面的高度是多少？
@@ -1231,53 +1231,432 @@ $y$&0&0&4\\
 \end{enumerate} 
 \end{ex}
 
+\subsection{二次函数极值}
+根据实数的平方不小于零，容易求得二次函数的极值如
+下：
+\[y=ax^2+bx+c=a\left(x+\frac{b}{2a}\right)^2+\frac{4ac-b^2}{4a}\]
+\begin{enumerate}
+    \item 如果$a>0$, 那么$a\left(x+\frac{b}{2a}\right)^2\ge 0$
+\[y=a\left(x+\frac{b}{2a}\right)^2+\frac{4ac-b^2}{4a}\ge \frac{4ac-b^2}{4a}\]
+即当$x=-\frac{b}{2a}$时，函数有极小值，$y_{\min}=\frac{4ac-b^2}{4a}$
+
+\item 如果$a<0$, 那么$a\left(x+\frac{b}{2a} \right)^2\le 0$
+\[y=a\left(x+\frac{b}{2a}\right)^2+\frac{4ac-b^2}{4a}\le \frac{4ac-b^2}{4a}\]
+即当$x=-\frac{b}{2a}$时，函数有极大值，$y_{\max}=\frac{4ac-b^2}{4a}$
+\end{enumerate}
+
+求二次函数的极值有着许多实际的应用，下面我们举几
+个例子。
 
 \begin{example}
-    
+    某工厂为了存放材料，需要围一个周长为160米
+的矩形场地，问矩形的长和宽各取多少米，才能使存放场地
+的面积最大？
 \end{example}
 
 \begin{solution}
-    
+    设一边为$x$m，则另一边长为$(80-x)$m，如果$y{\rm m}^2$
+是矩形的面积，则
+\[\begin{split}
+    y=x(80-x)&=-x2+80x,\qquad (0<x<80)\\
+    &=-(x^2-80x+1600-1600)\\
+    &=-(x-40)^2+1600
+\end{split}\]
+因此，当边长是40m的正
+方形时，有最大面积1600${\rm m}^2$。
 \end{solution}
 
 \begin{example}
-    
+    窗的形状是矩形上
+面加一个半圆，它的周长等于
+6米，要使窗能透过最多的光
+线，它的尺寸应该怎样设计？
 \end{example}
 
 \begin{solution}
-    
+设半圆的半径是$x$米（图5.16），那么半圆的长就是
+$\pi x$米，矩形的底$BC$就是$2x$米，而矩形的高$AB$和$CD$就是
+$\frac{6-\pi x-2x}{2}$米。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex]
+\draw (0,0) rectangle (2,3) node [right]{$D$};
+\node at (0,0)[below]{$B$};
+\node at (2,0)[below]{$C$};
+\node at (0,3)[left]{$A$};
+\node at (1,3)[below]{$O$};
+\draw (0,3) arc (180:0:1);
+\draw[->] (1,3)--node[left]{$x$} +(60:1) ;
+\draw [<->](0,.5)--node[fill=white]{$2x$}(2,.5);
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+设图形的总面积是$y$平方米，那么在开区间$\left(0,\frac{6}{\pi+2}\right)$上，
+\[y=\frac{6-\pi x-2x}{2}\cdot 2x+\frac{1}{2}\pi x^2\]
+就是
+\[\begin{split}
+    y&=6x-\left(\frac{\pi}{2}+2\right)x^2\\
+    &=-\frac{\pi+4}{2}\left[x^2-\frac{12}{\pi+4}x+\left(\frac{6}{\pi+4}\right)^2-\left(\frac{6}{\pi+4}\right)^2\right]\\
+    &=-\frac{\pi+4}{2}\left(x-\frac{6}{\pi+4}\right)^2+\frac{18}{\pi+4}
+\end{split}\]
+由此可知，当$x=\frac{6}{\pi+4}$的时候，$y_{\max}=\frac{18}{\pi+4}$。
+
+所以尺寸应该这样来设计：半圆的半径是$\frac{6}{\pi+4}\approx 0.84$米，或者说矩形的底边长是$\frac{12}{\pi+4}\approx 1.68$米时，窗能透过最
+多的光线。
+\end{solution}
+
+\begin{example}
+    用一块宽为1.2米的长方形铁板弯起两边做一个
+水槽，水槽的横截面为底角是$120^{\circ}$的等腰梯形（图5.17），要
+使水權的横截面积最大，它的侧面的宽应该是多少？
+\end{example}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}
+\draw[thick] (120:2)--(0,0)node[below]{$B$}--(3,0)node[below]{$C$}--+(60:2);
+\draw[dashed] (-1,1.732)node[left]{$A$}--(4,1.732)node[right]{$D$};
+\draw [dashed](0,0)--(0,1.732)node[above]{$H$};
+\draw (0,.7) arc (90:120:.7)node[above=6pt]{$30^{\circ}$};
+\draw(2.5,0) arc (180:60:.5)node [left=6pt]{$120^{\circ}$};
+\end{tikzpicture}   
+    \caption{}
+\end{figure}
+
+
+\begin{solution}
+    设侧的宽$AB$为$x$米，作$BH\bot AD$, 则
+\[\angle ABH=30^{\circ},\qquad AH=x\sin 30^{\circ}=\frac{1}{2}x\]
+\[BH=x\cdot \cos 30^{\circ}=\frac{\sqrt{3}}{2}x,\qquad BC=(1.2-2x)\]
+\[AD=1.2-2x+2\cdot \frac{x}{2}=1.2-x\]
+所以，水槽的横截面面积为：
+\[\begin{split}
+    S&=\frac{1}{2}\cdot \frac{\sqrt{3}}{2}x(1.2-2x+1.2-x)\\
+    &=\frac{\sqrt{3}}{4}x(2.4-3x)\qquad (0<x<0.6)\\
+    &=-\frac{3\sqrt{3}}{4}x^2+\frac{3\sqrt{3}}{5}x=-\frac{3\sqrt{3}}{4}\left(x^2-\frac{4}{5}x\right)\\
+&=-\frac{3\sqrt{3}}{4}\left(x^2-\frac{4}{5}x+\frac{4}{25}-\frac{4}{25}\right)\\
+&=-\frac{3\sqrt{3}}{4}\left(x-\frac{2}{5}\right)^2+\frac{3\sqrt{3}}{25}
+\end{split}\]
+所以$x=\frac{2}{5}=0.4$（米）时，水槽有最大的横截面面积$\frac{3\sqrt{3}}{25}$（平方米）。
 \end{solution}
 
 
 \begin{example}
-    
+    快艇和轮船分别从$A$地和$C$地同时开出，各沿着
+    箭头所指方向航行（图5.18），快艇和轮船的速度分别是40公
+    里/小时和16公里/小时，已知$AC=145$公里，经过多少时间
+    以后，快艇和轮船之间的距离最短（图中$AC\bot CD$）？
 \end{example}
 
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex, scale=.9]
+\draw (0,0)--(8,0)node[right]{$A$};
+\draw[->, very thick] (0,0)--(0,-2)node[below]{$D$};
+\draw[->, very thick] (8,0)--(3,0)node[above]{$B$};
+\draw (0,-2)--(3,0);
+\draw (3,0)--(3,-1); \draw (8,0)--(8,-1); 
+\draw[<->] (3,-.5)--node[fill=white]{$40t$}(8,-.5);
+\draw (-1,0)--(0,0); \draw (-1,-2)--(0,-2);
+\draw[<->]  (-.5,0)--node[fill=white]{$16t$}(-.5,-2);
+\node at (-.25,.25) {$C$};
+\draw(0,0)--(0,1.2); \draw (8,0)--(8,1.2);
+\draw[<->] (0,1) --node[fill=white]{$145$公里}  (8,1) ;
+
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
 \begin{solution}
-    
+    设经过$t$小时以后，快艇的位置在$B$, 轮船的位置在
+$D$. 这时
+\[\begin{split}
+  AB&=40t \text{（公里）}\\
+CD&=16t \text{（公里）}\\
+BC&=(145-40t) \text{（公里）}\\  
+\end{split}\]
+根据勾股定理得
+\[BD=\sqrt{BC^2+CD^2}=\sqrt{(145-40t)^2+(16t)^2}\]
+现在要使$BD$最短，因$(145-40t)^2+(16t)^2>0$
+
+故只需使被开方数$(145-40t)^2+(16t)^2$有最小的值。
+
+令 $y=(145-40t)^2+(16t)^2\qquad \left(0<t<3\frac{5}{8}\right)$
+则有：$$y=1856t^2-11600t+21025$$
+这个二次函数在
+$t=\frac{11600}{3712}=3\frac{1}{8}$（小时）
+的时候有极小值。所以，快艇和轮船分别从$A$地和$C$地开出
+$3\frac{1}{8}$（小时）的时候，它们间的距离最短。
 \end{solution}
+
+有时要在闭区间$[a,b]$上讨论二次函数的最大值或最小
+值，这时要把开区间$(a,b)$内的极值和两端点处的函数值作
+比较，再确定出最大值或最小值。
+
+
+\begin{example}    
+设$0\le x\le 3$, 讨论$y=x^2-4x+5$的最大值和最小
+值。
+\end{example}
+
+\begin{solution}    
+$$y=(x-2)^2+1$$
+
+当$x=2$时，$y_{\min}=1$；又当$x=0$时，$y=5$；当$x=3$时，$y=2$。
+
+所以当$x=2$时，$y$取最小值
+$y_{\min}=1$；当$x=0$时，$y$取最大值$y_{\max}=5$（图5.19）。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex,scale=.8]
+\draw[->] (-1,0)--(4,0)node[right]{$x$};
+\draw[->] (0,-1)--(0,6)node[right]{$y$};
+\foreach \x in {1,2,3}
+{
+    \draw(\x,0)node[below]{$\x$}--(\x,.1);
+    \draw(0,\x)node[left]{$\x$}--(.1,\x);
+}
+\draw(0,4)node[left]{$4$}--(.1,4);
+\draw(0,5)node[left]{$5$}--(.1,5);
+
+\draw [domain=0:3, samples=50, very thick]plot(\x, {(\x-2)*(\x-2)+1});
+\draw[dashed] (2,-1)--(2,6);
+\draw[dashed] (3,0)--(3,2)--(0,2);
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+\end{solution}    
+
+\section*{习题5.2}
+\addcontentsline{toc}{subsection}{习题5.2}
+\begin{enumerate}
+    \item 求下列各函数的最大值和最小值，并且求这时的$x$的值：
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $y=x^2-6x+10$
+    \item $y=3x^2+6x-2$
+    \item $y=5-4x-x^2$
+    \item $y=3+2x-2x^2$
+\end{enumerate}
+\end{multicols}
+    \item 求下列各函数的最大值和最小值：
+\begin{enumerate}
+    \item $y=2x^2+5x+4,\qquad    0\le x\le 1$
+    \item $y=x^2-3x+4,\qquad      0\le x\le 1$
+    \item $y=x^2-x+1,\qquad      0\le x\le 1$
+\end{enumerate}
+\item 求证在周长相同的所有矩形中，正方形面积是最大的。
+\item 求证在一边长固定，且周长固定的所有三角形中，等腰
+三角形面积是最大的。
+\item 把宽40厘米的铁皮制成U字形的雨水槽，要使它的断面
+积成为最大，深度应为多少？
+\item 一农民准备用篱笆围成一面靠墙的矩形，养鸡场共分五
+间，每间大小相等，现有可编120米长的篱笆竹料，养
+鸡场每间的长宽各是多少米，养鸡场面积最大。
+\item 炮弹以初速度$U_0=600$米/秒，仰角$\theta=30^{\circ}$射出时，上升
+的高度$h$与相应的水平距离$x$之间的函数关系是：
+\[h=-\frac{1}{54000}x^2+\frac{1}{\sqrt{3}}x\]
+试求炮弹能达到的最大高度。
+\item 设有边长为$a$的等边三角形，要作内接矩形（如图），问如
+何作法使这矩形面积最大？
+\item 在半径是20厘米的圆内作一内接矩形，这个矩形的面积
+最大可以是多少平方厘米？
+\item 给了一个正方形$ABCD$（如图）。由它的各顶点量下相等
+的线段$Aa,Bb,Cc,Dd$, 并且以直线连结$a,b,c,d$各
+点，问$Aa$多长时正方形$abcd$的面积最小？
+\item 已知三角形的两边之和为4, 夹角是$60^{\circ}$, 求：最大
+面积；最小周长．
+
+\begin{center}
+\begin{tikzpicture}[>=latex]
+\begin{scope}
+    \draw (0,0)--(2,0)--(1,1.732)--(0,0);
+\draw[pattern=north east lines] (.5,0) rectangle (1.5,1.732/2);
+\node at (1,-1){第8题};
+\draw[|<->|](1-.25,1.732+.1)--node[fill=white]{$a$}(0-.25,0+.1);
+
+\end{scope}    
+\begin{scope}[xshift=5cm, yshift=1cm]
+\draw (0,0) circle (1.5);
+\draw (0,0)node[left]{$O$}--node[below]{20cm}(1.5,0)--(120:1.5)--(180:1.5)--(-60:1.5)--(1.5,0);
+\node at (0,-2){第9题};
+\end{scope}  
+\begin{scope}[xshift=8cm]
+    \draw (0,0)node[below]{$A$} rectangle(2.1,2.1)node[above]{$C$};
+\node at (2.1,0)[below]{$B$}; 
+\node at (0,2.1)[above]{$D$}; 
+
+\node at (1.05,-1){第10题};
+
+\draw (0.9,0)node[below]{$a$}--(2.1,.9)node[right]{$b$}--(1.2,2.1)node[above]{$c$}--(0,1.2)node[left]{$d$}--(.9,0); 
+\end{scope}  
+\end{tikzpicture} 
+\end{center}
+\end{enumerate}
+
+\subsection{一元二次方程图象解法}
+我们来观察二次函数$y=x^2-2x-3=(x-1)^2-4$的图
+象（图5.21），这条抛物线交$x$轴于两点：$A(-1,0)$, $B(3,0)$.
+
+这就是说，当$x=-1$或$x=3$时，函数$y=x^2-2x-3$的
+值是0, 换句话说，也就是$x=-1$和$x=3$是方程
+$x^2-2x-3=0$
+的两个根，这个例子告诉我们，二次方程
+$ax^2+bx+c=0$
+的求根问题可归结为二次函数$y=ax^2+bx+c$对于怎样的$x$取
+值为零的问题，这样的$x$称作二次函数的零点，因此二次方程
+$ax^2+bx+c=0$的（实）根就等同于二次函数$y=ax^2+bx+c$的零点，这样我们就可用图象来解二次方程，如
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=.7]
+\draw[->] (-2,0)--(4,0)node[right]{$x$};
+\draw[->] (0,-4.5)--(0,4)node[right]{$y$};
+\foreach \x in {1,2,3,-1}
+{
+    \draw(\x,0)node[below]{$\x$}--(\x,.1);
+    \draw(0,\x)node[left]{$\x$}--(.1,\x);
+}       
+
+\draw[dashed] (1,-4.5)--(1,4);
+\draw [domain=-1.5:3.5, samples=100, very thick] plot(\x, {(\x-1)*(\x-1)-4});
+\node at (1,-4)[below]{$(1,-4)$};
+\node at (-.25,-.25){$O$};
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=.7]
+\draw[->] (-2,0)--(4,0)node[right]{$x$};
+\draw[->] (0,-4)--(0,4)node[right]{$y$};
+\foreach \x in {1,2,3,-1}
+{
+    \draw(\x,0)node[below]{$\x$}--(\x,.1);
+    \draw(0,\x)node[left]{$\x$}--(.1,\x);
+}          
+
+\draw[dashed] (1,-4)--(1,4);
+\draw [domain=-1.5:3.5, samples=100, very thick] plot(\x, {(\x-1)*(\x-1)-3});
+\node at (.3,-.3){$O$};
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
 
 \begin{example}
-    
+    用图象法解一元二次方程
+$x^2-2x-2=0$。
 \end{example}
 
 \begin{solution}
-    
+    先作出函数$y=x^2-2x-2=(x-1)^2-3$的图象（图
+5.21），从图中读出二次函数零点：$x_1\approx-0.7$; $x_2\approx 2.7$, 这
+就是二次方程$x^2-2x-2=0$的两个近似实根。
 \end{solution}
 
+从函数图象的观点看来，二次函数$y=ax^2+bx+c$的零
+点，就是它的图象与$x$轴的交点的横坐标，因此二次方程
+$ax^2+bx+c=0$能否有实数解，或者有一个（实）重根，或者
+有两个不同的（实）根，实际上就等于抛物线$y=ax^2+bx+c$是
+否与$x$轴相交，或者与$x$轴相切于一点；或者与$x$轴相交于两
+个不同的点（这两个点必对称地位于抛物线对称轴的左、右两
+侧）。
+
+当$a>0$时，抛物线$y=ax^2+bx+c$是开口向上的，并且
+其顶点是它的最低点，因此二次方程$ax^2+bx+c=0$能否有
+解，有一解或二解，完全取决于抛物线$y=ax^2+bx+c$的顶
+点位于$x$轴的上方，位于$x$轴上，或位于$x$轴的下方。
+
+抛物线$y=ax^2+bx+c$的顶点坐标是$\left(-\frac{b}{2a},\frac{4ac-b^2}{4a}\right)$
+由于$a>0$, 因此抛物线的顶点位于$x$轴的上方，位于$x$轴上，
+或者位于$x$轴的下方，分别取决于$b^2-4ac<0$, $b^2-4ac=0$,
+或$b^2-4ac>0$ （图5.22），以前我们曾谈过：二次方程$ax^2+bx+c=0$能否有解，取决于判别式$b^2-4ac$的符号，现在我们又
+可以看到，抛物线$y=ax^2+bx+c$能否与$x$轴有交点，也取决
+于判别式$b^2-4ac$的符号。
+
+当$a<0$时，情况与上面相同，我们留给同学去考虑。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex, scale=.8]
+\begin{scope}
+    \draw[->] (-1,0)--(5,0)node[right]{$x$};
+    \draw[->] (0,-4)--(0,6)node[right]{$y$};
+    \draw[domain=.2:4.2, samples=50, thick]plot(\x, {(\x-2.2)*(\x-2.2)*.8});
+    \draw[domain=.2:4.2, samples=50, thick]plot(\x, {(\x-2.2)*(\x-2.2)*.8+2.5});
+    \draw[domain=.2:4.2, samples=50, thick]plot(\x, {(\x-2.2)*(\x-2.2)*.8-3});
+    \draw[dashed] (2.2,-4)--(2.2,6);
+    \node at (-.3,-.3){$O$};
+    \node at (2,-4.5){$a>0$};
+\node at (3.2,-3)[right]{$b^2-4ac>0$};
+\node at (3.2,1)[right]{$b^2-4ac=0$};
+\node at (3.2,3.5)[right]{$b^2-4ac<0$};
+\end{scope}
+
+\begin{scope}[xshift=8cm, yshift=2cm]
+    \draw[->] (-1,0)--(5,0)node[right]{$x$};
+    \draw[->] (0,-6)--(0,4)node[right]{$y$};
+    \draw[domain=.2:4.2, samples=50, thick]plot(\x, {-(\x-2.2)*(\x-2.2)*.8});
+    \draw[domain=.2:4.2, samples=50, thick]plot(\x, {-(\x-2.2)*(\x-2.2)*.8-2.5});
+    \draw[domain=.2:4.2, samples=50, thick]plot(\x, {-(\x-2.2)*(\x-2.2)*.8+3});
+    \draw[dashed] (2.2,-6)--(2.2,4);
+    \node at (-.3,-.3){$O$};
+    \node at (2,-6.5){$a<0$};
+    \node at (3.2,-4.5)[right]{$b^2-4ac<0$};
+    \node at (3.2,-.7)[right]{$b^2-4ac=0$};
+    \node at (3.2,2.5)[right]{$b^2-4ac>0$};
+\end{scope}
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+前面考虑二次方程$ax^2+bx+c=0$的根为二次函数$y=
+ax^2+bx+c$的图象与$x$轴的交点的横坐标，我们也可用另外一种观点来考虑。由于
+$ax^2+bx+c=0$与$ax^2=-bx-c$
+的解是一样的，故我们可以考虑抛物线
+$y=ax^2$与直线$y=-bx-c$的交点。
+
+为此，在同一坐标系里，把抛物线和直线画出来，如果直
+线与抛物线有交点（至多两个）那么交点的横坐标就是二次方
+程的根。这是因为，如果交点是$(x_1,y_1)$, 那么必有$y_1=ax_1^2$和
+$y_1=-bx_1-c$, 从而有$ax_1^2=-bx_1-c$, 即$ax_1^2+bx_1+c=0$。
+如果没有交点，则二次方程
+没有解。当我们使用函数图象求解二次方程近似根时，
+这种方法是比较方便的，因
+为$y=ax^2$与$y=-bx-c$都比
+较容易描绘，如果我们还是
+以例5.19的二次方程$x^2-2x-2=0$为例，如图5.23，
+求出近似根$x_1\approx -0.7$，$x_2\approx 2.7$。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex, scale=.7]
+\draw[->] (-4,0)--(4,0)node[right]{$x$};
+\draw[->] (0,-1)--(0,9)node[right]{$y$};
+\foreach \x in {1}
+{
+    \draw(\x,0)node[below]{$\x$}--(\x,.1);
+    \draw(0,\x)node[left]{$\x$}--(.1,\x);
+}          
+
+\draw [domain=-3:3, samples=100, very thick] plot(\x, {\x*\x});
+\draw [domain=-1.5:3.5, samples=10, very thick] plot(\x, {2*\x+2});
+\node at (-1.5,-1)[below]{$y=2x+2$};
+\node at (-1.7,8){$y=x^2$};
+\node at (2.7,7.4)[right]{$(2.7,7.4)$};
+\node at (-.7,.6)[left]{$(-0.7,0.6)$};
+\node at (.3,-.3){$O$};
+    \end{tikzpicture}
+    \caption{}
+\end{figure}
 
 
-
-
-
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
 
 
 \begin{example}
