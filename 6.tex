@@ -1432,19 +1432,526 @@ $\frac{\pi}{2}\pm\alpha$与$\alpha$的三角函数间有下述关系：
     \caption{}
 \end{figure}
 
-    从$P$点和$P'$点分别向$Ox$轴和$Oy$轴引垂线$PM$, 
-
+    从$P$点和$P'$点分别向$Ox$轴和$Oy$轴引垂线$PM$, $P'M'$。从直角三角形$OMP$和$OM'P'$全等得
+\[|OM|=|OM'|,\qquad |MP|=|M'P'|\]
     
+由上面等式和对于任意角$\alpha$的$P,P'$两点所在象限知道：$P$点的横坐标$x_P=OM$，恒与$P'$点的纵坐标$y_{P'}=OM'$相等，即它们的绝对值和符号都相同，也就是$x_P=y_{P'}$，因此$\cos\alpha=\sin\left(\alpha+\frac{\pi}{2}\right)$。
+
+又$P$点的纵坐标$y_P=MP$是$P'$点的横坐标$x_{P'}=M'P'$的相反数，即$y_P=MP=-M'P'=-x_{P'}$，因此，$\sin\alpha=-\cos\left(\alpha+\frac{\pi}{2}\right)$。这样就得到：
+\[\begin{split}
+    \sin\left(\frac{\pi}{2}+\alpha\right)&=\cos\alpha\\
+    \cos\left(\frac{\pi}{2}+\alpha\right)&=-\sin\alpha\\
+    \tan\left(\frac{\pi}{2}+\alpha\right)&=\frac{\sin\left(\frac{\pi}{2}+\alpha\right)}{\cos\left(\frac{\pi}{2}+\alpha\right)}=\frac{\cos\alpha}{-\sin\alpha}=-\cot\alpha\\
+    \cot\left(\frac{\pi}{2}+\alpha\right)&=\frac{\cos\left(\frac{\pi}{2}+\alpha\right)}{\sin \left(\frac{\pi}{2}+\alpha\right)}=\frac{-\sin\alpha}{\cos\alpha}=-\tan\alpha
+\end{split}\]
 \end{proof}
 
+由公式(6.7)我们可以得到，对于任意角$\alpha$，
+\[\begin{split}
+\sin\left(\frac{\pi}{2}-\alpha\right)&=\sin\left[\frac{\pi}{2}+(-\alpha)\right]=  \cos(-\alpha)=\cos\alpha \\
+\cos\left(\frac{\pi}{2}-\alpha\right)&=\cos\left[\frac{\pi}{2}+(-\alpha)\right]=  -\sin(-\alpha)=\sin\alpha \\
+\tan\left(\frac{\pi}{2}-\alpha\right)&=\tan\left[\frac{\pi}{2}+(-\alpha)\right]= -\cot(-\alpha)=\cot\alpha  \\
+\cot\left(\frac{\pi}{2}-\alpha\right)&=\cot\left[\frac{\pi}{2}+(-\alpha)\right]=  -\tan(-\alpha)=\tan\alpha 
+\end{split}\]
+于是有
+\begin{equation}
+\begin{split}
+    \sin\left(\frac{\pi}{2}-\alpha\right)=\cos\alpha, &\qquad \cos\left(\frac{\pi}{2}-\alpha\right)=\sin\alpha \\
+    \tan\left(\frac{\pi}{2}-\alpha\right)=\cot\alpha, &\qquad \cot\left(\frac{\pi}{2}-\alpha\right)=\tan\alpha 
+\end{split}    
+\end{equation}
+
+\subsection{$\pi\pm\alpha$、$\frac{3\pi}{2}\pm \alpha$与$\alpha$的三角函数间的关系}
+由于
+\[\begin{split}
+\sin(\pi+\alpha)&=\sin \left[\frac{\pi}{2}+\left(\frac{\pi}{2}+\alpha\right)\right]=\cos\left(\frac{\pi}{2}+\alpha\right)=-\sin\alpha\\
+\cos(\pi+\alpha)&=\cos \left[\frac{\pi}{2}+\left(\frac{\pi}{2}+\alpha\right)\right]=-\sin\left(\frac{\pi}{2}+\alpha\right)=-\cos\alpha\\
+\tan(\pi+\alpha)&=\tan \left[\frac{\pi}{2}+\left(\frac{\pi}{2}+\alpha\right)\right]=-\cot\left(\frac{\pi}{2}+\alpha\right)=-(-\tan\alpha)=\tan\alpha\\
+\cot(\pi+\alpha)&=\cot \left[\frac{\pi}{2}+\left(\frac{\pi}{2}+\alpha\right)\right]=-\tan\left(\frac{\pi}{2}+\alpha\right)=-(-\cot\alpha)=\cot\alpha\\
+\end{split}\]
+因此有：
+\begin{equation}
+    \begin{split}
+        \sin\left(\pi+\alpha\right)=-\sin\alpha, &\qquad \cos\left(\pi+\alpha\right)=-\cos\alpha \\
+        \tan\left(\pi+\alpha\right)=\tan\alpha, &\qquad \cot\left(\pi+\alpha\right)=\cot\alpha 
+    \end{split}    
+    \end{equation}
+
+由于
+\[\begin{split}
+\sin(\pi-\alpha)&=\sin[\pi+(-\alpha)]= -\sin(-\alpha)=\sin\alpha\\
+\cos(\pi-\alpha)&=\cos[\pi+(-\alpha)]= -\cos(-\alpha)=-\cos\alpha\\
+\tan(\pi-\alpha)&=\tan[\pi+(-\alpha)]= \tan(-\alpha)=-\tan\alpha\\
+\cot(\pi-\alpha)&=\cot[\pi+(-\alpha)]= \cot(-\alpha)=-\cot\alpha\\
+\end{split}\]
+因此有：
+\begin{equation}
+    \begin{split}
+        \sin\left(\pi-\alpha\right)=\sin\alpha, &\qquad \cos\left(\pi-\alpha\right)=-\cos\alpha \\
+        \tan\left(\pi-\alpha\right)=-\tan\alpha, &\qquad \cot\left(\pi-\alpha\right)=-\cot\alpha 
+    \end{split}    
+    \end{equation}
+
+由于
+\[\begin{split}
+\sin\left(\frac{3\pi}{2}+\alpha\right)&=\sin \left[\pi+\left(\frac{\pi}{2}+\alpha\right)\right]=-\sin\left(\frac{\pi}{2}+\alpha\right)=-\cos\alpha\\
+\cos\left(\frac{3\pi}{2}+\alpha\right)&=\cos \left[\pi+\left(\frac{\pi}{2}+\alpha\right)\right]=-\cos\left(\frac{\pi}{2}+\alpha\right)=-(-\sin\alpha)=\sin\alpha\\
+\tan\left(\frac{3\pi}{2}+\alpha\right)&=\tan \left[\pi+\left(\frac{\pi}{2}+\alpha\right)\right]=\tan\left(\frac{\pi}{2}+\alpha\right)=-\cot\alpha\\
+\cot\left(\frac{3\pi}{2}+\alpha\right)&=\cot \left[\pi+\left(\frac{\pi}{2}+\alpha\right)\right]=\cot\left(\frac{\pi}{2}+\alpha\right)=-\tan\alpha
+\end{split}\]
+因此有：
+\begin{equation}
+    \begin{split}
+        \sin\left(\frac{3\pi}{2}+\alpha\right)=-\cos\alpha, &\qquad \cos\left(\frac{3\pi}{2}+\alpha\right)=\sin\alpha \\
+        \tan\left(\frac{3\pi}{2}+\alpha\right)=-\cot\alpha, &\qquad \cot\left(\frac{3\pi}{2}+\alpha\right)=-\tan\alpha 
+    \end{split}    
+    \end{equation}
+
+由于
+\[\begin{split}
+\sin\left(\frac{3\pi}{2}-\alpha\right)&=\sin\left[\frac{3\pi}{2}+(-\alpha)\right]=-\cos(-\alpha)=-\cos\alpha\\
+\cos\left(\frac{3\pi}{2}-\alpha\right)&=\cos \left[\frac{3\pi}{2}+(-\alpha)\right]=\sin(-\alpha)=-\sin\alpha\\
+\tan\left(\frac{3\pi}{2}-\alpha\right)&=\tan \left[\frac{3\pi}{2}+(-\alpha)\right]=-\cot(-\alpha)=\cot\alpha\\
+\cot\left(\frac{3\pi}{2}-\alpha\right)&=\cot \left[\frac{3\pi}{2}+(-\alpha)\right]=-\tan(-\alpha)=\tan\alpha
+\end{split}\]
+
+因此有：
+\begin{equation}
+    \begin{split}
+        \sin\left(\frac{3\pi}{2}-\alpha\right)=-\cos\alpha, &\qquad \cos\left(\frac{3\pi}{2}-\alpha\right)=-\sin\alpha \\
+        \tan\left(\frac{3\pi}{2}-\alpha\right)=\cot\alpha, &\qquad \cot\left(\frac{3\pi}{2}-\alpha\right)=\tan\alpha 
+    \end{split}    
+    \end{equation}
+
+\begin{example}
+求$\sin(-1650^{\circ})$，$\cos\left(-\frac{19\pi}{6}\right)$的值。
+\end{example}
+
+\begin{solution}
+\[\begin{split}
+    \sin(-1650^{\circ})&=-\sin(1650^{\circ})=-\sin(4\x360^{\circ}+210^{\circ})\\
+    &=-\sin 210^{\circ}=-\sin(180^{\circ}+30^{\circ})\\
+    &=\sin30^{\circ}=\frac{1}{2}
+\end{split}\]
+\[\begin{split}
+    \cos\left(-\frac{19\pi}{6}\right)&=\cos\frac{19\pi}{6}=\cos\left(2\pi+\frac{7\pi}{6}\right)\\
+    &=\cos\frac{7\pi}{6}=\cos\left(\pi+\frac{\pi}{6}\right)\\
+    &=-\cos\frac{\pi}{6}=-\frac{\sqrt{3}}{2}
+\end{split}\]
+\end{solution}
+
+\subsection{三角函数的诱导公式}
+
+把上面的自变数是$-\alpha$、$\frac{\pi}{2}\pm\alpha$、$\pi\pm\alpha$、$\frac{3\pi}{2}\pm\alpha$、$2\pi\pm\alpha$
+的三角函数表示为自变数就是$\alpha$的三角函数的公式，
+叫做三角函数的诱导公式。为便于查阅和比较，我们把三角
+函数的诱导公式全部都列于下表中。
+\begin{center}
+\begin{tabular}{ccccc}
+    \hline
+& $\cos$ & $\sin$ & $\tan $ &  $\cot$\\
+\hline
+$-\alpha$& $\cos\alpha$ & $-\sin\alpha$ & $-\tan\alpha $ &  $-\cot\alpha$\\
+\vspace{1ex}$\frac{\pi}{2}+\alpha$& $-\sin\alpha$ & $\cos\alpha$ & $-\cot\alpha $ &  $-\tan\alpha$\\
+\vspace{1ex}$\frac{\pi}{2}-\alpha$& $\sin\alpha$ & $\cos\alpha$ & $\cot\alpha $ &  $\tan \alpha$\\
+$\pi+\alpha$& $-\cos\alpha$ & $-\sin\alpha$ & $\tan\alpha $ &  $\cot\alpha$\\
+$\pi-\alpha$& $-\cos\alpha$ & $\sin\alpha$ & $-\tan\alpha $ &  $-\cot\alpha$\\
+\vspace{1ex}$\frac{3\pi}{2}+\alpha$& $\sin\alpha$ & $-\cos\alpha$ & $-\cot\alpha $ &  $-\tan\alpha$\\
+\vspace{1ex}$\frac{3\pi}{2}-\alpha$& $-\sin\alpha$ & $-\cos\alpha$ & $\cot\alpha $ &  $\tan\alpha$\\
+$2\pi+\alpha$& $\cos\alpha$ & $\sin\alpha$ & $\tan\alpha $ &  $\cot\alpha$\\
+$2\pi-\alpha$& $\cos\alpha$ & $-\sin\alpha$ & $-\tan\alpha $ &  $-\cot\alpha$\\
+\hline
+\end{tabular}
+\end{center}
+
+比如要计算$\tan\left(\frac{\pi}{2}+\alpha\right)$
+的值，在表中找到标记$\frac{\pi}{2}+\alpha$
+的第二行与标记$\tan$的第三列，它们相交之处，标记着
+$-\cot\alpha$, 于是，相应的诱导公式可以写成
+$\tan \left(\frac{\pi}{2}+\alpha\right) =
+-\cot\alpha$。
+
+表中最后一列，给出对于锐角$\alpha$ （带斜条的全等直角三
+角形的顶点在圆心的锐角）的三角函数诱导公式的几何解
+释。
+
+我们称正弦与余弦，正切与余切互为余函数。
+
+从表中，可知$-\alpha$、$\frac{\pi}{2}\pm\alpha$、$\pi \pm\alpha$、
+$\frac{3\pi}{2}\pm \alpha$ 和$2\pi \pm\alpha$ 都可以化成$k\frac{\pi}{2}
+\pm\alpha$ $(k=0,1,2,3,4)$ 的形式，并且
+这些角的三角函数和角$\alpha$ 的三角函数之间的关系，可以总结
+出下面的法则。
+
+\begin{enumerate}
+    \item 符号
+    
+要确定结果的符号，只要假定$\alpha$为锐角（实际上，在所
+有公式中的$\alpha$ 都是任意角），看角$k\cdot \frac{\pi}{2}\pm \alpha$在哪一象限，然后用原来函数在这个象限内应取的符号，作为结果的符号。
+
+\item 函数名称
+\begin{enumerate}
+    \item 若$k$为偶数（包括$k=0$在内）则等式两边函数名称相同。
+    \item 若$k$为奇数，则等式两边函数名称不同，可由原来
+函数名称中的“正”变“余”，或“余”变“正”（就是正
+弦变余弦，正切变余切；或余弦变正弦，余切变正切等等）
+而得到。
+\end{enumerate}
+\end{enumerate}
+
+为了便于记忆，上述法则还可以概括成下面的口诀：
+\begin{center}
+\verb|正负看象限，奇变偶不变。 |
+\end{center}
+
+利用上面的法则，便可以迅速地写出三角函数的诱导公
+式，下面举例来说明。
+
+\begin{example}
+    写出$\cos\left(\frac{3\pi}{2}+\alpha\right)$的诱导公
+    式。
+\end{example}
+
+\begin{solution}
+\begin{enumerate}
+    \item 假定$\alpha$ 是锐角，则
+$\frac{3\pi}{2}+\alpha$ 是第四象限的
+角，而第四象限的角的余弦是正的，所以结果应取正号。
+\item 因为$\frac{3\pi}{2}=3\cdot \frac{\pi}{2}$，3是奇数，所以，结果中函数名称应由余弦变为正弦，因此，有
+\[\cos\left(\frac{3\pi}{2}+\alpha\right)=\cos\left(3\cdot \frac{\pi}{2}+\alpha\right)=\sin\alpha\]
+\end{enumerate}
+\end{solution}
+
+\begin{example}
+    写出$\tan(\pi-\alpha)$的诱导公式。
+\end{example}
+
+\begin{solution}
+\begin{enumerate}
+    \item 假定$\alpha$是锐角，则
+$\pi -\alpha$ 是第二象限的角，
+而第二象限的角的正切是负的，所以结果应取负号。
+\item 因为$\pi =2\cdot\frac{\pi}{2}$，2是偶数，所以，结果中
+函数名称与原来的相同，仍为正切，因此，有
+\[\tan(\pi -\alpha )=-\tan\alpha \]
+\end{enumerate}
+\end{solution}
+
+利用三角函数的诱导公式，我们可以把求任意角的三角
+函数值的问题化为求锐角三角函数值的问题。下面分三种情
+形举例说明。
+
+第一种情形：0到$2\pi$ (或$0^{\circ}$到$360^{\circ}$)之间的角的三角
+函数。先选用适当的诱导公式化为锐角函数，然后求值。
+
+\begin{example}
+\[\sin 150^{\circ}=\sin(180^{\circ}-30^{\circ})=\sin30^{\circ}=\frac{1}{2}\]
+或
+  \[\sin 150^{\circ}=\sin(90^{\circ}+60^{\circ})=\cos60^{\circ}=\frac{1}{2}\]  
+\end{example}
+
+\begin{example}
+\[\cos\frac{2\pi}{3}=\cos\left(\pi-\frac{\pi}{3}\right)=-\cos\frac{\pi}{3}=-\frac{1}{2}\]
+或
+\[\cos\frac{2\pi}{3}=\cos\left(\frac{\pi}{2}+\frac{\pi}{6}\right)=-\sin\frac{\pi}{6}=-\frac{1}{2}\]
+\end{example}
+
+\begin{example}
+    $\tan\frac{4\pi}{3}=\tan\left(\pi+\frac{\pi}{3}\right)=\tan\frac{\pi}{3}=\sqrt{3}$
+\end{example}
+
+\begin{example}
+$\cot313^{\circ}25'=\cot(360^{\circ}-46^{\circ}35')=-\cot46^{\circ}35'=-0.9463$
+\end{example}
+
+第二种情形：大于$2\pi$ (或大于$360^{\circ}$) 的角的三角函数，
+可利用公式(6.4), 化为上述第一种情形，然后求值。
+
+\begin{example}
+    $\sin 510^{\circ}=\sin(360^{\circ}+150^{\circ})=\sin150^{\circ}=\sin30^{\circ}=\frac{1}{2}$
+\end{example}
+
+
+\begin{example}
+    $\cos\frac{8\pi}{3}=\cos\left(2\pi+\frac{2\pi}{3}\right)=\cos\frac{2\pi}{3}=\cos\left(\pi-\frac{\pi}{3}\right)=-\cos\frac{\pi}{3}=-\frac{1}{2}$
+\end{example}
+
+\begin{example}
+\[\begin{split}
+    \tan500^{\circ}=\tan(360^{\circ}+140^{\circ})&=\tan 140^{\circ}\\
+    &=\tan(180^{\circ}-40^{\circ})\\ &=-\tan40^{\circ}=-0.8391
+\end{split}\]
+\end{example}
+
+第三种情形：负角的三角函数，可先化为正角的三角函
+数，然后再分别按上述两种情形求值。
+
+\begin{example}
+\[\begin{split}
+    \sin( -680^{\circ}) &= -\sin680^{\circ} =-\sin(360^{\circ}+320^{\circ})\\
+   &=-\sin320^{\circ}
+   =-\sin(360^{\circ}-40^{\circ})\\
+  & =-(-\sin40^{\circ})   =\sin40^{\circ}=0.6428
+\end{split}\]
+或$$\sin( -680^{\circ})=\sin( -680^{\circ}+2\x 360^{\circ})=\sin 40^{\circ}=0.6428$$
+\end{example}
+
+\begin{example}
+    \[\begin{split}
+        \cos\left(-\frac{22\pi}{5}\right)=\cos\frac{22\pi}{5}&=\cos\left(4\pi+\frac{2\pi}{5}\right)\\ &=\cos\frac{2\pi}{5}=\cos72^{\circ}=0.3090
+    \end{split}\]
+\end{example}    
+
+
+\begin{example}
+    化$\tan (\alpha-270^{\circ})$为角$\alpha$的三角函数。
+\end{example}
+
+\begin{solution}
+$$\tan (\alpha-270^{\circ})=\tan [-(270^{\circ}-\alpha)]
+=-\tan (270^{\circ}-\alpha)
+=-\cot \alpha$$
+或
+$$\tan (\alpha-270^{\circ})=\tan[ (\alpha-270^{\circ})+360^{\circ}]
+=\tan (90^{\circ}+\alpha)=-\cot \alpha$$
+\end{solution}
+
+\section*{习题6.1}
+\addcontentsline{toc}{subsection}{习题6.1}
+\begin{enumerate}
+    \item 用余角的三角函数来替换下面的三角函数。
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\sin75^{\circ}30'$
+    \item $\sin(30^{\circ}-\alpha)$
+    \item $\cos(2\alpha+14^{\circ})$
+    \item $\cos\left(\frac{\alpha}{2}+55^{\circ}\right)$
+    \item $\tan\left(66^{\circ}-\frac{\alpha}{3}\right)$
+    \item $\cot(45^{\circ}+\alpha)$
+\end{enumerate}
+\end{multicols}
+    \item 查表求下列三角函数值：
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $\sin105^{\circ}45'$
+        \item $\cos165^{\circ}24'$
+        \item $\tan200^{\circ}$
+        \item $\cot290^{\circ}$
+    \end{enumerate}
+    \end{multicols}
+    \item 查表求下列三角函数值：
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\sin\frac{5\pi}{8}$
+    \item $\cos\frac{9\pi}{8}$
+    \item $\tan 1.4\pi$
+    \item $\cot 1.8\pi$
+    \item $-\tan 0.3\pi$
+\end{enumerate}
+\end{multicols}
+
+\item 查表求下列三角函数值：
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\sin(-1640^{\circ})$
+    \item $\cos(-900^{\circ})$
+    \item $\tan(-700^{\circ})$
+    \item $\cot\left(-13\frac{3}{4}\pi\right)$
+\end{enumerate}
+\end{multicols}
+
+\item 查表求下列三角函数值：
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\sin2$
+    \item $\cos1$
+    \item $\tan(-3)$
+    \item $\cot(\sin2)$
+\end{enumerate}
+\end{multicols}
+\item 查表求下列三角函数值：
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\sin 1160^{\circ}$
+    \item $\tan (-1596^{\circ})$
+    \item $\cot 864^{\circ}$
+    \item $\cos(-320^{\circ})$
+    \item $\tan 1190^{\circ}$
+    \item $\cos(-847^{\circ}32')$
+    \item $-\sin 570^{\circ}$
+    \item $-\cot 390^{\circ}$
+\end{enumerate}
+\end{multicols}
+
+\item 已知$\sin(180^{\circ}+\alpha)=-\frac{1}{2}$，计算：
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\sin(270^{\circ}+\alpha)$
+    \item $\cos(90^{\circ}+\alpha)$
+    \item $\tan(\alpha-270^{\circ})$
+    \item $\tan(\alpha-180^{\circ})$
+\end{enumerate}
+\end{multicols}
+\item 计算下列各式的值：
+\begin{enumerate}
+    \item $2\sin^2\frac{17\pi}{4}+\tan^2\frac{33\pi}{4}\cot\frac{3\pi}{4}$
+    \item $\tan10^{\circ}\cdot \tan20^{\circ}\cdot \tan30^{\circ}\cdot \tan40^{\circ}\cdot \tan50^{\circ}\cdot \tan60^{\circ}\cdot \tan70^{\circ}\cdot \tan80^{\circ}$
+    \item $\sin110^{\circ}+\sin130^{\circ}+\sin150^{\circ}+\sin170^{\circ}+\sin190^{\circ}+\sin210^{\circ}+\sin230^{\circ}+\sin250^{\circ}+\sin270^{\circ}$
+\end{enumerate}
+
+
+\item 确定下列各式的符号：
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $\sin 100^{\circ}+\cos100^{\circ}$
+    \item $\frac{1}{\cos230^{\circ}}-\frac{1}{\cos220^{\circ}}$
+\end{enumerate}
+\end{multicols}
+
+\item 查表求角，若
+\begin{enumerate}
+    \item $\sin\alpha=-0.515,\qquad 180^{\circ}<\alpha<270^{\circ}$
+    \item $\sin\alpha=0.669,\qquad 90^{\circ}<\alpha<180^{\circ}$
+    \item  $\tan\alpha=-1.376,\qquad 90^{\circ}<\alpha<180^{\circ}$
+    \item $\cos\alpha=0.407,\qquad 270^{\circ}<\alpha<360^{\circ}$
+    \item $\tan\alpha=0.577,\qquad 180^{\circ}<\alpha<270^{\circ}$
+    \item $\cot\alpha=-2.747,\qquad 90^{\circ}<\alpha<180^{\circ}$
+\end{enumerate}
+\end{enumerate}
+
+\subsection{正切函数线与余切函数线}
+\begin{blk}{定义}
+    过单位圆与坐标系的横轴$Ox$的交点$A(1,0)$的切
+线叫做正切函数线，简称正切线；而过单位圆与坐标系纵轴
+$Oy$的交点$B(0,1)$的切线叫做余切函数线，简称余切线（图
+6.18）。
+\end{blk}
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex]
+\draw[->](-2,0)--(2.5,0)node[right]{$x$};
+\draw[->](0,-2)--(0,2.5)node[right]{$y$};
+\draw (0,0) circle(1.5);
+\draw[thick] (-2,1.5)--(2,1.5)node[right]{余切线};
+\draw[thick] (1.5,-2)node[below]{正切线}--(1.5,2);
+\node at (-.25,-.25){$O$};
+\node at (2,0)[below]{$A(1,0)$};
+\node at (.5,1.5)[above]{$B(0,1)$};
+
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+
+正切线与$Oy$轴平行，在正
+切线上，规定它的正方向与$Oy$
+轴的正方向一致，它上面的单
+位长等于单位圆的半径。
+
+令$P$是角$\alpha$的终边与单位
+圆的交点，延长旋转半径$OP$或反向延长旋转半径$OP$与正
+切线交于$L$点（当$P$点位于
+$Oy$轴上时，过$O$、$P$两点的直线就不与正切线相交），如
+图6.19所示。
+
+
+\begin{blk}{定理}
+    角$\alpha$的正切等于它的终边所在直线与正切线的交
+点的纵坐标。
+\end{blk}
+
+\begin{proof}
+    如果角$\alpha$的终边$OP$在$Oy$轴的右侧，射线$OP$
+    与正切线交于$L$点。设$P$点坐标为$(x,y)$, $L$点坐标为$(1,y_1)$，这时
+\[\tan\alpha=\frac{y}{x}=\frac{AL}{1}=y_1\]
+这里$AL$是有向线段$\Vec{AL}$的数量（图6.19(a)）。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex]
+\begin{scope}
+\draw[->](-2,0)--(2.5,0)node[right]{$x$};
+\draw[->](0,-2)--(0,2.5)node[right]{$y$};
+\draw (0,0) circle(1.5);
+\draw[thick] (1.5,-2)--(1.5,2);
+\node at (-.25,-.25){$O$};
+\node at (2,0)[below]{$A(1,0)$};
+\draw[thick] (0,0)--(45:3);
+\node at (1.5,1.5)[right]{$L(1,y)$};
+\node at (45:1.5)[above]{$P(x,y)$};
+\draw[->] (.5,0) arc (0:45:.5);
+\node at (45/2:.7) {$\alpha$};
+\node at (0,-2.75){(a)};
+\end{scope}
+\begin{scope}[xshift=6cm]
+\draw[->](-2,0)--(2.5,0)node[right]{$x$};
+\draw[->](0,-2)--(0,2.5)node[right]{$y$};
+\draw (0,0) circle(1.5);
+\draw[thick] (1.5,-2)--(1.5,2);
+\node at (-.25,-.25){$O$};
+\node at (2,0)[below]{$A(1,0)$};
+\draw[thick] (-1.5/1.414,0)node[below]{$M$}--(90+45:1.5)node[above]{$P(x,y)$}--(0,0)--(-45:3);
+\node at (1.5,-1.5)[right]{$L(1,y)$};
+\draw[->] (.5,0) arc (0:45+90:.5);
+\node at (135/2:.7){$\alpha$};
+\node at (0,-2.75){(b)};
+\end{scope}
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+如果角$\alpha$ 的终边$OP$在$Oy$轴的左侧，反向延长$OP$与
+正切线交于$L$点．设$P$点、$L$点的坐标分别是$(x,y)$、$(x_1,y_1)$，
+这时$P$点和$L$点的同名称坐标的符号相反，但由于
+$\triangle  OPM    \sim \triangle OLA$, 所以它们的坐标的比相同（图6.19(b)），即
+\[\tan\alpha =\frac{y}{x}=\frac{MP}{OM}=\frac{AL}{OA}=\frac{y_1}{1}=y_1\]
+
+如果$P$点在$Oy$轴上则$L$点不存在，$\tan\alpha$ 不存在。
+
+余切线与$Ox$轴平行，在余切线上，规定它的正方向与
+$Ox$轴的正方向一致，它上面的单位长等于单位圆的半径。
+\end{proof}
+
+我们可以用同样的方法证明下面的定理。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \begin{example}
     
 \end{example}
 
-
-\begin{solution}
+\begin{example}
     
-\end{solution}
+\end{example}
 
 \begin{example}
     
@@ -1454,63 +1961,101 @@ $\frac{\pi}{2}\pm\alpha$与$\alpha$的三角函数间有下述关系：
     
 \end{solution}
 
+\begin{solution}
+    
+\end{solution}
 
+\begin{solution}
+    
+\end{solution}
+
+\begin{solution}
+    
+\end{solution}
 
 \begin{example}
     
 \end{example}
 
-\begin{solution}
+\begin{example}
     
-\end{solution}
+\end{example}
 
 \begin{example}
     
 \end{example}
 
-\begin{solution}
+\begin{example}
     
-\end{solution}
-
+\end{example}
 
 \begin{example}
     
 \end{example}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{solution}
+\begin{example}
     
-\end{solution}
+\end{example}
 
-\begin{solution}
+\begin{example}
     
-\end{solution}
+\end{example}
 
-\begin{solution}
+\begin{example}
     
-\end{solution}
+\end{example}
 
-\begin{solution}
+\begin{example}
     
-\end{solution}
+\end{example}
+
+\begin{example}
+    
+\end{example}
+
+\begin{example}
+    
+\end{example}
+
+\begin{example}
+    
+\end{example}
+
+\begin{example}
+    
+\end{example}
+
+\begin{example}
+    
+\end{example}
+
+\begin{example}
+    
+\end{example}
+
+\begin{example}
+    
+\end{example}
+
+\begin{example}
+    
+\end{example}
+
+\begin{example}
+    
+\end{example}
+
+\begin{example}
+    
+\end{example}
+
+\begin{example}
+    
+\end{example}
+
+\begin{example}
+    
+\end{example}
+\begin{example}
+    
+\end{example}
