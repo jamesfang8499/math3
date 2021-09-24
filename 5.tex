@@ -1258,7 +1258,7 @@ $y$&0&0&4\\
     设一边为$x$m，则另一边长为$(80-x)$m，如果$y{\rm m}^2$
 是矩形的面积，则
 \[\begin{split}
-    y=x(80-x)&=-x2+80x,\qquad (0<x<80)\\
+    y=x(80-x)&=-x^2+80x,\qquad (0<x<80)\\
     &=-(x^2-80x+1600-1600)\\
     &=-(x-40)^2+1600
 \end{split}\]
@@ -1656,8 +1656,788 @@ $y_1=-bx_1-c$, 从而有$ax_1^2=-bx_1-c$, 即$ax_1^2+bx_1+c=0$。
     \caption{}
 \end{figure}
 
+\begin{ex}
+\begin{enumerate}
+\item 先画出函数$y=x^2$的图象，然后利用这个图象解方程（精
+确到0.1):
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $x^2-x-1=0$
+    \item $2x^2-3x+6=0$
+    \item $3x^2+5x-15=0$
+    \item $5x^2-2x-10=0$
+\end{enumerate}
+\end{multicols}
+\item 解下列各一元二次方程，井说出与相应的函数图象之间
+的关系：
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $x^2-2x-3=0$
+    \item $x^2-10x+21=0$
+    \item $x^2-x-6=0$
+    \item $x^2+7x+12=0$
+    \item $2x^2-11x+15=0$
+    \item $3x^2+5x-12=0$
+    \item $6x^2-13x+6=0$
+    \item $6x^2-7x-20=0$
+    \item $x^2-4x=0$
+    \item $(x-2)^2+2(x-2)-8=0$
+\end{enumerate}
+\end{multicols}   
+\end{enumerate}    
+\end{ex}
+
+\subsection{利用二次函数的图象解一元二次不等式}
+我们在第三章中讨论了二次三项式$ax^2+bx+c$的值
+的符号，现在有了二次函数的图象，就可以把一元二次不等
+式的解的情况利用图象更直观地表示出来。
+
+在解一元二次不等式时，只要看二次函数$y=ax^2+bx+
+c$, 当$x$取何值时，抛物线上的点的纵坐标是正的或是负的就
+可以了．解一元二次不等式$ax^2+bx+c>0$(或$<0$)可按照
+下列步骤：
+\begin{enumerate}
+    \item 先求判别式；
+    \item 根据$a$及判别式的符号决定二次
+函数图象形状（开口）与位置（这一步或画草图，或在头脑中
+想象均可）；
+\item 若$b^2-4ac\ge 0$, 则求出二次方程$ax^2+bx+
+c=0$的根；
+\item 根据图象决定二次不等式的解的范围。
+\end{enumerate}
 
 
+
+
+\begin{example}
+    解不等式$x^2-2x-3>0$
+\end{example}
+
+\begin{solution}
+\begin{enumerate}
+    \item $\Delta=b^-4ac=(-2)^2+12>0$。
+    \item $a=1>0$, 图象开口向上与$x$轴有两个交点。
+    \item $x^2-2x-3=(x-3)(x+1)$
+    
+    $\therefore\quad x=-1,\; x=3$为$x^2-2x-3=0$的两根。
+
+    \item $x^2-2x-3>0$的解集是：$\{x|x<-1\}\cup \{x|x\ge 3\}$。
+\end{enumerate}
+\end{solution}
+
+\begin{example}
+解不等式$2x^2-4x+3<0$.
+\end{example}
+
+\begin{solution}
+\begin{enumerate}
+    \item $\Delta=(-4^2)-4\x2\x3=16-24<0$。
+    \item $a=2>0$, 图象开口向上且与轴无交点。
+    \item 因此$2x^2-4x+3<0$的解集为$\emptyset$。
+\end{enumerate} 
+\end{solution}
+
+\begin{example}
+    求$k$值范围，使抛物线$y=(k-1)x^2-2(k+1)x-4+4k$在$x$轴下方与$x$轴没有交点。
+\end{example}
+
+\begin{solution}
+    抛物线在$x$轴下方与$x$轴没有交点的充分必要条件是：
+\[\begin{cases}
+    k-1<0 \\ \Delta=4(k+1)^2-4(k-1)(4k-4)<0
+\end{cases}\Rightarrow \quad \begin{cases}
+    k-1<0 \\ 3k^2-10k+3>0
+\end{cases}\]
+解集：
+\[\begin{split}
+\left\{k|k<1,\; 3k^2-10k+3>0 \right\}&=\left\{k\Big|k<1,\; k<\frac{1}{3} \right\}\bigcup\{k|k<1,\; k>3 \}\\
+&=\left\{k\Big|k<\frac{1}{3} \right\}\bigcup\emptyset\\
+&=\left\{k\Big|k<\frac{1}{3} \right\}
+\end{split}\]
+\end{solution}
+
+\begin{example}
+    求$m$值的范围使方程
+    $x^2+2(m-1)x+3m^2-11=0$
+    有正实数根。
+\end{example}
+
+\begin{solution}
+方程有实数根的充分必要条件是：
+$\Delta=4(m-1)^2-4(3m^2-11)\ge 0$
+即：
+\begin{equation}
+    m^2+m-6\le 0
+\end{equation}
+此两实数根同号，故在上述条件上还需添上条件
+\begin{equation}
+    x_1x_2=3m^2-11>0
+\end{equation}
+又二同号实根均为正实数，故又在条件(5.16)和(5.17)上还需添
+上条件
+\begin{equation}
+    x_1+x_2=-2(m-1)>0
+\end{equation}
+因此原方程有正实数根的等价条件是：
+\[\begin{cases}
+    m^2+m-6\le 0\\
+    3m^2-11>0\\
+    -2(m-1)>0
+\end{cases}\]
+由(5.16)得：
+$-3\le m\le 2$.
+
+由(5.17)得：$m<-\sqrt{\frac{11}{3}}=-\frac{\sqrt{33}}{3}\approx -1.91$或$m>\sqrt{\frac{11}{3}}=\frac{\sqrt{33}}{3}\approx 1.91$
+
+由(5.18)得：$m<1$。
+
+因此，$m$的解集：
+\[\begin{split}
+   & \left\{m\Big|-3\le m\le 2,\; m<-\frac{\sqrt{33}}{3},\; m<1\right\}\\
+   &\qquad \bigcup\left\{m\Big|-3\le m\le 2,\; m>\frac{\sqrt{33}}{3},\; m<1\right\}\\
+    &=\left\{m\Big|-3\le m<-\frac{\sqrt{33}}{3}\right\}\bigcup \emptyset\\
+    &=\left\{m\Big|-3\le m<-\frac{\sqrt{33}}{3}\right\}
+\end{split}\]
+故$m$的值在$-3\le m<-\frac{\sqrt{33}}{3}$
+的范围内，可使方程$x^2+2(m-1)x+3m^2-11=0$有正实数根。
+\end{solution}
+
+\begin{example}
+    求$p$的范围使方程
+$(p-3)x^2-2px+6p=0$
+有两符号相反实根，且最小实根大于$-3$。
+\end{example}
+
+\begin{solution}
+    方程有两符号相反实根，即0在两根之间的充分必
+要条件是$f(0)\cdot (p-3)<0$（图5.24）。
+即
+\begin{equation*}
+    6p(p-3)<0
+\end{equation*}
+又$-3$小于最小实根，故需添上条件；
+\[f(-2)(p-3)>0\]
+即：$[9(p-3)+6p+6p](p-3)>0$。化简得$p<1\frac{2}{7}$
+或$p>3$
+
+因此原方程有两符号相反实根，且最小实根大于$-3$的等价
+条件是：
+\[\begin{cases}
+    0<p<3\\
+    p<1\frac{2}{7},\qquad \text{或}\qquad p>3
+\end{cases}\]
+所以$p$的解集：$\left\{p\Big|0<p<1\frac{2}{7}\right\}$。
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex,scale=.7]
+\begin{scope}
+\draw[->] (-2,0)--(4,0)node[right]{$x$};
+\draw[->] (0,-3)--(0,5)node[right]{$y$};
+\draw[domain=-1.5:3.5, samples=100, thick] plot(\x, {(\x-1)*(\x-1)*.8-1.5});
+\node at (1.5,3.5){$p-3>0$};
+\foreach \x/\xtext in {1.37+1/x_2, -1.37+1/x_1}
+{
+    \node at (\x-.2,0)[below] {$\xtext$};
+}
+\node at (.3,-.3){$O$};
+\node at (0,-0.9)[left]{$f(0)$};
+\end{scope}
+
+\begin{scope}[xshift=8cm, yshift=1cm]
+    \draw[->] (-2,0)--(4,0)node[right]{$x$};
+\draw[->] (0,-4)--(0,4)node[right]{$y$};
+\draw[domain=-1.5:3.5, samples=100, thick] plot(\x, {-(\x-1)*(\x-1)*.8+1.5});
+\node at (1.5,2){$p-3<0$};
+\foreach \x/\xtext in {1.37+1/x_2, -1.37+1/x_1}
+{
+    \node at (\x-.2,0)[below] {$\xtext$};
+}
+\node at (.3,-.3){$O$};
+\node at (0,0.7)[right]{$f(0)$};
+\end{scope}
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+\end{solution}
+
+\begin{ex}
+\begin{enumerate}
+    \item 解下列不等式：
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $(3-4x)(2x-1)>0$
+    \item $(x+1)^2+2<0$
+    \item $(x+2)^2\ge 9$
+    \item $12x-4x^2-9<0$
+    \item $2x^2+5x-1>0$
+    \item $x^2-3x+2>0$
+    \item $2x^2-3x+1<0$
+    \item $-x^2-x-1<0$
+    \item $x^2-x+1<0$
+    \item $1+x-x^2>0$
+    \item $1-x+x^2>0$
+\end{enumerate}
+\end{multicols}
+
+\item 求$k$的范围使方程：
+$kx^2+3kx+k-3=0$的两根都是负数。
+\item $k$在什么范围，方程$3x^2-(k-4)x+3=0$的根是实数，
+并确定这两根的符号。
+\item $k$在什么范围，方程$(k+2)x^2-2kx-k=0$的两根符号
+相反。
+\end{enumerate}    
+\end{ex}
+
+\subsection{一元二次方程的判别式与求函数的极值}
+利用一元二次方程的判别式，可以求一类函数的极值，我
+们先说明如何应用判别式，求二次函数的极值，然后将此法
+推广去求$y=\frac{ax^2+bx+c}{a'x^2+b'x+c'}$
+这一类函数的极值。
+
+我们借助于函数的图象来说明这个方法，先作出
+$y=ax^2+bx+c\; (a\ne 0)$的图象，然后用一族和$x$轴平行的直
+线$y=d$去截割它（图5.25）。直线$y=d$和抛物线的交点满足方
+程组：
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex]
+\begin{scope}
+    \draw[->] (-1.5,0)--(3.5,0)node[right]{$x$};
+    \draw[->] (0,-3)--(0,3)node[right]{$y$};
+    \draw [domain=-.8:2.8, samples=50, ultra thick] plot(\x, {1.3*(\x-1)*(\x-1)-2});
+    \foreach \x in {-2,-1,1,2}
+    {
+        \draw (-1.2,\x)--(3.2,\x);
+    }
+    \node at (3,-1)[below]{$y=d$};
+    \node at (0,-1)[below]{$M$}; 
+    \node at (2,-1)[below]{$N$};
+    \node at (.25,.25){$O$};
+\end{scope}
+
+\begin{scope}[xshift=6.5cm]
+    \draw[->] (-1.5,0)--(3.5,0)node[right]{$x$};
+    \draw[->] (0,-3)--(0,3)node[right]{$y$};
+    \draw [domain=-.8:2.8, samples=50, ultra thick] plot(\x, {-1.3*(\x-1)*(\x-1)+2});
+    \foreach \x in {-2,-1,1,2}
+    {
+        \draw (-1.2,\x)--(3.2,\x);
+    }
+    \node at (3,1)[below]{$y=d$};
+    \node at (0,1)[above]{$M$}; 
+    \node at (2,1)[above]{$N$};\node at (.25,-.25){$O$};
+\end{scope}
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\begin{numcases}{}
+    y=ax^2+bx+c\\
+y=d
+\end{numcases}
+将(5.20)代入(5.19)得到交点横坐标满足的方程：
+\[ax^2+bx+(c-d)=0\]
+为简单起见就写成：
+\begin{equation}
+    ax^2+bx+ (c-y)=0
+\end{equation}
+因为直线与抛物线相交，故方程(5.21)有实数解，也就是说它
+的判别式：
+\begin{equation}
+    D=b^2-4a(c-y)\ge 0
+\end{equation}
+
+在$a>0$的情况下，让$y$的值越来越小，也就是说让直线
+$y=d$平行$x$轴下降，这时两个交点$M,N$就越来越靠近，直
+到这两个交点重合时为止，也就是说当直线$y=d$与抛物线切
+于顶点时为止。(5.21)的判别式$D=b^2-4a(c-y)=0$, 就是函数
+$y=ax^2+bx+c$的极小值所满足的条件，所以
+$y_{\min}=\frac{4ac-b^2}{4a}$。
+
+在$a<0$的情况下，让直线$y=d$平行$x$轴上升，直到两交点重
+合为止，同样(5.21)的判别式$D=b^2-4a(c-y)=0$是(5.19)的
+极大值所满足的条件，所以$y_{\max}=\frac{4ac-b^2}{4a}$。
+
+为求极值点，我们应用根和系数的关系。
+设$x_1,x_2$是方程(5.21)的两个实数根，于是$x_1+_2=-\frac{b}{a}$，
+当$x_1=x_2$时，则$x_1=x_2=-\frac{b}{2a}$，
+因此，极值点$x_0=-\frac{b}{2a}$。
+
+通过上面的说明，可以知道(5.21)的判别式$D=0$是(5.19)
+的极值的必要条件，剩下的问题是怎样辨认$D=0$的解是极
+大值或是极小值。由于我们在前面已经知道了二次函数的极
+值存在且唯一和二次函数的图象，所以根据$a$的符号就可
+以确定$D=0$的解是极大值还是极小值。假如我们不知道
+二次函数的性质和它的图象，那么我们用什么办法去辨认
+呢？一个常用的方法就是在解方程$D=0$的同时还去 解不等
+式$D>0$。使$D>0$成立的每个解$y$都使直线$y=d$和抛物线(5.19)
+有两个交点，故这些交点的纵坐标可以由不等式：
+\[D=b^2-4a(c-y)>0\]
+解出。它的解：
+\begin{itemize}
+    \item 当$a>0$时，$y>\frac{4ac-b^2}{4a}$；
+    \item 当$a<0$时，$y<\frac{4ac-b^2}{4a}$。
+\end{itemize}
+
+把$D=0$和$D>0$的解合取在一起得到$D\ge 0$的解：
+\[y\ge \frac{4ac-b^2}{4a}\;\; (a>0)\qquad \text{或}\qquad y\le \frac{4ac-b^2}{4a}\;\; (a<0)\]
+由上面第一个不等式知道，二次函数在极值点$x_0=-\frac{b}{2a}$
+的邻近的函数值都比$\frac{4ac-b^2}{4a}$大，故
+$\frac{4ac-b^2}{4a}$
+是(5.19)的极小值。
+由第二个不等式知道，二次函数在极值点$x_0=-\frac{b}{2a}$的邻近
+的函数值都比$\frac{4ac-b^2}{4a}$
+小，故$\frac{4ac-b^2}{4a}$是(5.19)的极大值。
+
+上面应用二次方程判别式，求二次函数的极值的方法，
+也可以用来求$y=\frac{ax^2+bx+c}{a'x^2+b'x+c'}$
+这类函数的极值，下面通过例子来说明。
+
+
+
+
+
+\begin{example}
+    求$y=\frac{x^2+2x+4}{x}$
+的极值。
+\end{example}
+
+\begin{solution}
+    假设给$y$在函数
+    \begin{equation}
+        y=\frac{x^2+2x+4}{x}
+    \end{equation}
+    值域中的任何一个值，那么(5.23)中和$y$对应的$x$值是方程
+    \begin{equation}
+        x^2+(2-y)x+4=0
+    \end{equation}
+    的实数解。
+
+    方程(5.24)的判别式是
+    \begin{equation}
+        D=(2-y)^2-16=(y+2)(y-6)
+    \end{equation}
+
+    由$D=0$得到(5.24)有重根的条件，也就是(5.23)的极值满
+    足的条件，解得
+ \[   y1=-2\qquad \text{或}\qquad y_2=6\]
+    将$y_1=-2$代入(5.24), 得到对应于$-2$的$x$值
+  \[  x_1=-\frac{4}{2}=-2\]
+    将$y_2=6$代入(5.24)，得到对应于6的$x$值
+    \[x_2=-\frac{2-6}{2}=2\]
+
+    由$D>0$得到(5.24)有不同实根的条件，也就是说，它的解
+    是在(5.23)的值域中，并且是在点$x_1=-2$, $x_2=2$附近的函数值。解得
+  \[  y<-2\qquad \text{和}\qquad y>6\]
+    由$y<-2$和$y>6$, 知道：
+    $-2$是(5.23)的极大值，6是(5.23)的极小值（图5.26）。
+\end{solution}
+
+
+\begin{example}
+    说明函数$y=\frac{2x}{1-x^2}$
+没有极值。
+\end{example}
+
+\begin{solution}
+假设给$y$在函数
+\begin{equation}
+    y=\frac{2x}{1-x^2}
+\end{equation}
+的值域中的一个值，那么(5.26)中和$y$对应的$x$值是方程
+\begin{equation}
+    yx^2+2x-y=0
+\end{equation}
+的实数解。
+
+(5.27)的判别式是$D=4+4y^2$, 因为$D=0$没有实数解，
+而$D>0$的解是一切实数，即$y\in\mathbb{R}$。
+
+这就是说函数(5.26)的值域是一切实数。因此(5.26)没有
+极值（图5.27）。
+\end{solution}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=.4]
+     \draw[->] (-6,0)--(6,0)node[right]{$x$};
+    \draw[->] (0,-6.5)--(0,11.5)node[right]{$y$};   
+    \draw [domain=-6:-.5, samples=50, ultra thick] plot(\x, {\x+4/\x+2});
+    \draw [domain=.5:6, samples=50, ultra thick] plot(\x, {\x+4/\x+2});
+    \draw [domain=-6:6, samples=5, dashed, thick] plot(\x, {\x+2});
+    \foreach \x in {1}
+    {
+        \draw (\x,0)node[below]{\x}--(\x,.2);
+        \draw(0,\x)node[left]{\x}--(.2,\x); 
+    }
+    \node at (-.5,-.5){$O$};
+\node at (2,6)[below]{$(2,6)$};
+\node at (-2,-2)[above]{$(-2,-2)$};
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=.55]
+        \draw[->] (-5,0)--(5,0)node[right]{$x$};
+      \draw[->] (0,-5)--(0,5)node[right]{$y$};  
+      \foreach \x in {-1,1}
+      {
+          \node at (\x-.3,0)[below]{$\x$};
+          \draw[dashed] (\x,-5)--(\x,5);
+      }
+      \draw [domain=-.8:.8, samples=50, ultra thick] plot(\x, {2*(\x/(1-\x*\x))});
+      \draw [domain=-5:-1.25, samples=50, ultra thick] plot(\x, {2*(\x/(1-\x*\x))});
+      \draw [domain=1.25:5, samples=50, ultra thick] plot(\x, {2*(\x/(1-\x*\x))});
+    \node at (-.5,.5){$O$};
+    
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+\begin{ex}
+\begin{enumerate}
+    \item 求下列函数的极值：
+    \begin{multicols}{2}
+\begin{enumerate}
+    \item $y=\frac{1}{1-x^{2}}$
+    \item $y=\frac{2 x}{1+x^{2}}$
+    \item $y=\frac{x^{2}-4 x+3}{x+1}$
+    \item $y=\frac{x^{2}+3 x+5}{x^{2}+1}$
+    \item $y=\frac{x^{2}-3 x+4}{x^{2}+3 x+4}$
+    \item $y=\frac{x^{2}-x+1}{x^{2}+x+1}$
+    \item $y=\frac{(x+1)(x-2)}{(x-1)(x+2)}$
+    \item $y=\frac{x^{2}-2 x+4}{x^{2}+2 x+4}$
+\end{enumerate}        
+    \end{multicols}
+
+\item 有一杠杆的支点在它的一端，而在距支点一米处挂一重
+为490公斤的物体，同时加力于杆的它端，使杠杆保持水
+平．若杠杆本身每米长的重量为5公斤，求最省力的杆
+长（如图5.28）。
+\end{enumerate}
+\end{ex}
+
+
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex]
+
+\fill [pattern=north east lines] (-.5,-.25) rectangle(.5,0);
+\draw (-.5,0)--(.5,0);
+\draw (-.25,0)--(0,.5)--(.25,0);
+\draw[thick] (0,.5)--(6,.5);
+\draw[->, very thick] (6,.5)--(6,3)node[right]{$F$};
+\draw[->, very thick](2.5,.5)--(2.5,-1.5)node[below]{$P$};
+\draw [->, very thick] (3.5,.5)--(3.5,-2.4)node[right]{490公斤};
+\draw (0,.5)--(0,1.5);
+\draw  (3.5,.5)--(3.5,1.5);
+\draw[<->](0,1)--node[fill=white]{1米}(3.5,1);
+\draw [fill=black](2.5,.5) circle(1.5pt);
+\draw [fill=black](3.5,.5) circle(1.5pt);
+\end{tikzpicture}
+    \caption{}
+\end{figure}
+
+\section{多项式函数的增减性}
+\subsection{多项式函数的增减性}
+我们已经在第四章中，给出了函数在某一区间上
+是增函数和减函数的定义，在前面也讨论过一、二次函数的
+增减性与极值。这就是：
+
+一次函数$f(x)=kx+b$
+\begin{itemize}
+    \item 当$k>0$时，一次函数$f(x)=kx+b$在定义域$(-\infty,+\infty)$上递增；
+\item 当$k<0$时，一次函数$f(x)=kx+b$在定义域$(-\infty,+\infty)$上递减。
+\item 一次函数在定义域$(-\infty,+\infty)$上无极值。
+\end{itemize}
+
+二次函数$f(x)=ax^2+bx+c$
+\begin{itemize}
+    \item 当$a>0$时，二次函数$f(x)=ax^2+bx+c$在
+$\left(-\infty,-\frac{b}{2a}\right)$上递减，在$\left(-\frac{b}{2a},+\infty\right)$上递增，且当$x=-\frac{b}{2a}$
+时，$y_{\min}=\frac{4ac-b^2}{4a}$。
+\item 当$a<0$时，二次函数$f(x)=ax^2+bx+c$在$\left(-\infty,-\frac{b}{2a}\right)$上递增，在$\left(-\frac{b}{2a},+\infty\right)$上递减，且当$x=-\frac{b}{2a}$
+时，$y_{\max}=\frac{4ac-b^2}{4a}$。
+\end{itemize}
+
+
+可是对于二次以上的多项式函数就不能象二次多项式那
+样，利用配方和图象来研究它。在研究二次以上多项式函数
+的时候，确定出函数的递增、递减变化的区间对作出函数的
+图象，求出函数的极值都很重要，下面举一个例子来说明。
+
+\begin{example}
+证明函数$y=x^3-3x$在开区间$(-\infty),-1)$上递增；在开区间$(-1,+1)$上递减；
+在开区间$(1,+\infty)$上递增；作出这个函数图象的草图。
+\end{example}
+
+\begin{solution}
+\begin{enumerate}
+    \item 
+设$x_1<x_2<-1$, 则$-x_1>-x_2>1$, 从而
+$(-x_1)(-x_2)>1$,  即$x_1\cdot x_2>1$。
+\begin{equation}
+    \begin{split}
+    f(x_2)-f(x_1)&=x_2^3-3x_2-(x_1^3-3x_1)\\
+    &= x_2^3-x_1^3-3(x_2-x_1)\\
+&=(x_2-x_1)(x_2^2+x_2x_1+x_1^2-3)\\
+&>(x_2-x_1)(3x_2x_1-3)\\
+&=3(x_2-x_1)(x_2x_1-1)
+\end{split}
+\end{equation}
+$\because\quad x_2-x_1>0,\quad x_2x_1-1>0$
+
+$\therefore\quad f(x_2)-f(x_1)>0$, 即$f(x)=x^3-3x$在$(-\infty,-1)$上递增。
+
+\item 设$-1<x_1<x_2<1$, 当$-1<x_1<x_2<0$时，有
+$1>-x_1>-x_2>0$,  从而$(-x_1)(-x_2)<1$, 即$x_1x_2<
+1$；当$-1<x_1<0<x_2<1$时，有$x_1x_2<0<1$；$当0<x_1
+<x_2<1$时，有$x_1x_2<1$, 无论哪种情形都有$x_1x_2<1$。因
+此由(5.28)得到：$f(x_2)-f(x_1)<0$,即$f(x)=x^3-3x$在$(-1,1)$
+上递减。
+
+\item 设$1<x_1<x_2$, 则$x_1x_2>1$. 因此由(5.28)得
+到：
+$f(x_2)-f(x1)>0$, 即$f(x)=x^3-3x$在$(1,+\infty)$上
+递增。
+\end{enumerate}
+
+这个函数的图象通过原点且关于原点对称，函数变化增、减情形如下表：
+\begin{center}
+\begin{tabular}{c|ccccccc}
+    \hline
+    $x$    &&$-1$&& 0 && 1           \\
+    \hline
+    $f(x)=x^3-3x$& $\nearrow $&2&$\searrow $&0$\searrow $&$-2$&$\nearrow$\\
+    \hline
+\end{tabular}
+\end{center}
+    
+\end{solution}
+    
+草图如图5.29。
+\begin{figure}[htp]
+    \centering
+\begin{tikzpicture}[>=latex, scale=1]
+        \draw[->] (-3,0)--(3,0)node[right]{$x$};
+      \draw[->] (0,-3)--(0,3)node[right]{$y$};  
+      \foreach \x in {-1,1,-2,2}
+      {
+          \draw (\x,0)node[below]{$\x$}--(\x,.1);
+          \draw (0,\x)--(.1,\x)node[right]{$\x$};
+      }
+      \draw [domain=-2.1:2.1, samples=50, ultra thick] plot(\x, {\x*(\x*\x-3)});
+    \node at (.25,.25){$O$};
+    \end{tikzpicture}    
+    \caption{}
+\end{figure}
+
+现在的问题是怎样找出一个多项式函数的递增区间和递
+减区间？
+
+我们的办法是考虑多项式函数在各点的变化趋向，也就
+是考虑函数$f(x)$在$x=x_0$这一点有递增变化趋向，还是有递
+减变化趋向？从图5.29可以直观地看出随着$x$值的增加，当
+$x=2$时，$f(x)=x^3-3x$有递增变化趋向，当
+$x=-\frac{1}{2}$时，
+$f(x)=x^3-3x$有递减变化趋向；当$x=-1$时，函数由递增转
+变到递减；当$x=1$时，函数由递减转变到递增，现在我们
+来考虑如何给函数在某一点递增或递减的概念以明确的定
+义，一个很自然的办法是让自变量从$x_0$点开始作很小的改变。
+令$x-x_0=h$, 即$x=x_0+h$, 这里$h$可正、可负，但是它的绝
+对值很小，我们把$h$叫做自变量的改变量，以$x=x_0+h$代入
+$f(x)$, 得到自变量改变量的对应函数$f(x_0+h)$, 我们把差
+$f(x_0+h)-f(x_0)$叫做函数$f(x)$在$x=x_0$这一点的改变量。
+
+
+\begin{blk}{定义}
+    如果存在一个充分小正数$\delta $, 使得在以$x_0$为中心的
+开区间$(x_0-\delta,x_0+\delta)$, 即在点$x_0$的邻域内，使得
+\begin{enumerate}
+    \item 对于一切点$x=x_0+h\; (-\delta<h<0)$和一切点$x'=
+x_0+h'\; (0<h'<\delta)$, 有$$f(x_0+h)<f(x_0)<f(x_0+h')$$ 则称
+函数$f(x)$在点$x_0$递增（图5.30），
+\item 对于一切点$x=x_0+h\; (-\delta<h<0)$和一切点$x=x_0+
+h'\; (0<h'<\delta)$, 有
+$$f(x_0+h)>f(x_0)>f(x_0+h')$$
+则称函数$f(x)$在点$x_0$递减（图5.31）。
+\end{enumerate}
+\end{blk}
+
+\begin{figure}[htp]\centering
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+\begin{tikzpicture}[>=latex, scale=1.2]
+    \draw[->] (-.5,0)--(4,0)node[right]{$x$};
+    \draw[->] (0,-.5)--(0,4)node[right]{$y$};  
+\draw [very thick](.5,1)to [bend right=-15](3.5,3.5)node[above]{$y=f(x)$};
+\node at (-.25,-.25){$O$};
+\draw[dashed] (.5,0)node[below]{$x_0-\delta$}--(.5,1);  
+\draw[dashed] (3.5,0)node[below]{$x_0+\delta$}--(3.5,3.5);
+\draw[dashed] (2,0)node[below]{$x_0$}--(2,2.55)node[left]{$f(x_0)$};
+
+\draw[dashed] (1.3,0)node[below=8pt]{$x_0+h$}--(1.3,1.85)node[left]{$f(x_0+h)$};  
+\draw[dashed] (2.5,0)node[below=8pt]{$x_0+h'$}--(2.5,2.95)node[above]{$f(x_0+h')$};
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \begin{minipage}[t]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=latex, scale=1.2]
+        \draw[->] (-.5,0)--(4,0)node[right]{$x$};
+        \draw[->] (0,-.5)--(0,4)node[right]{$y$}  ;
+\draw [very thick](.5,3.5)node[right]{$y=f(x)$} to [bend right=15](3.5,1);   
+\node at (-.25,-.25){$O$};      
+\draw[dashed] (.5,0)node[below]{$x_0-\delta$}--(.5,3.5);  \draw[dashed] (3.5,0)node[below]{$x_0+\delta$}--(3.5,1);
+\draw[dashed] (2,0)node[below]{$x_0$}--(2,1.8)node[right]{$f(x_0)$};
+
+\draw[dashed] (1.3,0)node[below=8pt]{$x_0+h$}--(1.3,2.5)node[right]{$f(x_0+h)$};  
+\draw[dashed] (2.5,0)node[below=8pt]{$x_0+h'$}--(2.5,1.5)node[right]{$f(x_0+h')$};
+
+    \end{tikzpicture}
+    \caption{}
+    \end{minipage}
+    \end{figure}
+
+
+
+
+\begin{example}
+    说明$f(x)=x^3-3x$在点$x_0=2$是递增。
+\end{example}
+
+\begin{solution}
+    取一个充分小的$\delta>0$, 譬如$\delta=0.01$, 令$0<|h|<0.01$，即$-0.01<h<0.01,\; h\ne 0$。
+
+    函数在点$x=2$的改变量是$f(2+h)-f(2)$,
+\[\begin{split}
+    f(2+h)&=(2 +h)^3-3(2+h)\\
+  &  =8+12h+6h^2+h^3-6-3h\\
+   & =2+9h+6h+h^3
+\end{split} \]   
+    又
+  $  f(2)=2^3-3\x(2)=2$，
+
+
+$\therefore\quad f(2+h)-f(2)=9h+6h^2+h^3$
+
+    当$x=2+h$在点2的左边，且$-0.01<h<0$时，我们
+    来确定$f(2+h)-f(2)$的符号，暂取$h=-0.009$, 于是
+\[\begin{split}
+      f(2-0.009)-f(2)&=9(-9\x10^{-3})+6(-9\x10^{-3})^2+(-9\x10^{-3})^3\\
+ &   =-0.0081+0.00000486-0.00000000729  
+\end{split}\]
+    我们看到这个算式的后面两项的和的绝对值，比第一项的绝
+    对值小得多，所以略去后面两项，不会改变结果的符号。因
+    此，只要$\delta$充分小，$f(2+h)-f(2)$的符号，完全可以由$h$
+    的一次幂项的符号决定，这就是说当$-0.01<h<0$时，$f(2+h)-f(2)>0$。
+
+    当$x=2+h$在点2的右边且$0<h<0.01$时，我们来确
+    定$f(2+h)-f(2)$的符号，暂取$h=0.0001$, 于是
+\[\begin{split}
+    f(2+0.0001)-f(2)&=9(10^{-4})+6(10^{-4})^2+(10^{-4})^3\\
+  &  =0.0009+0.00000006+0.000000000001
+\end{split}\]
+    我们看到只要$h$是一个微小的数量，那么$h^2$, $h^3$就是更小，
+    更更小的量，略去含$h^2$和$h^3$的项，不影响$f(2+h)-f(2)$的
+    符号，这也就是说只要充分小，那么$f(2+h)-f(2)$的符
+    号与它的按$h$升幂展开式中的$h$的一次项的符号一致，所以当
+    $0<h<0.01$时，$f(2+h)-f(2)>0$。
+
+    根据上面的定义，我们说$f(x)=x^3-3x$在点$x_0=2$是递
+增的。
+\end{solution}
+
+让我们来找出一般的三次多项式函数$f(x)=a_3x^3+a_2x^2
++a_1x+a_0$, 在点$x=x_0$的递增性或递减性的判别方法。
+
+取充分小的$\delta>0$, $f(x)=a_3x^3+a_2x^2
++a_1x+a_0$, 在点
+$x=x_0$的邻近一点$x=x_0+h$ (这里$|h|<\delta$)的函数值$f(x_0+h)$, 
+按$h$的升幂展开得到
+\[\begin{split}
+    f(x_0+h) &= a_3 (x_0 +h)^3 +a_2(x_0 +h)^2 + a_3 (x_0 +h) + a_0\\
+&=a_3x_0^3+3a_3x_0^2h+3a_3x_0h^2+a_3h^3+a_2x_0^2+2a_2x_0h\\
+&\qquad +a_2h^2+a_1x_0+a_1h+a_0\\
+&=f(x_0)+(3a_3x_0^2+2a_2x_0+a_1)h+(3a_3x_0+
+a_2)h^2+a_3h^3
+\end{split}\]
+
+在$x_0$处的函数改变量：
+\[f(x_0+h)-f(x_0)=(3a_3x_0^2+2a_2x_0+a_1)h+(3a_3x_0+
+a_2)h^2+a_3h^3\]
+因为当$\delta$充分小时，在$3a_3x_0^2+2a_2x_0+a_1\ne 0$的场合，$f(x_0+h)-f(x_0)$的符号与$h$的一次幂项即$(3a_3x_0^2+2a_2x_0+a_1)h$的符
+$f(x_0+h)-f(x_0)$
+的符号与$h$的系数$3a_3x_0^2+2a_2x_0+a_1$的符号一致。这样
+\begin{itemize}
+    \item 如果
+    \begin{equation}
+        3a_3x_0^2+2a_2x_0+a_1>0
+    \end{equation}
+    则$\frac{f(x_0+h)-f(x_0)}{h}>0$，即：当$h<0$时，由$\frac{f(x_0+h)-f(x_0)}{h}>0$，得到$f(x_0+h)-f(x_0)<0$；当$h>0$时，由$\frac{f(x_0+h)-f(x_0)}{h}>0$，得到$f(x_0+h)-f(x_0)>0$。因此条件(5.29)表明$f(x)$在点$x=x_0$递增。
+    \item 如果
+    \begin{equation}
+        3a_3x_0^2+2a_2x_0+a_1<0
+    \end{equation}
+    则$\frac{f(x_0+h)-f(x_0)}{h}<0$，即：当$h<0$时，$f(x_0+h)-f(x_0)>0$；当$h>0$时，$f(x_0+h)-f(x_0)<0$。因此条件(5.30)表明$f(x)$在点$x=x_0$递减。
+\end{itemize}
+
+数$3a_3x_0^2+2a_2x_0+a_1$可以看作多项式$f'(x)=3a_3x_0^2+2a_2x_0+a_1$在$x=x_0$的值。而多项式$f'(x)=3a_3x_0^2+2a_2x_0+a_1$称为原来多项式函数的导出函数，
+    它的二次项系数等于原来多项式的三次项系数与3的乘积，
+    它的一次项系数等于原来多项式二次项的系数与2的乘积，它
+    的常数项等于原来多项式一次项的系数。
+
+    将上面讨论的结果总结成下面的定理：
+
+\begin{blk}{定理}
+    如果$f(x)=a_3x^3+a_2x^2+a_1x+a_0$的导函数$f'(x)=3a_3x_0^2+2a_2x_0+a_1$在$x=x_0$的值$f'(x_0)>0$, 则$f(x)$在点$x=x_0$递
+增；如果$f(x)$在$x=x_0$的值$f'(x_0)<0$, 则$f(x)$在点$x=x_0$递
+减。
+\end{blk}
+
+$f'(x_0)$也简称为$f(x)$在$x=x_0$的导数。
+
+\begin{blk}{推论}
+    如果三次多项式$f(x)$的导函数$f'(x)$, 在区间$(a,
+b)$内各点有$f'(x)>0$成立，那么$f(x)$在区间$(a,b)$上递增。
+
+如果$f'(x)$在区间$(c,d)$内各点有$f'(x)<0$成立，那么
+$f(x)$在区间$(c,d)$上递减。（定理和推论的严格证明在第六册）
+\end{blk}
+ 
+虽然我们在上面仅讨论了三次多项式函数，其实$n$次多
+项式函数也有类似上面的定理与推论。
+
+
+
+
+
+\begin{example}
+  确定$f(x)=x^3-3x$的递增区间和递减区间。  
+\end{example}
+
+\begin{solution}
+$f(x)=x^3-3x$的导函数是$f'(x)=3x^2-3=3(x^2-
+1)$. 它的两个零点是$-1$和1。
+
+因为，当$x<-1$或$x>1$时，$f'(x)=3(x-1)>0$, 所以
+$f(x)=x^3-3x$在区间$(-\infty,-1)$和$(1,+\infty)$上递增。
+
+因为，当$-1<x<1$时，$f'(x)=3(x-1)<0$, 所以
+$f(x)=x^3-3x$在区间$(-1,1)$上递减。
+\end{solution}
+
+\begin{rmk}
+在$x=1$或$x=-1$这两个点，函数既不是递增也
+不是递减。
+\end{rmk}
 
 \begin{example}
     
@@ -1675,102 +2455,6 @@ $y_1=-bx_1-c$, 从而有$ax_1^2=-bx_1-c$, 即$ax_1^2+bx_1+c=0$。
 \begin{solution}
     
 \end{solution}
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-
-
-
-
-
-
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-\begin{example}
-    
-\end{example}
-
-\begin{solution}
-    
-\end{solution}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 \begin{ex}
